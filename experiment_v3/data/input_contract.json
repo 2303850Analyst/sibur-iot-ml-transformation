@@ -1,0 +1,17 @@
+{
+  "evidence": "REFERENCE_ONLY",
+  "origin": "NEW_SCENARIO_ASSUMPTION",
+  "source": "WEPAStacks: series_py312/data/normalized/source.parquet",
+  "unit": "one source record per pallet",
+  "time_unit": "seconds",
+  "document": "Source has no inbound receipt key. Group by replay day / original SKU / dock / hour of readiness. Split every 8 pallets in stable readiness and pallet ID order.",
+  "quality": "quality_case_id shared by replay day, original SKU and source batch. No real release record.",
+  "business_origin": "ready = external delivery timestamp, arrival = ready + 30 s; manufacturing document is available for transmission at first readiness. No perfect production schedule.",
+  "source_days": "34 days sampled in 7-day blocks from complete test weeks only; same draw for all masks; last block truncated; all background inflow and departures retained",
+  "case_horizon_seconds": 259200,
+  "cohort_ready_interval_seconds": [
+    86400,
+    2678400
+  ],
+  "no_plant_calibration": true
+}

@@ -1,0 +1,15 @@
+<odoo>
+    <record id="view_pallet_list" model="ir.ui.view">
+        <field name="name">wms.research.pallet.list</field><field name="model">wms.research.pallet</field>
+        <field name="arch" type="xml"><list create="0" edit="0" delete="0"><field name="run_id"/><field name="pallet_id"/><field name="product_id"/><field name="lot_id"/><field name="quality"/><field name="receipt_id"/><field name="cell_id"/><field name="transfer_id"/></list></field>
+    </record>
+    <record id="view_event_list" model="ir.ui.view">
+        <field name="name">wms.research.event.list</field><field name="model">wms.research.event</field>
+        <field name="arch" type="xml"><list create="0" edit="0" delete="0"><field name="run_id"/><field name="pallet_id"/><field name="operation"/><field name="event_id"/><field name="source"/><field name="status"/><field name="reason"/><field name="picking_id"/><field name="processed_at"/></list></field>
+    </record>
+    <record id="action_pallet" model="ir.actions.act_window"><field name="name">Research pallets</field><field name="res_model">wms.research.pallet</field><field name="view_mode">list</field></record>
+    <record id="action_event" model="ir.actions.act_window"><field name="name">Research audit</field><field name="res_model">wms.research.event</field><field name="view_mode">list</field></record>
+    <menuitem id="menu_research" name="WMS Research" groups="stock.group_stock_manager"/>
+    <menuitem id="menu_pallet" parent="menu_research" action="action_pallet"/>
+    <menuitem id="menu_event" parent="menu_research" action="action_event"/>
+</odoo>

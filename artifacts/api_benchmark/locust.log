@@ -1,0 +1,9 @@
+ Container wms-inbound-research-runner-run-39dd0a89e5c9 Creating 
+ Container wms-inbound-research-runner-run-39dd0a89e5c9 Created 
+Exception ignored in: <function _removeHandlerRef at 0x7647a41df380>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/logging/__init__.py", line 884, in _removeHandlerRef
+  File "/usr/local/lib/python3.12/logging/__init__.py", line 241, in _acquireLock
+  File "/usr/local/lib/python3.12/threading.py", line 198, in acquire
+  File "/usr/local/lib/python3.12/site-packages/gevent/thread.py", line 76, in get_ident
+RuntimeError: greenlet is being finalized

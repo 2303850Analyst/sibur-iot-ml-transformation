@@ -1,0 +1,111 @@
+{
+  "evidence": "ODOO_INTEGRATION",
+  "status": "PASS",
+  "before": {
+    "snapshot": {
+      "sku": "REF-01",
+      "lot": "LOT-FULL-01",
+      "quantity": 1.0,
+      "quality": "released",
+      "pallet": "FULL-01",
+      "receipt_id": 5,
+      "receipt_state": "assigned",
+      "transfer_id": null,
+      "reserved": null,
+      "cell": null,
+      "quants": [],
+      "odoo_url": "/odoo/action-stock.action_picking_tree_all/5"
+    },
+    "audit": []
+  },
+  "after": {
+    "snapshot": {
+      "sku": "REF-01",
+      "lot": "LOT-FULL-01",
+      "quantity": 1.0,
+      "quality": "released",
+      "pallet": "FULL-01",
+      "receipt_id": 5,
+      "receipt_state": "done",
+      "transfer_id": null,
+      "reserved": null,
+      "cell": null,
+      "quants": [
+        [
+          "WMS-R Buffer",
+          "LOT-FULL-01",
+          1.0
+        ]
+      ],
+      "odoo_url": "/odoo/action-stock.action_picking_tree_all/5"
+    },
+    "audit": [
+      [
+        4870,
+        "TSD",
+        "receive",
+        "applied",
+        null,
+        5,
+        "593bfa352400440db7a129eae375dafa",
+        "2026-11-18 18:54:45",
+        "2026-11-18 18:54:45"
+      ]
+    ]
+  },
+  "response": [
+    {
+      "status": "applied",
+      "reason": null,
+      "picking_id": 5,
+      "snapshot": {
+        "sku": "REF-01",
+        "lot": "LOT-FULL-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "FULL-01",
+        "receipt_id": 5,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-FULL-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/5"
+      },
+      "audit_id": 4870
+    },
+    {
+      "reason": null,
+      "status": "applied",
+      "audit_id": 4870,
+      "snapshot": {
+        "lot": "LOT-FULL-01",
+        "sku": "REF-01",
+        "cell": null,
+        "pallet": "FULL-01",
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-FULL-01",
+            1.0
+          ]
+        ],
+        "quality": "released",
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/5",
+        "quantity": 1.0,
+        "reserved": null,
+        "receipt_id": 5,
+        "transfer_id": null,
+        "receipt_state": "done"
+      },
+      "picking_id": 5
+    }
+  ],
+  "unauthorized_release_status": 403
+}

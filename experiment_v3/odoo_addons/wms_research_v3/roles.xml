@@ -1,0 +1,13 @@
+<odoo>
+  <record id="role_production" model="res.groups"><field name="name">WMS V3 production</field></record>
+  <record id="role_operator" model="res.groups"><field name="name">WMS V3 operator</field></record>
+  <record id="role_driver" model="res.groups"><field name="name">WMS V3 driver</field></record>
+  <record id="role_quality" model="res.groups"><field name="name">WMS V3 quality</field></record>
+  <record id="role_dispatch" model="res.groups"><field name="name">WMS V3 dispatch</field></record>
+  <record id="role_closing" model="res.groups"><field name="name">WMS V3 closing</field></record>
+  <record id="role_supervisor" model="res.groups"><field name="name">WMS V3 supervisor</field></record>
+  <record id="role_production_adapter" model="res.groups"><field name="name">WMS V3 production_adapter</field></record>
+  <record id="role_quality_adapter" model="res.groups"><field name="name">WMS V3 quality_adapter</field></record>
+  <record id="role_sensor" model="res.groups"><field name="name">WMS V3 sensor</field></record>
+  <record id="role_exchange" model="res.groups"><field name="name">WMS V3 exchange</field></record>
+</odoo>

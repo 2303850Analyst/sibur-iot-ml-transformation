@@ -1,0 +1,2 @@
+{"BlockIO":"0B / 16.4kB","CPUPerc":"0.00%","Container":"wms-inbound-research-odoo-1","ID":"4ccb1d586e8b","MemPerc":"1.47%","MemUsage":"233MiB / 15.51GiB","Name":"wms-inbound-research-odoo-1","NetIO":"406kB / 164kB","PIDs":"6"}
+{"BlockIO":"0B / 1.05GB","CPUPerc":"0.14%","Container":"wms-inbound-research-db-1","ID":"70e86dd6b496","MemPerc":"1.19%","MemUsage":"188.6MiB / 15.51GiB","Name":"wms-inbound-research-db-1","NetIO":"1.42GB / 2.33GB","PIDs":"9"}

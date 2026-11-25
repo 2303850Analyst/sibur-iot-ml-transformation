@@ -1,0 +1,121 @@
+{
+  "evidence": "API_BENCHMARK",
+  "status": "PASS",
+  "levels": [
+    {
+      "users": 1,
+      "elapsed_s": 120.0026227260023,
+      "http_requests": 88,
+      "http_errors": 0,
+      "p95_ms": 210.0,
+      "by_operation": [
+        {
+          "operation": "receive",
+          "requests": 4,
+          "failures": 0,
+          "p95_ms": 210.0
+        },
+        {
+          "operation": "reserve",
+          "requests": 4,
+          "failures": 0,
+          "p95_ms": 35
+        },
+        {
+          "operation": "place",
+          "requests": 4,
+          "failures": 0,
+          "p95_ms": 330.0
+        },
+        {
+          "operation": "status",
+          "requests": 76,
+          "failures": 0,
+          "p95_ms": 38
+        }
+      ],
+      "completed_pallets": 4,
+      "business_rejections": 0,
+      "write_technical_errors": 0,
+      "fixture_exhausted": 0
+    },
+    {
+      "users": 5,
+      "elapsed_s": 120.00103874200067,
+      "http_requests": 440,
+      "http_errors": 0,
+      "p95_ms": 250.0,
+      "by_operation": [
+        {
+          "operation": "receive",
+          "requests": 20,
+          "failures": 0,
+          "p95_ms": 280.0
+        },
+        {
+          "operation": "status",
+          "requests": 380,
+          "failures": 0,
+          "p95_ms": 36
+        },
+        {
+          "operation": "reserve",
+          "requests": 20,
+          "failures": 0,
+          "p95_ms": 60
+        },
+        {
+          "operation": "place",
+          "requests": 20,
+          "failures": 0,
+          "p95_ms": 380.0
+        }
+      ],
+      "completed_pallets": 20,
+      "business_rejections": 0,
+      "write_technical_errors": 0,
+      "fixture_exhausted": 0
+    },
+    {
+      "users": 20,
+      "elapsed_s": 120.00411147399791,
+      "http_requests": 1760,
+      "http_errors": 0,
+      "p95_ms": 240.0,
+      "by_operation": [
+        {
+          "operation": "status",
+          "requests": 1520,
+          "failures": 0,
+          "p95_ms": 86
+        },
+        {
+          "operation": "receive",
+          "requests": 80,
+          "failures": 0,
+          "p95_ms": 250.0
+        },
+        {
+          "operation": "reserve",
+          "requests": 80,
+          "failures": 0,
+          "p95_ms": 79
+        },
+        {
+          "operation": "place",
+          "requests": 80,
+          "failures": 0,
+          "p95_ms": 390.0
+        }
+      ],
+      "completed_pallets": 80,
+      "business_rejections": 0,
+      "write_technical_errors": 0,
+      "fixture_exhausted": 0
+    }
+  ],
+  "warmup_s": 30,
+  "measurement_s": 120,
+  "requests": "19 status tasks / 1 three-call stock workflow",
+  "warning": "Host API only; not physical warehouse capacity. A request in flight across the warmup boundary may be counted."
+}

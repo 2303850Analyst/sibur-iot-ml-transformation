@@ -1,0 +1,10 @@
+human_servers:
+  production: 1
+  operator: 1
+  driver: 1
+  quality: 1
+  dispatch: 1
+  closing: 1
+calendar: continuous scenario; independent finite queues
+forklifts: 2
+storage_addresses: 5329

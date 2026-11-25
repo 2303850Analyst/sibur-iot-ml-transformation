@@ -1,0 +1,117 @@
+{
+  "status": "PARTIAL_REPLAY",
+  "cases": [
+    {
+      "case": "S1-L1-1000-A",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S1-L1-1000-B",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S2-L1-1000-A",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S1-L1-1000-C",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S2-L1-1000-B",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S3-L1-1000-A",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S1-L2-1000-A",
+      "pallets": 50,
+      "transitions": 212
+    },
+    {
+      "case": "S2-L1-1000-C",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S3-L1-1000-B",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S4-L1-1000-A",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S4-L3-1000-C",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S1-L2-1000-B",
+      "pallets": 50,
+      "transitions": 212
+    },
+    {
+      "case": "S2-L2-1000-A",
+      "pallets": 50,
+      "transitions": 212
+    },
+    {
+      "case": "S3-L1-1000-C",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S4-L1-1000-B",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S5-L1-1000-A",
+      "pallets": 50,
+      "transitions": 224
+    },
+    {
+      "case": "S1-L2-1000-C",
+      "pallets": 50,
+      "transitions": 212
+    },
+    {
+      "case": "S2-L2-1000-B",
+      "pallets": 50,
+      "transitions": 212
+    },
+    {
+      "case": "S3-L2-1000-A",
+      "pallets": 50,
+      "transitions": 212
+    },
+    {
+      "case": "S4-L1-1000-C",
+      "pallets": 50,
+      "transitions": 203
+    },
+    {
+      "case": "S5-L1-1000-B",
+      "pallets": 50,
+      "transitions": 224
+    },
+    {
+      "case": "S6-L1-1000-A",
+      "pallets": 50,
+      "transitions": 203
+    }
+  ],
+  "limitations": "Background occupancy projected from canonical logs; actual stock operations and balances validated for selected pallets.",
+  "evidence": "ODOO_INTEGRATION"
+}

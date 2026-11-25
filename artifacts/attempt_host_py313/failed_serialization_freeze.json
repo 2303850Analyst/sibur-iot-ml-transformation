@@ -1,0 +1,18 @@
+{
+  "files": {
+    "artifacts/models/L1.joblib": "bcad394f63402e1682789710231ba9fd7442f1cbd60edfe3aae007c0e31f3faf",
+    "artifacts/models/L2.joblib": "3077c6a474a1f72619944dd5ef9f02677272ec3d3638e894b1acd2188ef08365",
+    "artifacts/models/L3.joblib": "a3ad35401dc5b80ebbe6b75b66d53f44f93d5aa9b082b28aefbbd07fb61106db",
+    "configs/device_profiles.yaml": "bf1a27fafd9da4865ec7dd062685124ea8501dbe4d510db285e54d63bbf38295",
+    "data/manifests/wepastacks.json": "66f3fe239f3512d61e7bb3782ac54e92c0fa87a5ca0041608dcc91e6bef47b77",
+    "data/normalized/source.parquet": "3e364e77b19ecc3efe75ecb2d12d5ca128c35d5352cc638f62c7923ac522a6e0",
+    "protocol.yaml": "2601058cfc586ea0ee94313336af4844d06b6aa245e555050710119bd5fbc12f",
+    "src/data.py": "dde764ee9d46591bdc31015d91779f94211874848c5ab423c1932474ea4f2c0e",
+    "src/forecast.py": "e1462b27633ea3a14ab2e896a8e2fc80dae98f94e6cd09150623ab5f724181c6",
+    "src/run_matrix.py": "fdcde25e065f5d21b8e0162c7185532170f7f77c67b3d8fe48d00ce39403c054",
+    "src/simulator.py": "75d0d1d5a17c817256b2d6841b5f927a7e70b163c965d30f9360a5b338c45c49"
+  },
+  "fingerprint": "9530d99796683bb55e0e6a0308772cabfb610a4ae77ea73e381ad3f1759d3f58",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]"
+}

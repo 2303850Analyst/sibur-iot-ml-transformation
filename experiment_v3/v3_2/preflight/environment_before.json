@@ -1,0 +1,80 @@
+{
+  "captured_utc": "2026-11-19T22:05:32.2317483Z",
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i5-14400F",
+    "NumberOfCores": 10,
+    "NumberOfLogicalProcessors": 16,
+    "LoadPercentage": 59
+  },
+  "memory": {
+    "TotalVisibleMemorySize": 33328148,
+    "FreePhysicalMemory": 9210056,
+    "FreeVirtualMemory": 47514008
+  },
+  "volume": {
+    "DriveLetter": "C",
+    "Size": 1999732989952,
+    "SizeRemaining": 1053340360704
+  },
+  "disk": {
+    "FriendlyName": "Samsung SSD 990 PRO 2TB",
+    "MediaType": "SSD",
+    "HealthStatus": "Healthy"
+  },
+  "cpu_disk_sample": {
+    "DiskBytesPersec": 82907685,
+    "PercentDiskTime": 20
+  },
+  "docker": "29.6.1 16 16653336576",
+  "services": [
+    "wms-inbound-v3-trial-1 Up 4 hours",
+    "wms-inbound-v3-odoo-1 Up 4 hours",
+    "wms-inbound-v3-broker-1 Up 4 hours",
+    "wms-inbound-v3-db-1 Up 4 hours (healthy)",
+    "wms-inbound-research-gateway-1 Up 27 hours",
+    "wms-inbound-research-odoo-1 Up 27 hours",
+    "wms-inbound-research-broker-1 Up 27 hours",
+    "wms-inbound-research-db-1 Up 27 hours (healthy)",
+    "finance-ai-service-cloudflared-1 Up 28 hours (Paused)",
+    "finance-ai-service-miniapp-gateway-1 Up 28 hours (Paused)",
+    "finance-ai-service-frontend-1 Up 28 hours (Paused)",
+    "finance-ai-service-backend-1 Up 28 hours (Paused)",
+    "finance-ai-service-telegram-1 Up 28 hours (Paused)",
+    "finance-ai-service-postgres-1 Up 28 hours (Paused)"
+  ],
+  "stats": [
+    "wms-inbound-v3-trial-1 0.10% 261.2MiB / 15.51GiB",
+    "wms-inbound-v3-odoo-1 0.09% 249MiB / 15.51GiB",
+    "wms-inbound-v3-broker-1 0.02% 2.441MiB / 15.51GiB",
+    "wms-inbound-v3-db-1 2.44% 221.7MiB / 15.51GiB",
+    "wms-inbound-research-gateway-1 0.21% 92.77MiB / 15.51GiB",
+    "wms-inbound-research-odoo-1 0.00% 316.6MiB / 15.51GiB",
+    "wms-inbound-research-broker-1 0.03% 2.695MiB / 15.51GiB",
+    "wms-inbound-research-db-1 2.53% 97.95MiB / 15.51GiB",
+    "finance-ai-service-cloudflared-1 0.00% 25.38MiB / 15.51GiB",
+    "finance-ai-service-miniapp-gateway-1 0.00% 15.1MiB / 15.51GiB",
+    "finance-ai-service-frontend-1 0.00% 399MiB / 15.51GiB",
+    "finance-ai-service-backend-1 0.00% 69.93MiB / 15.51GiB",
+    "finance-ai-service-telegram-1 0.00% 155.2MiB / 15.51GiB",
+    "finance-ai-service-postgres-1 0.00% 35.62MiB / 15.51GiB"
+  ],
+  "wsl": [
+    "    N A M E                             S T A T E                       V E R S I O N ",
+    " ",
+    " *   U b u n t u                         R u n n i n g                   2 ",
+    " ",
+    "     d o c k e r - d e s k t o p         R u n n i n g                   2 ",
+    " ",
+    " "
+  ],
+  "wsl_memory": [
+    "               total        used        free      shared  buff/cache   available",
+    "Mem:     16653336576  3489779712  4162256896   235249664  9491189760 13163556864",
+    "Swap:     4294967296      233472  4294733824"
+  ],
+  "wslconfig": false,
+  "git": null,
+  "odoo": "Odoo Server 19.0-20261112",
+  "postgres": "postgres (PostgreSQL) 16.16",
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)] 4.1.1"
+}

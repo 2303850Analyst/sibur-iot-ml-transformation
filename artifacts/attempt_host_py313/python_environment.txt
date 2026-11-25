@@ -1,0 +1,2 @@
+C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\.venv\Scripts\python.exe
+3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]

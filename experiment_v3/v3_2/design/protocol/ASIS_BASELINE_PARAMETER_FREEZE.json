@@ -1,0 +1,498 @@
+{
+  "protocol_name": "WMS_V3_BASELINE_TIMING_AND_ACCOUNTING",
+  "status": "PROPOSED_PRE_REGISTER_BEFORE_FULL_RUN",
+  "version": "V3.2-baseline-proposal-2026-11-20",
+  "reference_nature": "SCENARIO_ONLY_NOT_MEASURED_AT_SIBUR",
+  "applies_to_all_masks": "The same C000 primitives, resource calendars, and exogenous streams apply to all 128 masks. M1-M7 only remove or alter specified subactions and routing. No target outcome time is specified.",
+  "reference_pilot_not_reusable_as_v3_2": "The C000 82.34 min and C127 78.38 min were generated under an older parameterization. Do not mix or rescale these outputs.",
+  "human_factors": {
+    "service_distribution": "triangular around each specified mode, 0.7x/1.0x/1.3x, with per-entity keyed random variates identical across masks for unchanged subactions",
+    "context_switch_s": 8,
+    "context_switch_applies": "only when the same real worker changes case/task category, once per actual change, never per arbitrary event",
+    "break_schedule": "three 8-hour shifts; per-person two 10-minute short breaks and one 30-minute meal break staggered; all staff counts and calendars locked across masks",
+    "reference_fatigue_rule": {
+      "lookback_minutes": 120,
+      "busy_fraction_threshold": 0.85,
+      "manual_time_multiplier_above_threshold": 1.1,
+      "manual_time_multiplier_otherwise": 1.0,
+      "exclude_equipment_physical_speed": true
+    },
+    "predeclared_sensitivity_fatigue_multipliers": [
+      1.0,
+      1.1,
+      1.2
+    ],
+    "new_spontaneous_error_probabilities": "NOT_ADDED: use frozen source data defects and scenarios S2/S3/S5; additional human error risk only as separately pre-registered sensitivity, never to engineer ROI",
+    "idle_time": "Never count idle/queue as active labor; record paid shift capacity separately.",
+    "employee_count_is_not_20_odoo_users": true
+  },
+  "staffing_reference_assumption": {
+    "shift_hours": 8,
+    "shifts_per_day": 3,
+    "workers_per_shift": {
+      "production_clerk": 1,
+      "receiver": 2,
+      "quality_inspector": 1,
+      "wms_operator": 2,
+      "forklift_driver": 2,
+      "supervisor_on_exception": 1
+    },
+    "forklifts_per_shift": 2,
+    "status": "SCENARIO_ASSUMPTION; if an existing frozen V3 resource roster is found, reconcile BEFORE protocol freeze; do not silently mix counts"
+  },
+  "measurement": {
+    "primary_unit": "one inbound case with all its pallets, case_id",
+    "primary_full_cycle": "t_standard_close - t_first_pallet_ready; include open cases and T72 capped horizon separately",
+    "labor": "sum of allocations of all actual workers, including forklift drivers, quality, production; simultaneous persons counted separately",
+    "equipment": "active minutes and reserved minutes by forklift separately",
+    "queue": "resource request to grant and blocked states; do not count standby staff as active labor",
+    "software": "server transaction wall time is distinct from human active time",
+    "costs": "labor & equipment capacity rates separated, avoid including driver in both forklift rate and labor rate"
+  },
+  "operations": [
+    {
+      "operation_id": "P01",
+      "operation": "Формирование и передача основания",
+      "scope": "case",
+      "primary_resource": "production_clerk",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Проверка готовности, оформление основания, уведомление; M1 сохраняет человеческое подтверждение",
+      "base_mode_s": 90,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 63.0,
+        "mode_s": 90,
+        "max_s": 117.0
+      },
+      "manual_labor_s": 90
+    },
+    {
+      "operation_id": "P02",
+      "operation": "Приём и идентификация грузовой единицы",
+      "scope": "pallet",
+      "primary_resource": "receiver",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "20 с физической сверки + 15 с ручного считывания; M5 автоматизирует только идентификацию",
+      "base_mode_s": 35,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 24.5,
+        "mode_s": 35,
+        "max_s": 45.5
+      },
+      "manual_labor_s": 35,
+      "conditional_damaged_label": {
+        "manual_reidentification_s": 120,
+        "replaces_normal_scan_component_s": 15,
+        "unchanged_physical_check_s": 20,
+        "failure_manifest_must_be_same_between_masks": true,
+        "M5_success_replaces_only_15s_scan": "physical 20s retained + actual measured sensor event processing",
+        "M5_failure": "manual fallback 60 or 120s by preexisting error type and handling policy"
+      }
+    },
+    {
+      "operation_id": "P03",
+      "operation": "Сверка комплектности документов",
+      "scope": "case",
+      "primary_resource": "receiver",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Сопоставление состава, реквизитов и факта; при дефекте дополнительная ветка",
+      "base_mode_s": 90,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 63.0,
+        "mode_s": 90,
+        "max_s": 117.0
+      },
+      "manual_labor_s": 90,
+      "conditional_document_defect": {
+        "additional_manual_clarification_s": 30,
+        "outside_response_wait": "until valid response event, separate from human busy time",
+        "same_exogenous_defect_for_all_masks": true
+      }
+    },
+    {
+      "operation_id": "P04",
+      "operation": "Оформление результата приёмки",
+      "scope": "case",
+      "primary_resource": "receiver",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Контроль результатов и создание акта, без второй проводки",
+      "base_mode_s": 60,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 42.0,
+        "mode_s": 60,
+        "max_s": 78.0
+      },
+      "manual_labor_s": 60
+    },
+    {
+      "operation_id": "P05",
+      "operation": "Передача сведений участникам",
+      "scope": "case",
+      "primary_resource": "receiver",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Фиксация и передача, учитывает фактическое подтверждение",
+      "base_mode_s": 35,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 24.5,
+        "mode_s": 35,
+        "max_s": 45.5
+      },
+      "manual_labor_s": 35
+    },
+    {
+      "operation_id": "P06",
+      "operation": "Идентификация объекта качества",
+      "scope": "quality_case",
+      "primary_resource": "quality_inspector",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Один раз на объект качества, не на каждую паллету",
+      "base_mode_s": 35,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 24.5,
+        "mode_s": 35,
+        "max_s": 45.5
+      },
+      "manual_labor_s": 35
+    },
+    {
+      "operation_id": "P07",
+      "operation": "Обязательная проверка качества",
+      "scope": "quality_case_if_required",
+      "primary_resource": "quality_inspector",
+      "baseline_rule": "quality_split",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "900 с календарной длительности: 180 с активного труда инспектора и 720 с внешней/лабораторной части; ранее действительное решение: шаг НЕ ПРИМЕНИМ; распределение задаётся для двух компонентов отдельно; только при применимости",
+      "base_mode_s": 900,
+      "duration_distribution": {
+        "name": "sum_of_distinct_components",
+        "human_inspection_s": {
+          "name": "triangular",
+          "min_s": 126,
+          "mode_s": 180,
+          "max_s": 234
+        },
+        "external_lab_s": {
+          "name": "triangular",
+          "min_s": 504,
+          "mode_s": 720,
+          "max_s": 936
+        },
+        "applies_only_if_new_inspection_required": true,
+        "same_exogenous_draw_for_all_masks": true
+      },
+      "manual_labor_s": 180,
+      "quality_calendar_s": 900,
+      "inspector_active_s": 180,
+      "external_lab_elapsed_s": 720
+    },
+    {
+      "operation_id": "P08",
+      "operation": "Принятие решения качества",
+      "scope": "quality_case",
+      "primary_resource": "quality_inspector",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Решение уполномоченного; M2 его не ускоряет",
+      "base_mode_s": 45,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 31.5,
+        "mode_s": 45,
+        "max_s": 58.5
+      },
+      "manual_labor_s": 45
+    },
+    {
+      "operation_id": "P09",
+      "operation": "Регистрация и доведение статуса качества",
+      "scope": "quality_case",
+      "primary_resource": "quality_inspector",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "10 с проверки решения + 30 с передачи; M2 не снимает право решения",
+      "base_mode_s": 40,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 28.0,
+        "mode_s": 40,
+        "max_s": 52.0
+      },
+      "manual_labor_s": 40
+    },
+    {
+      "operation_id": "P10",
+      "operation": "Временное размещение под ограничением",
+      "scope": "pallet_if_hold",
+      "primary_resource": "forklift_driver",
+      "baseline_rule": "forklift_route",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Та же физическая формула, что P18: 180 с обработки + порожний и гружёный путь/1 м/с, один водитель на машину",
+      "formula": "180 * handling_factor + empty_distance_m/1.0 + loaded_distance_m/1.0",
+      "manual_labor": "equal_to_forklift_occupied_duration",
+      "equipment_active": "same active movement duration; excludes queue",
+      "travel_model_origin": "LEGACY_SCENARIO"
+    },
+    {
+      "operation_id": "P11",
+      "operation": "Разбор несоответствия качества",
+      "scope": "quality_case_if_nonconformance",
+      "primary_resource": "quality_inspector",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Только при действительном несоответствии, подтверждённый исход",
+      "base_mode_s": 120,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 84.0,
+        "mode_s": 120,
+        "max_s": 156.0
+      },
+      "manual_labor_s": 120
+    },
+    {
+      "operation_id": "P12",
+      "operation": "Подготовка данных WMS",
+      "scope": "case",
+      "primary_resource": "wms_operator",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "30 с содержательной проверки + 45 с сборки/переноса данных",
+      "base_mode_s": 75,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 52.5,
+        "mode_s": 75,
+        "max_s": 97.5
+      },
+      "manual_labor_s": 75
+    },
+    {
+      "operation_id": "P13",
+      "operation": "Создание записи WMS",
+      "scope": "case",
+      "primary_resource": "wms_operator",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "15 с проверки объекта + 50 с ввода/подтверждения",
+      "base_mode_s": 65,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 45.5,
+        "mode_s": 65,
+        "max_s": 84.5
+      },
+      "manual_labor_s": 65
+    },
+    {
+      "operation_id": "P14",
+      "operation": "Контроль корректности записи WMS",
+      "scope": "case",
+      "primary_resource": "wms_operator",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Проверка по первичным данным; не отменять обязательные проверки при M3",
+      "base_mode_s": 55,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 38.5,
+        "mode_s": 55,
+        "max_s": 71.5
+      },
+      "manual_labor_s": 55
+    },
+    {
+      "operation_id": "P15",
+      "operation": "Исправление ошибки и повторная проверка",
+      "scope": "case_if_error",
+      "primary_resource": "wms_operator",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Только если есть ошибка; вероятность задаётся внешним манифестом/правилом, а не желаемым эффектом",
+      "base_mode_s": 120,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 84.0,
+        "mode_s": 120,
+        "max_s": 156.0
+      },
+      "manual_labor_s": 120
+    },
+    {
+      "operation_id": "P16",
+      "operation": "Приходная запись и статус",
+      "scope": "pallet",
+      "primary_resource": "wms_operator",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "10 с содержательной сверки + 20 с действий ТСД/WMS на паллету",
+      "base_mode_s": 30,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 21.0,
+        "mode_s": 30,
+        "max_s": 39.0
+      },
+      "manual_labor_s": 30
+    },
+    {
+      "operation_id": "P17",
+      "operation": "Выбор допустимого места и задания",
+      "scope": "pallet",
+      "primary_resource": "wms_operator",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Уже есть базовая адресация WMS; оставлено ручное подтверждение/коррекция, M4 меняет политику",
+      "base_mode_s": 30,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 21.0,
+        "mode_s": 30,
+        "max_s": 39.0
+      },
+      "manual_labor_s": 30
+    },
+    {
+      "operation_id": "P18",
+      "operation": "Перемещение с погрузчиком",
+      "scope": "pallet",
+      "primary_resource": "forklift_driver",
+      "baseline_rule": "forklift_route",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "180 с обработки + порожний и гружёный путь / 1 м/с; полная занятость одного водителя, техника та же во всех масках",
+      "formula": "180 * handling_factor + empty_distance_m/1.0 + loaded_distance_m/1.0",
+      "manual_labor": "equal_to_forklift_occupied_duration",
+      "equipment_active": "same active movement duration; excludes queue",
+      "travel_model_origin": "LEGACY_SCENARIO"
+    },
+    {
+      "operation_id": "P19",
+      "operation": "Установка и ТСД-подтверждение",
+      "scope": "pallet",
+      "primary_resource": "forklift_driver",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Физическое движение не повторяется: только завершающее подтверждение, водитель занят; техника зарезервирована, но не ведёт рабочий пробег",
+      "base_mode_s": 25,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 17.5,
+        "mode_s": 25,
+        "max_s": 32.5
+      },
+      "manual_labor_s": 25
+    },
+    {
+      "operation_id": "P20",
+      "operation": "Проверка соответствия размещения",
+      "scope": "pallet",
+      "primary_resource": "wms_operator",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Сверка полученного подтверждения с ожидаемым; не дублирует физическую установку",
+      "base_mode_s": 15,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 10.5,
+        "mode_s": 15,
+        "max_s": 19.5
+      },
+      "manual_labor_s": 15
+    },
+    {
+      "operation_id": "P21",
+      "operation": "Обработка расхождения размещения",
+      "scope": "pallet_if_discrepancy",
+      "primary_resource": "wms_operator",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Только при расхождении, все повторные реальные операции учитываются отдельно",
+      "base_mode_s": 120,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 84.0,
+        "mode_s": 120,
+        "max_s": 156.0
+      },
+      "manual_labor_s": 120
+    },
+    {
+      "operation_id": "P22",
+      "operation": "Консолидация полного поступления",
+      "scope": "case",
+      "primary_resource": "wms_operator",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "25 с содержательной проверки + 65 с сбора результатов; M3 не удаляет проверку состава",
+      "base_mode_s": 90,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 63.0,
+        "mode_s": 90,
+        "max_s": 117.0
+      },
+      "manual_labor_s": 90
+    },
+    {
+      "operation_id": "P23",
+      "operation": "Подготовка итоговых документов",
+      "scope": "case",
+      "primary_resource": "wms_operator",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "20 с просмотра/подписания + 40 с подготовки; периодический отчёт исключён",
+      "base_mode_s": 60,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 42.0,
+        "mode_s": 60,
+        "max_s": 78.0
+      },
+      "manual_labor_s": 60
+    },
+    {
+      "operation_id": "P24",
+      "operation": "Передача и подтверждение итоговых сведений",
+      "scope": "case",
+      "primary_resource": "wms_operator",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "15 с проверки + 30 с передачи/контроля ответа; интеграция не отменяет ACK",
+      "base_mode_s": 45,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 31.5,
+        "mode_s": 45,
+        "max_s": 58.5
+      },
+      "manual_labor_s": 45
+    },
+    {
+      "operation_id": "P25",
+      "operation": "Фиксация закрытия поступления",
+      "scope": "case",
+      "primary_resource": "wms_operator",
+      "baseline_rule": "manual",
+      "origin": "NEW_SCENARIO_ASSUMPTION",
+      "description": "Окончательная сверка стандартного исхода; M3 не закрывает незавершённое поступление",
+      "base_mode_s": 25,
+      "duration_distribution": {
+        "name": "triangular",
+        "min_s": 17.5,
+        "mode_s": 25,
+        "max_s": 32.5
+      },
+      "manual_labor_s": 25
+    }
+  ]
+}

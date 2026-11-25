@@ -1,0 +1,32 @@
+{
+  "run_id": "S1-L2-1009-C",
+  "status": "PASS",
+  "lines_processed": 97795,
+  "operations": {
+    "outbound": 11095,
+    "preparation_released": 744,
+    "preparation_started": 744,
+    "physical_arrival": 12164,
+    "physical_buffer": 11682,
+    "observation_received": 12164,
+    "register": 11682,
+    "reserve_and_start": 11855,
+    "physical_move_end": 11855,
+    "confirm_place": 11855,
+    "preparation_completed": 744,
+    "scanner_miss": 123,
+    "external_release": 615,
+    "identity_exception": 63,
+    "unfilled_outbound": 410
+  },
+  "first_findings": [],
+  "complete": true,
+  "counts": {
+    "duplicate_receipts": 0,
+    "illegal_moves": 0,
+    "illegal_release": 0,
+    "negative_stock": 0
+  },
+  "input_hash": "ce0846c9a3806225b49242c2f632c227ded380a86a551c604704cc5f09a98561",
+  "log_sha256": "0392ed10525990d06aa07fa4eda3b6a1f19f13db68eb7e512408fe5fe39695d5"
+}

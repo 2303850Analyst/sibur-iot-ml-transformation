@@ -1,0 +1,16 @@
+ Container wms-inbound-research-odoo-run-1ee2c9db5762 Creating 
+ Container wms-inbound-research-odoo-run-1ee2c9db5762 Created 
+2026-11-18 19:13:18,921 1 INFO ? odoo: Odoo version 19.0-20261112 
+2026-11-18 19:13:18,922 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-11-18 19:13:18,922 1 INFO ? odoo: addons paths: _NamespacePath(['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/19.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/addons']) 
+2026-11-18 19:13:18,922 1 INFO ? odoo: database: odoo@db:5432 
+2026-11-18 19:13:19,151 1 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-18 19:13:19,151 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-18 19:13:19,174 1 INFO wms_reference odoo.modules.loading: loading 1 modules... 
+2026-11-18 19:13:19,176 1 INFO wms_reference odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-18 19:13:19,184 1 WARNING wms_reference odoo.modules.module: Missing `author` key in manifest for 'wms_research', defaulting to '' 
+2026-11-18 19:13:19,187 1 INFO wms_reference odoo.modules.loading: loading 41 modules... 
+2026-11-18 19:13:19,590 1 INFO wms_reference odoo.modules.loading: 41 modules loaded in 0.40s, 0 queries (+0 extra) 
+2026-11-18 19:13:19,666 1 INFO wms_reference odoo.modules.loading: Modules loaded. 
+2026-11-18 19:13:19,693 1 INFO wms_reference odoo.registry: Registry loaded in 0.541s 
+Seed verified: 6 expected pallets

@@ -1,0 +1,114 @@
+[
+  {
+    "case": "TRIAL-0000",
+    "planned": 20,
+    "cohort": false,
+    "end": 25.610596700003953,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0001",
+    "planned": 50,
+    "cohort": false,
+    "end": 55.09188649999851,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0002",
+    "planned": 80,
+    "cohort": true,
+    "end": 85.07342300000892,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0003",
+    "planned": 110,
+    "cohort": true,
+    "end": 115.19689210000797,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0004",
+    "planned": 140,
+    "cohort": true,
+    "end": 145.04266439999628,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0005",
+    "planned": 170,
+    "cohort": true,
+    "end": 175.13658150000265,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0006",
+    "planned": 200,
+    "cohort": true,
+    "end": 204.91686070000287,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0007",
+    "planned": 230,
+    "cohort": true,
+    "end": 235.14096839999547,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0008",
+    "planned": 260,
+    "cohort": false,
+    "end": 265.0810205000016,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0009",
+    "planned": 290,
+    "cohort": false,
+    "end": 295.0335574000055,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0010",
+    "planned": 320,
+    "cohort": false,
+    "end": 325.1421185000072,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0011",
+    "planned": 350,
+    "cohort": false,
+    "end": 355.1020286999992,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0012",
+    "planned": 380,
+    "cohort": false,
+    "end": 385.1135268000071,
+    "outcome": "standard",
+    "error": null
+  },
+  {
+    "case": "TRIAL-0013",
+    "planned": 410,
+    "cohort": false,
+    "end": 415.0445636000077,
+    "outcome": "standard",
+    "error": null
+  }
+]

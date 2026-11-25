@@ -1,0 +1,74 @@
+name: wms-inbound-research
+services:
+  db:
+    image: ${PG_IMAGE:-postgres:16-alpine@sha256:81e77a4833487b8132fe4b00bedd39dc3f74b8641e387f19312a48f7de218c2e}
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?}
+      POSTGRES_DB: postgres
+    volumes: [db:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U odoo -d postgres']
+      interval: 2s
+      timeout: 2s
+      retries: 30
+  odoo:
+    image: ${ODOO_IMAGE:-odoo:19.0@sha256:49c9d2a9935f07f15e2404ce8649a84c4f0d4e70a880f7209ad27a19ab415f77}
+    depends_on:
+      db: {condition: service_healthy}
+    environment:
+      HOST: db
+      USER: odoo
+      PASSWORD: ${DB_PASSWORD:?}
+      TSD_PASSWORD: ${TSD_PASSWORD:?}
+      GATEWAY_PASSWORD: ${GATEWAY_PASSWORD:?}
+      QUALITY_PASSWORD: ${QUALITY_PASSWORD:?}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?}
+    command: [odoo, '-d', wms_reference, '--db-filter=^wms_reference$', '--no-database-list', '--workers=2', '--max-cron-threads=0']
+    ports: ['127.0.0.1:18069:8069']
+    volumes:
+      - odoo:/var/lib/odoo
+      - ./odoo_addons:/mnt/extra-addons:ro
+      - ./scripts:/lab/scripts:ro
+      - ./artifacts/replay:/lab/replay
+      - ./odoo.conf:/etc/odoo/odoo.conf:ro
+  broker:
+    image: ${MQTT_IMAGE:-eclipse-mosquitto:2@sha256:fa12172a051310efe5bcb7a6a11b77bd5faacb82cbacd7742aa758bf024fd8e4}
+    ports: ['127.0.0.1:18883:1883']
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - mqtt:/mosquitto/data
+  runner:
+    image: wms-inbound-research-runner:py312-v1
+    build:
+      context: .
+      target: runner
+    volumes: ['.:/lab']
+    environment:
+      ODOO_URL: http://odoo:8069
+      MQTT_HOST: broker
+      TSD_PASSWORD: ${TSD_PASSWORD:?}
+      QUALITY_PASSWORD: ${QUALITY_PASSWORD:?}
+      OMP_NUM_THREADS: 1
+      OPENBLAS_NUM_THREADS: 1
+    profiles: [tools]
+  gateway:
+    image: wms-inbound-research-gateway:py312-v1
+    build:
+      context: .
+      target: gateway
+    environment:
+      ODOO_URL: http://odoo:8069
+      MQTT_HOST: broker
+      GATEWAY_PASSWORD: ${GATEWAY_PASSWORD:?}
+      PYTHONUNBUFFERED: 1
+    command: [python, scripts/gateway.py]
+    volumes:
+      - ./scripts:/lab/scripts:ro
+      - gateway:/lab/outbox
+    depends_on: [broker, odoo]
+volumes:
+  db:
+  odoo:
+  mqtt:
+  gateway:

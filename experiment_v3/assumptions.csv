@@ -1,0 +1,8 @@
+﻿parameter,value,unit,origin
+initial_fill,0.70; S5 0.95,fraction,LEGACY_SCENARIO
+shared_quality,day/original SKU/source batch,object key,NEW_SCENARIO_ASSUMPTION
+nonconformity,0.005; S5 0.02,probability per quality object,NEW_SCENARIO_ASSUMPTION
+physical_arrival,ready+30,s,NEW_SCENARIO_ASSUMPTION
+source_directions,WEPAStacks delivery/retrieval,one pallet,SOURCE_DATA
+baseline,"WMS and handheld scanners; no fixed sensors, end-to-end automation or ML",configuration,USER_ASSUMPTION
+actual_SIBUR_resource_rates,unknown,RUB/h,UNKNOWN

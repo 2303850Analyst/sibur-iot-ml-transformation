@@ -1,0 +1,8 @@
+id,claim,evidence,source_key,formula,limit
+H1,Ограниченная задержка регистрации,SIMULATION,hypotheses.json:H1,"mean(A-B), cap 600 s",S1/L1
+H2,Ограниченное первичное размещение,SIMULATION,hypotheses.json:H2,"mean(B-C), cap 86400 s",S1/L2; просрочка подготовки
+RQ3,Устойчивость очереди и буфера,SIMULATION,summary_54.csv:S1–S6/L1–L3,"mean by architecture, scenario and level",условная модель
+RQ4,Порог CAPEX,FINANCIAL_SCENARIO,economics.csv:S1/L1,PV(cash benefits)-PV(OPEX),только сопоставимая работа
+INT,Транзакции референсной WMS,ODOO_INTEGRATION,integration_results.json:cases,Odoo picking + stock quants + audit,не является валидацией 1080 запусков
+REPLAY,Сверка 54 выборок по 50 паллет,ODOO_INTEGRATION,replay/verification.json:counts,native stock records + compare canonical sequence,фоновые остатки из журнала модели
+HTTP,Фактическая HTTP-нагрузка хоста,API_BENCHMARK,api_benchmark/status.json:levels,Locust measured counts and all-request P95,не является пропускной способностью склада

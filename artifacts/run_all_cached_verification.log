@@ -1,0 +1,104 @@
+ Container wms-inbound-research-broker-1 Recreate 
+ Container wms-inbound-research-db-1 Recreate 
+ Container wms-inbound-research-broker-1 Recreated 
+ Container wms-inbound-research-db-1 Recreated 
+ Container wms-inbound-research-broker-1 Starting 
+ Container wms-inbound-research-db-1 Starting 
+ Container wms-inbound-research-db-1 Started 
+ Container wms-inbound-research-broker-1 Started 
+ Container wms-inbound-research-db-1 Waiting 
+ Container wms-inbound-research-broker-1 Waiting 
+ Container wms-inbound-research-broker-1 Healthy 
+ Container wms-inbound-research-db-1 Healthy 
+ Container wms-inbound-research-odoo-1 Stopping 
+ Container wms-inbound-research-odoo-1 Stopped 
+ Container wms-inbound-research-broker-1 Running 
+ Container wms-inbound-research-db-1 Running 
+ Container wms-inbound-research-odoo-1 Recreate 
+ Container wms-inbound-research-odoo-1 Recreated 
+ Container wms-inbound-research-gateway-1 Recreate 
+ Container wms-inbound-research-gateway-1 Recreated 
+ Container wms-inbound-research-db-1 Waiting 
+ Container wms-inbound-research-db-1 Healthy 
+ Container wms-inbound-research-odoo-1 Starting 
+ Container wms-inbound-research-odoo-1 Started 
+ Container wms-inbound-research-gateway-1 Starting 
+ Container wms-inbound-research-gateway-1 Started 
+Odoo Server 19.0-20261112
+postgres (PostgreSQL) 16.16
+1795029206: mosquitto version 2.1.4 terminating
+mosquitto version 2.1.4
+ Container wms-inbound-research-runner-run-d66cd6938961 Creating 
+ Container wms-inbound-research-runner-run-d66cd6938961 Created 
+......                                                                   [100%]
+6 passed in 43.63s
+ Container wms-inbound-research-runner-run-ceafcd292788 Creating 
+ Container wms-inbound-research-runner-run-ceafcd292788 Created 
+18/1080 complete
+36/1080 complete
+54/1080 complete
+72/1080 complete
+90/1080 complete
+108/1080 complete
+126/1080 complete
+144/1080 complete
+162/1080 complete
+180/1080 complete
+198/1080 complete
+216/1080 complete
+234/1080 complete
+252/1080 complete
+270/1080 complete
+288/1080 complete
+306/1080 complete
+324/1080 complete
+342/1080 complete
+360/1080 complete
+378/1080 complete
+396/1080 complete
+414/1080 complete
+432/1080 complete
+450/1080 complete
+468/1080 complete
+486/1080 complete
+504/1080 complete
+522/1080 complete
+540/1080 complete
+558/1080 complete
+576/1080 complete
+594/1080 complete
+612/1080 complete
+630/1080 complete
+648/1080 complete
+666/1080 complete
+684/1080 complete
+702/1080 complete
+720/1080 complete
+738/1080 complete
+756/1080 complete
+774/1080 complete
+792/1080 complete
+810/1080 complete
+828/1080 complete
+846/1080 complete
+864/1080 complete
+882/1080 complete
+900/1080 complete
+918/1080 complete
+936/1080 complete
+954/1080 complete
+972/1080 complete
+990/1080 complete
+1008/1080 complete
+1026/1080 complete
+1044/1080 complete
+1062/1080 complete
+1080/1080 complete
+ Container wms-inbound-research-runner-run-989ad9dc1117 Creating 
+ Container wms-inbound-research-runner-run-989ad9dc1117 Created 
+ Container wms-inbound-research-runner-run-1c278fd0cd52 Creating 
+ Container wms-inbound-research-runner-run-1c278fd0cd52 Created 
+ Container wms-inbound-research-runner-run-b4f3c7072f64 Creating 
+ Container wms-inbound-research-runner-run-b4f3c7072f64 Created 
+ Container wms-inbound-research-runner-run-76282d7d942a Creating 
+ Container wms-inbound-research-runner-run-76282d7d942a Created 

@@ -1,0 +1,41 @@
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\i\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\process.py", line 254, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\src\run_matrix.py", line 77, in pair
+    simulation.save(folder, meta)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\src\simulator.py", line 449, in save
+    target.write((json.dumps(dict(evidence='SIMULATION', **record), separators=(',', ':'), sort_keys=True) + '\n').encode())
+                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\i\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\i\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\i\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\i\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type bool is not JSON serializable
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\src\run_matrix.py", line 159, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\src\run_matrix.py", line 145, in main
+    rows.extend(job.result())
+                ~~~~~~~~~~^^
+  File "C:\Users\i\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 453, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\i\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 402, in __get_result
+    raise self._exception
+TypeError: Object of type bool is not JSON serializable

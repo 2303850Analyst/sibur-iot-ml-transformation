@@ -1,0 +1,102 @@
+[
+  {
+    "role": "production",
+    "index": 0,
+    "logged_in": 0.5650737999967532
+  },
+  {
+    "role": "production",
+    "index": 1,
+    "logged_in": 1.4352311999973608
+  },
+  {
+    "role": "operator",
+    "index": 0,
+    "logged_in": 2.401216600002954
+  },
+  {
+    "role": "operator",
+    "index": 1,
+    "logged_in": 3.40813490000437
+  },
+  {
+    "role": "operator",
+    "index": 2,
+    "logged_in": 4.405176300002495
+  },
+  {
+    "role": "operator",
+    "index": 3,
+    "logged_in": 5.387110299998312
+  },
+  {
+    "role": "operator",
+    "index": 4,
+    "logged_in": 6.395500400001765
+  },
+  {
+    "role": "operator",
+    "index": 5,
+    "logged_in": 7.425782400008757
+  },
+  {
+    "role": "driver",
+    "index": 0,
+    "logged_in": 8.416169100004481
+  },
+  {
+    "role": "driver",
+    "index": 1,
+    "logged_in": 9.372316599998157
+  },
+  {
+    "role": "driver",
+    "index": 2,
+    "logged_in": 10.355595700006234
+  },
+  {
+    "role": "driver",
+    "index": 3,
+    "logged_in": 11.343031900003552
+  },
+  {
+    "role": "quality",
+    "index": 0,
+    "logged_in": 12.38847980000719
+  },
+  {
+    "role": "quality",
+    "index": 1,
+    "logged_in": 13.459554900007788
+  },
+  {
+    "role": "dispatch",
+    "index": 0,
+    "logged_in": 14.420461700006854
+  },
+  {
+    "role": "dispatch",
+    "index": 1,
+    "logged_in": 15.397544499996002
+  },
+  {
+    "role": "closing",
+    "index": 0,
+    "logged_in": 16.378754500008654
+  },
+  {
+    "role": "closing",
+    "index": 1,
+    "logged_in": 17.369660399999702
+  },
+  {
+    "role": "supervisor",
+    "index": 0,
+    "logged_in": 18.399265700005344
+  },
+  {
+    "role": "supervisor",
+    "index": 1,
+    "logged_in": 19.3684118000092
+  }
+]

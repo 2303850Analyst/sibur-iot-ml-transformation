@@ -1,0 +1,4 @@
+ Container wms-inbound-research-odoo-run-c9c222e681a4 Creating 
+ Container wms-inbound-research-odoo-run-c9c222e681a4 Created 
+2026-11-19 11:14:49,030 1 WARNING wms_reference odoo.modules.module: Missing `author` key in manifest for 'wms_research', defaulting to '' 
+Benchmark fixture committed: 3 snapshots of 131 expected pallets (BENCH-V2-202611191414467050)

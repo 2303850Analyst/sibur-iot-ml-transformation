@@ -1,0 +1,26 @@
+﻿operation_id,operation,scope,resource,base_rule,mode_s,min_s,max_s,origin,notes
+P01,Формирование и передача основания,case,production_clerk,manual,90,63.0,117.0,NEW_SCENARIO_ASSUMPTION,"Проверка готовности, оформление основания, уведомление; M1 сохраняет человеческое подтверждение"
+P02,Приём и идентификация грузовой единицы,pallet,receiver,manual,35,24.5,45.5,NEW_SCENARIO_ASSUMPTION,20 с физической сверки + 15 с ручного считывания; M5 автоматизирует только идентификацию
+P03,Сверка комплектности документов,case,receiver,manual,90,63.0,117.0,NEW_SCENARIO_ASSUMPTION,"Сопоставление состава, реквизитов и факта; при дефекте дополнительная ветка"
+P04,Оформление результата приёмки,case,receiver,manual,60,42.0,78.0,NEW_SCENARIO_ASSUMPTION,"Контроль результатов и создание акта, без второй проводки"
+P05,Передача сведений участникам,case,receiver,manual,35,24.5,45.5,NEW_SCENARIO_ASSUMPTION,"Фиксация и передача, учитывает фактическое подтверждение"
+P06,Идентификация объекта качества,quality_case,quality_inspector,manual,35,24.5,45.5,NEW_SCENARIO_ASSUMPTION,"Один раз на объект качества, не на каждую паллету"
+P07,Обязательная проверка качества,quality_case_if_required,quality_inspector,quality_split,900,630.0,1170.0,NEW_SCENARIO_ASSUMPTION,900 с календарной длительности: 180 с активного труда инспектора и 720 с внешней/лабораторной части; ранее действительное решение: шаг НЕ ПРИМЕНИМ
+P08,Принятие решения качества,quality_case,quality_inspector,manual,45,31.5,58.5,NEW_SCENARIO_ASSUMPTION,Решение уполномоченного; M2 его не ускоряет
+P09,Регистрация и доведение статуса качества,quality_case,quality_inspector,manual,40,28.0,52.0,NEW_SCENARIO_ASSUMPTION,10 с проверки решения + 30 с передачи; M2 не снимает право решения
+P10,Временное размещение под ограничением,pallet_if_hold,forklift_driver,forklift_route,dynamic,,,NEW_SCENARIO_ASSUMPTION,"Та же физическая формула, что P18: 180 с обработки + порожний и гружёный путь/1 м/с, один водитель на машину"
+P11,Разбор несоответствия качества,quality_case_if_nonconformance,quality_inspector,manual,120,84.0,156.0,NEW_SCENARIO_ASSUMPTION,"Только при действительном несоответствии, подтверждённый исход"
+P12,Подготовка данных WMS,case,wms_operator,manual,75,52.5,97.5,NEW_SCENARIO_ASSUMPTION,30 с содержательной проверки + 45 с сборки/переноса данных
+P13,Создание записи WMS,case,wms_operator,manual,65,45.5,84.5,NEW_SCENARIO_ASSUMPTION,15 с проверки объекта + 50 с ввода/подтверждения
+P14,Контроль корректности записи WMS,case,wms_operator,manual,55,38.5,71.5,NEW_SCENARIO_ASSUMPTION,Проверка по первичным данным; не отменять обязательные проверки при M3
+P15,Исправление ошибки и повторная проверка,case_if_error,wms_operator,manual,120,84.0,156.0,NEW_SCENARIO_ASSUMPTION,"Только если есть ошибка; вероятность задаётся внешним манифестом/правилом, а не желаемым эффектом"
+P16,Приходная запись и статус,pallet,wms_operator,manual,30,21.0,39.0,NEW_SCENARIO_ASSUMPTION,10 с содержательной сверки + 20 с действий ТСД/WMS на паллету
+P17,Выбор допустимого места и задания,pallet,wms_operator,manual,30,21.0,39.0,NEW_SCENARIO_ASSUMPTION,"Уже есть базовая адресация WMS; оставлено ручное подтверждение/коррекция, M4 меняет политику"
+P18,Перемещение с погрузчиком,pallet,forklift_driver,forklift_route,dynamic,,,NEW_SCENARIO_ASSUMPTION,"180 с обработки + порожний и гружёный путь / 1 м/с; полная занятость одного водителя, техника та же во всех масках"
+P19,Установка и ТСД-подтверждение,pallet,forklift_driver,manual,25,17.5,32.5,NEW_SCENARIO_ASSUMPTION,"Физическое движение не повторяется: только завершающее подтверждение, водитель занят; техника зарезервирована, но не ведёт рабочий пробег"
+P20,Проверка соответствия размещения,pallet,wms_operator,manual,15,10.5,19.5,NEW_SCENARIO_ASSUMPTION,Сверка полученного подтверждения с ожидаемым; не дублирует физическую установку
+P21,Обработка расхождения размещения,pallet_if_discrepancy,wms_operator,manual,120,84.0,156.0,NEW_SCENARIO_ASSUMPTION,"Только при расхождении, все повторные реальные операции учитываются отдельно"
+P22,Консолидация полного поступления,case,wms_operator,manual,90,63.0,117.0,NEW_SCENARIO_ASSUMPTION,25 с содержательной проверки + 65 с сбора результатов; M3 не удаляет проверку состава
+P23,Подготовка итоговых документов,case,wms_operator,manual,60,42.0,78.0,NEW_SCENARIO_ASSUMPTION,20 с просмотра/подписания + 40 с подготовки; периодический отчёт исключён
+P24,Передача и подтверждение итоговых сведений,case,wms_operator,manual,45,31.5,58.5,NEW_SCENARIO_ASSUMPTION,15 с проверки + 30 с передачи/контроля ответа; интеграция не отменяет ACK
+P25,Фиксация закрытия поступления,case,wms_operator,manual,25,17.5,32.5,NEW_SCENARIO_ASSUMPTION,Окончательная сверка стандартного исхода; M3 не закрывает незавершённое поступление

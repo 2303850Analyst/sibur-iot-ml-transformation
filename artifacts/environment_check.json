@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-18T21:10:15.6160786+03:00",
+  "cpu_logical": 16,
+  "docker_server_authorized": true,
+  "compose": "Docker Compose version v5.1.4",
+  "github_status": "403",
+  "docker": "29.6.1",
+  "python_host": "Python 3.13.14",
+  "ram_bytes": 34128023552,
+  "free_bytes": 1072703049728,
+  "os": "Microsoft Windows 10.0.19045"
+}

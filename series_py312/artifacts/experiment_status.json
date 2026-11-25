@@ -1,0 +1,15 @@
+{
+  "technical_status": "FULL_PASS",
+  "expected_runs": 1080,
+  "completed_runs": 1080,
+  "data_status": "WEPASTACKS_ADAPTED",
+  "integration": "PASS_DEMO_AND_RESTART",
+  "replay_54": "PASS_PROJECTED_REPLAY",
+  "completed_cells": 54,
+  "c_runs": 360,
+  "replay_cases": 54,
+  "replay_verified": true,
+  "benchmark": "PASS",
+  "live_concurrency": "PASS",
+  "reproducibility": "PASS"
+}

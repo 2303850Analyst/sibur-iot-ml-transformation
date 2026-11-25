@@ -1,0 +1,47 @@
+{
+  "all_metrics_equal": true,
+  "events_sha256": "8bf60e44fa3de1b0ffe79d9459a8b815fdbbf56d9a3f01711e5e518f1ffa2b2f",
+  "fingerprint": "091ee88c7c1d9707b8168c4842e261b2ffa9612912f77f6a1007ca1d2dbc024c",
+  "initial_sha256": "63222d72f3a2eacfc63258ffb43d94f737bcec98f40ea83afa5e71cbb5ff2312",
+  "input_hash": "ece1ff27a21b55049782cae21bae069733757e10b864c61530e785c0dcc61aa9",
+  "manifest_sha256": "bc745bb110924e7723258022c1791ce0b0356a654698577cb7f37adcfe3a5bd4",
+  "metrics_count": 43,
+  "original_artifacts": {
+    "day_map.csv": {
+      "manifest": "cf62a0f3cf8a84e2721dd0406431a19875e230b9c57b898c5ff7a147681680b6",
+      "original": "cf62a0f3cf8a84e2721dd0406431a19875e230b9c57b898c5ff7a147681680b6",
+      "replay": "cf62a0f3cf8a84e2721dd0406431a19875e230b9c57b898c5ff7a147681680b6"
+    },
+    "decisions.parquet": {
+      "manifest": "0567f63e537e5805c9cda99f8c2812d16c4e23f95ebee827f594c63de13a3d11",
+      "original": "0567f63e537e5805c9cda99f8c2812d16c4e23f95ebee827f594c63de13a3d11",
+      "replay": "0567f63e537e5805c9cda99f8c2812d16c4e23f95ebee827f594c63de13a3d11"
+    },
+    "events.jsonl.gz": {
+      "manifest": "8bf60e44fa3de1b0ffe79d9459a8b815fdbbf56d9a3f01711e5e518f1ffa2b2f",
+      "original": "8bf60e44fa3de1b0ffe79d9459a8b815fdbbf56d9a3f01711e5e518f1ffa2b2f",
+      "replay": "8bf60e44fa3de1b0ffe79d9459a8b815fdbbf56d9a3f01711e5e518f1ffa2b2f"
+    },
+    "forecast.parquet": {
+      "manifest": "71faadf431148ecd1ee304b6f475cbc55194dc0e9a226c23ae9b39b578d66645",
+      "original": "71faadf431148ecd1ee304b6f475cbc55194dc0e9a226c23ae9b39b578d66645",
+      "replay": "71faadf431148ecd1ee304b6f475cbc55194dc0e9a226c23ae9b39b578d66645"
+    },
+    "pallets.parquet": {
+      "manifest": "a6539b236a611e33c443fae084800f5e595231de75be0329ab62406b660a24f5",
+      "original": "a6539b236a611e33c443fae084800f5e595231de75be0329ab62406b660a24f5",
+      "replay": "a6539b236a611e33c443fae084800f5e595231de75be0329ab62406b660a24f5"
+    },
+    "preparation.parquet": {
+      "manifest": "165b6445d91679f25eacbbd770e3bac076b138156150aa205d0ddd242965e640",
+      "original": "165b6445d91679f25eacbbd770e3bac076b138156150aa205d0ddd242965e640",
+      "replay": "165b6445d91679f25eacbbd770e3bac076b138156150aa205d0ddd242965e640"
+    },
+    "queue.parquet": {
+      "manifest": "577ac4cfd7f74510e9fdf8931410e48dacb09cc2f0d571f119608b0e9373bcc3",
+      "original": "577ac4cfd7f74510e9fdf8931410e48dacb09cc2f0d571f119608b0e9373bcc3",
+      "replay": "577ac4cfd7f74510e9fdf8931410e48dacb09cc2f0d571f119608b0e9373bcc3"
+    }
+  },
+  "run_id": "S1-L2-1000-C"
+}

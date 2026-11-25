@@ -1,0 +1,61 @@
+name: wms-inbound-v3
+services:
+  db:
+    image: postgres:16-alpine@sha256:81e77a4833487b8132fe4b00bedd39dc3f74b8641e387f19312a48f7de218c2e
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?}
+    volumes: [v3db:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U odoo -d postgres]
+      interval: 2s
+      timeout: 3s
+      retries: 40
+  odoo:
+    image: odoo:19.0@sha256:49c9d2a9935f07f15e2404ce8649a84c4f0d4e70a880f7209ad27a19ab415f77
+    depends_on:
+      db: {condition: service_healthy}
+    environment:
+      HOST: db
+      USER: odoo
+      PASSWORD: ${DB_PASSWORD:?}
+      TSD_PASSWORD: ${TSD_PASSWORD:?}
+    command: [odoo, -d, wms_v3, '--db-filter=^wms_v3$', --no-database-list, '--workers=2', '--max-cron-threads=0', '--addons-path=/mnt/legacy,/mnt/extra-addons']
+    networks: [default, access]
+    ports: ['127.0.0.1:18079:8069']
+    volumes:
+      - v3odoo:/var/lib/odoo
+      - ../odoo_addons:/mnt/legacy:ro
+      - ./odoo_addons:/mnt/extra-addons:ro
+      - ./live:/lab:ro
+  trial:
+    profiles: [trial]
+    image: odoo:19.0@sha256:49c9d2a9935f07f15e2404ce8649a84c4f0d4e70a880f7209ad27a19ab415f77
+    depends_on:
+      db: {condition: service_healthy}
+    environment:
+      HOST: db
+      USER: odoo
+      PASSWORD: ${DB_PASSWORD:?}
+      TSD_PASSWORD: ${TSD_PASSWORD:?}
+    command: [odoo, -d, wms_v3_trial, '--db-filter=^wms_v3_trial$', --no-database-list, '--workers=2', '--max-cron-threads=0', '--addons-path=/mnt/legacy,/mnt/extra-addons']
+    networks: [default, access]
+    ports: ['127.0.0.1:18080:8069']
+    volumes:
+      - v3trial:/var/lib/odoo
+      - ../odoo_addons:/mnt/legacy:ro
+      - ./odoo_addons:/mnt/extra-addons:ro
+      - ./live:/lab:ro
+  broker:
+    image: eclipse-mosquitto:2@sha256:fa12172a051310efe5bcb7a6a11b77bd5faacb82cbacd7742aa758bf024fd8e4
+    volumes: ['../mosquitto.conf:/mosquitto/config/mosquitto.conf:ro']
+    networks: [default, access]
+    ports: ['127.0.0.1:18893:1883']
+networks:
+  default: {internal: true}
+  access: {}
+volumes:
+  v3db:
+  v3odoo:
+
+  v3trial:

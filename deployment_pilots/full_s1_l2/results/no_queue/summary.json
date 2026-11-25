@@ -1,0 +1,231 @@
+{
+  "design": {
+    "input_sha256": "22a015e49ea5c42bb507bd4c629e4bbbd72b6a8ce97cf3f06d4d554473485245",
+    "seed": 20261121,
+    "scenario": "S1",
+    "load": "L2",
+    "work_factors": "Common per-object setup and fatigue from R0, completed by R0_recheck and within-step medians.",
+    "travel": "Common per-pallet empty and loaded legs from matched baseline trips; within-route-class medians for unseen trips.",
+    "alternate": "R3_recorded uses full solution's own R3 and R3_recheck trip lengths and active-work factors, retaining the same zero-wait semantics.",
+    "queue": "All eligible requests served immediately; quality dates, arrivals, branch logic and precedence remain active."
+  },
+  "arms": {
+    "R0": {
+      "cases": 2315,
+      "pallets": 11351,
+      "closed": 2287,
+      "quality_rejected": 28,
+      "mean_closed_s": 2335.091738850981,
+      "mean_all_capped72_s": 5441.881126026866,
+      "median_closed_s": 2426.7342909951694,
+      "p90_closed_s": 3688.7288440948355,
+      "total_staff_h": 1633.0226871809512,
+      "staff_s_per_offered": 2539.4737252057985,
+      "work_s_per_offered": 2549.8106656112554,
+      "checks": 0,
+      "quarantine_trips": 422,
+      "regulated_quality_objects": 26,
+      "mean_hold_s_on_held": 6213.807568755617,
+      "max_resource_wait_s": 1.5279510989785194e-10,
+      "fallback_trip_counts": {
+        "matched": 11342,
+        "route_class_median": 297
+      },
+      "fallback_work": {
+        "10": 151
+      },
+      "extra_storage": {
+        "2": 30
+      },
+      "peak_lane": {
+        "B": 7,
+        "A": 9
+      },
+      "ledger_checks": {
+        "capacity": 12881,
+        "unique_receipt": 12881,
+        "reservation": 13196,
+        "quality_address": 13196,
+        "source": 13196,
+        "single_vehicle": 13196,
+        "balance": 13196,
+        "complete_document": 2593,
+        "positive_balance": 12813
+      }
+    },
+    "R1": {
+      "cases": 2315,
+      "pallets": 11351,
+      "closed": 2287,
+      "quality_rejected": 28,
+      "mean_closed_s": 2318.9556300648096,
+      "mean_all_capped72_s": 5425.940183999231,
+      "median_closed_s": 2415.7773656665813,
+      "p90_closed_s": 3680.7288440948355,
+      "total_staff_h": 1621.74868544484,
+      "staff_s_per_offered": 2521.9418002597945,
+      "work_s_per_offered": 2532.5787406652507,
+      "checks": 0,
+      "quarantine_trips": 423,
+      "regulated_quality_objects": 26,
+      "mean_hold_s_on_held": 6213.807568755617,
+      "max_resource_wait_s": 1.5279510989785194e-10,
+      "fallback_trip_counts": {
+        "matched": 11341,
+        "route_class_median": 299
+      },
+      "fallback_work": {
+        "10": 152
+      },
+      "extra_storage": {
+        "2": 30
+      },
+      "peak_lane": {
+        "B": 7,
+        "A": 8
+      },
+      "ledger_checks": {
+        "capacity": 12881,
+        "unique_receipt": 12881,
+        "reservation": 13197,
+        "quality_address": 13197,
+        "source": 13197,
+        "single_vehicle": 13197,
+        "balance": 13197,
+        "complete_document": 2593,
+        "positive_balance": 12813
+      }
+    },
+    "R2": {
+      "cases": 2315,
+      "pallets": 11351,
+      "closed": 2287,
+      "quality_rejected": 28,
+      "mean_closed_s": 2309.394972982794,
+      "mean_all_capped72_s": 5416.495163374364,
+      "median_closed_s": 2399.1501774948556,
+      "p90_closed_s": 3670.005278087594,
+      "total_staff_h": 1574.8600703656125,
+      "staff_s_per_offered": 2449.0264593158554,
+      "work_s_per_offered": 2476.218000153203,
+      "checks": 111,
+      "quarantine_trips": 423,
+      "regulated_quality_objects": 26,
+      "mean_hold_s_on_held": 6213.807568755617,
+      "max_resource_wait_s": 1.5279510989785194e-10,
+      "fallback_trip_counts": {
+        "matched": 11341,
+        "route_class_median": 299
+      },
+      "fallback_work": {
+        "26": 111,
+        "10": 152
+      },
+      "extra_storage": {
+        "2": 30
+      },
+      "peak_lane": {
+        "B": 7,
+        "A": 8
+      },
+      "ledger_checks": {
+        "capacity": 12881,
+        "unique_receipt": 12881,
+        "reservation": 13197,
+        "quality_address": 13197,
+        "source": 13197,
+        "single_vehicle": 13197,
+        "balance": 13197,
+        "complete_document": 2593,
+        "positive_balance": 12813
+      }
+    },
+    "R3": {
+      "cases": 2315,
+      "pallets": 11351,
+      "closed": 2287,
+      "quality_rejected": 28,
+      "mean_closed_s": 2309.394972982794,
+      "mean_all_capped72_s": 5416.495163374364,
+      "median_closed_s": 2399.1501774948556,
+      "p90_closed_s": 3670.005278087594,
+      "total_staff_h": 1574.8600703656125,
+      "staff_s_per_offered": 2449.0264593158554,
+      "work_s_per_offered": 2476.218000153188,
+      "checks": 111,
+      "quarantine_trips": 423,
+      "regulated_quality_objects": 26,
+      "mean_hold_s_on_held": 6213.807568755617,
+      "max_resource_wait_s": 1.5279510989785194e-10,
+      "fallback_trip_counts": {
+        "matched": 11341,
+        "route_class_median": 299
+      },
+      "fallback_work": {
+        "26": 111,
+        "10": 152
+      },
+      "extra_storage": {
+        "2": 30
+      },
+      "peak_lane": {
+        "B": 7,
+        "A": 8
+      },
+      "ledger_checks": {
+        "capacity": 12881,
+        "unique_receipt": 12881,
+        "reservation": 13197,
+        "quality_address": 13197,
+        "source": 13197,
+        "single_vehicle": 13197,
+        "balance": 13197,
+        "complete_document": 2593,
+        "positive_balance": 12813
+      }
+    },
+    "R3_recorded": {
+      "cases": 2315,
+      "pallets": 11351,
+      "closed": 2287,
+      "quality_rejected": 28,
+      "mean_closed_s": 2309.7782188176498,
+      "mean_all_capped72_s": 5416.87377383843,
+      "median_closed_s": 2410.049402003642,
+      "p90_closed_s": 3672.143662276538,
+      "total_staff_h": 1576.2007002696794,
+      "staff_s_per_offered": 2451.1112401601927,
+      "work_s_per_offered": 2478.3027809975247,
+      "checks": 111,
+      "quarantine_trips": 423,
+      "regulated_quality_objects": 26,
+      "mean_hold_s_on_held": 6213.807568755617,
+      "max_resource_wait_s": 1.5279510989785194e-10,
+      "fallback_trip_counts": {
+        "matched": 11339,
+        "route_class_median": 301
+      },
+      "fallback_work": {
+        "10": 153
+      },
+      "extra_storage": {
+        "2": 30
+      },
+      "peak_lane": {
+        "B": 7,
+        "A": 8
+      },
+      "ledger_checks": {
+        "capacity": 12881,
+        "unique_receipt": 12881,
+        "reservation": 13197,
+        "quality_address": 13197,
+        "source": 13197,
+        "single_vehicle": 13197,
+        "balance": 13197,
+        "complete_document": 2593,
+        "positive_balance": 12813
+      }
+    }
+  }
+}
