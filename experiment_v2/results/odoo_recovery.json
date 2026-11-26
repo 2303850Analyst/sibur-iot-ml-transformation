@@ -1,0 +1,1 @@
+{"status": "PASS", "event": "V2-b9258a60c36a-network", "audit": [[13898, "IOT", "presence", "applied", null, null, "V2-b9258a60c36a-network", "2026-11-19 11:13:37", "2026-11-19 11:13:37"]], "method": "network disconnected from gateway, two QoS1 messages during outage, reconnect and deduplication"}

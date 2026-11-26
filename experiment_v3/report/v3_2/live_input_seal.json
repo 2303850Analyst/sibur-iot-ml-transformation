@@ -1,0 +1,10 @@
+{
+  "status": "design_inputs_only",
+  "files": {
+    "design.json": "13ba89fa39a7da29a7b727722b4f2066addbb7d8d23579e97f82781d74049179",
+    "manifest.py": "2f310504b9c25df1976b02c38ffa2183fa920bf22e6b6266ea78a08dda4da1b5",
+    "input_hashes.csv": "417fd9350ef5f5d334c32e76e2be278540c5d37a6ab8604ccefc8ad7e9e51762",
+    "../design/execution/plans/B_LIVE_ODOO_CONTRACT.csv": "efe321f5d8479c9130a3312e5e3949b6f9fd592fd4a7ff67ee398c589796cec6",
+    "../design/execution/plans/C_LIVE_ODOO_STRESS.csv": "ed1a8b7153c3efbed1a8ec82a1c2242ff6ddc332c04728a364eef4f0df966d28"
+  }
+}

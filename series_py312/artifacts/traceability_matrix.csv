@@ -1,0 +1,19 @@
+scope,artifact,boundary,evidence
+Поступление,pallets.parquet; physical_arrival,"ожидаемый документ, наблюдение и физическое событие раздельно",SIMULATION
+Идентификация,events.jsonl.gz; integration_results.json,"ошибки этикетки, партии, недоставка, повтор",SIMULATION
+Буфер,queue.parquet,"физический предел, ожидание перед входом, учёт отдельно",SIMULATION
+Место,events.jsonl.gz; integration_results.json,"резерв, вместимость, группа и качество",SIMULATION
+Перемещение,pallets.parquet; integration_results.json,"рейс, подтверждение адреса, карантин и выпуск",SIMULATION
+KPI,runs.csv; paired_comparisons.csv,ограниченные метрики учитывают незавершённые паллеты,SIMULATION
+Ограниченный буфер,queue.parquet; S4,смоделировано,SIMULATION
+Нехватка допустимых мест,runs.csv; S5,смоделировано,SIMULATION
+Расхождение физической и учётной картины,queue.parquet; S3,смоделировано,SIMULATION
+Ручная регистрация,runs.csv; A/B,смоделировано,SIMULATION
+Ошибка этикетки или партии,events.jsonl.gz; S2,смоделировано,SIMULATION
+Нарушение связи и повторы,events.jsonl.gz; S3,смоделировано,SIMULATION
+Незапланированный пик и очередь,runs.csv; S6,смоделировано,SIMULATION
+Выпуск качества и карантин,pallets.parquet; S5,смоделировано,SIMULATION
+Компьютерное зрение,,вне опыта,SIMULATION
+Весовой контроль,,вне опыта,SIMULATION
+Промышленная интеграция с ERP/SAP,,вне опыта,SIMULATION
+Строительство и реальные потери,,вне опыта,SIMULATION

@@ -1,0 +1,50 @@
+{
+  "status": "PLAN_VALIDATED_NOT_EXECUTED",
+  "configs": 128,
+  "counts_by_size": {
+    "0": 1,
+    "1": 7,
+    "2": 21,
+    "3": 35,
+    "4": 35,
+    "5": 21,
+    "6": 7,
+    "7": 1
+  },
+  "modules": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M7"
+  ],
+  "all_combinations_with_ml": 64,
+  "operations": 25,
+  "live_user_count": 20,
+  "engines": {
+    "PROCESS_SIMULATION": {
+      "planned_runs": 46080,
+      "planned_with_ml": 23040,
+      "conditions": 2304,
+      "replications_each": 20,
+      "paired_input_blocks": 360,
+      "configs_per_input_block": 128,
+      "unique_ids": 46080,
+      "all_balanced": true
+    },
+    "LIVE_ODOO": {
+      "planned_runs": 6912,
+      "planned_with_ml": 3456,
+      "conditions": 2304,
+      "replications_each": 3,
+      "paired_input_blocks": 54,
+      "configs_per_input_block": 128,
+      "unique_ids": 6912,
+      "all_balanced": true
+    }
+  },
+  "protocol_sha256": "09e301d8f4c11ed3d0d83ae43fcc71f0f81a4794d9ff759d833c0b1630149b60",
+  "warning": "Validated only the planned coverage. No Odoo or simulation experiments were executed."
+}

@@ -1,0 +1,93 @@
+parameter,value,unit,origin,source,uncertainty
+evidence,"""SIMULATION""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+architectures,"[""A"", ""B"", ""C""]",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+loads.L1,300,pallets/day,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+loads.L2,450,pallets/day,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+loads.L3,900,pallets/day,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+seeds.first,1000,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+seeds.last,1019,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+simulation.warmup_days,1,days,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+simulation.study_days,30,days,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+simulation.drain_days,1,days,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+simulation.block_days,7,days,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+simulation.day_seconds,86400,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+scenarios.S1,"""NORMAL""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+scenarios.S2,"""IDENTIFICATION""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+scenarios.S3,"""COMMUNICATION""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+scenarios.S4,"""SMALL_BUFFER""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+scenarios.S5,"""STORAGE_CONSTRAINTS""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+scenarios.S6,"""UNANNOUNCED_BURST""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.sku_count,20,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.zones,2,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.normal_per_zone,2600,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.quarantine,129,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.buffer,40,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.initial_fill,0.7,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.constrained_fill,0.95,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.forklifts,2,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.operators,1,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.speed_mps,1,m/s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.handling_seconds,180,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.handling_cv,0.15,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+physical.verification_seconds,20,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+storage.group_0_m,"[40, 60]",m,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+storage.group_1_m,"[80, 100]",m,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+storage.quarantine_m,"[30, 40]",m,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+storage.hold,0.05,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+storage.hold_seconds,7200,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+storage.constrained_hold,0.2,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+storage.constrained_hold_seconds,86400,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+identification.baseline_bad_label,0.005,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+identification.stress_bad_label,0.05,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+identification.stress_wrong_record,0.02,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+identification.reoffer,0.1,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+identification.adjudication_seconds,120,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+network.daily_start_seconds,43200,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+network.duration_seconds,600,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+network.redelivery,0.1,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+network.reorder_seconds,30,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+dispatch.decision_seconds,300,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+dispatch.prediction_seconds,1800,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+dispatch.pressure,8,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+dispatch.prep_release_seconds,3600,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+dispatch.prep_labor_seconds,900,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+dispatch.prep_deadline_seconds,7200,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+forecast.loss,"""poisson""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+forecast.max_iter,100,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+forecast.max_leaf_nodes,15,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+forecast.learning_rate,0.05,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+forecast.l2_regularization,1.0,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+forecast.early_stopping,false,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+forecast.random_state,20261118,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+inference.bootstrap_seed,20261118,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+inference.repetitions,5000,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+inference.unit,"""paired_seed""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+inference.exploratory_ci,0.95,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+inference.primary_ci,0.975,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+primary.H1.scenario,"""S1""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+primary.H1.load,"""L1""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+primary.H1.subtraction,"""A-B""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+primary.H1.metric,"""registration_bounded_s""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+primary.H1.cap_seconds,600,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+primary.H2.scenario,"""S1""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+primary.H2.load,"""L2""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+primary.H2.subtraction,"""B-C""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+primary.H2.metric,"""placement_bounded_s""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+primary.H2.cap_seconds,86400,s,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+primary.H2.late_preparation_max_increase_pp,1,pp,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+economics.evidence,"""FINANCIAL_SCENARIO""",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+economics.wages_rub_per_hour.operator,650,RUB/hour,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+economics.wages_rub_per_hour.forklift_with_driver,1200,RUB/hour,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+economics.horizon_years,5,years,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+economics.discount,0.2,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+economics.ramp_year_1,0.6,unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+economics.k,"[0, 0.25, 0.5]",unspecified,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+economics.capex_rub,"[0, 500000, 1500000, 4500000]",RUB,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+economics.opex_rub_per_year,"[0, 100000, 400000, 1000000]",RUB/year,PROTOCOL_ASSUMPTION,01_EXPERIMENT_AGENT / frozen protocol.yaml,not calibrated to an operating site
+devices.manual_confirmation,"[8, 12, 20]",seconds,ASSUMPTION,01_EXPERIMENT_AGENT §7,triangular
+devices.automatic_scan,"[0.2, 0.5, 1]",seconds,ASSUMPTION,01_EXPERIMENT_AGENT §7,triangular
+devices.connection_latency,"[0.1, 0.3, 1]",seconds,ASSUMPTION,01_EXPERIMENT_AGENT §7,triangular
+devices.scan_miss,0.01,probability,ASSUMPTION,01_EXPERIMENT_AGENT §7,not_calibrated
+devices.scan_retry,2,seconds,ASSUMPTION,01_EXPERIMENT_AGENT §7,fixed
+devices.tsd_fallback,60,seconds,ASSUMPTION,01_EXPERIMENT_AGENT §7,fixed
+devices.presence_interval,30,seconds,ASSUMPTION,01_EXPERIMENT_AGENT §7,fixed

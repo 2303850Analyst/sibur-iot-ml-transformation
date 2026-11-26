@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_research_pallet_stock,research.pallet.read,model_wms_research_pallet,stock.group_stock_manager,1,0,0,0
+access_research_event_stock,research.event.read,model_wms_research_event,stock.group_stock_manager,1,0,0,0
+access_research_cell_stock,research.cell.read,model_wms_research_cell,stock.group_stock_manager,1,0,0,0

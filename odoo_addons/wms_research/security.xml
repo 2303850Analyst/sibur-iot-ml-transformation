@@ -1,0 +1,5 @@
+<odoo>
+    <record id="role_tsd" model="res.groups"><field name="name">Research TSD</field></record>
+    <record id="role_gateway" model="res.groups"><field name="name">Research IoT Gateway</field></record>
+    <record id="role_quality" model="res.groups"><field name="name">Research Quality</field></record>
+</odoo>

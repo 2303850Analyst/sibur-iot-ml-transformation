@@ -1,0 +1,15 @@
+claim_id,type,source,filter,formula,limitation
+ИСТ,SOURCE,https://sappro.sapland.ru/publications/tsiphrovoi-sklad-gotovoi-produktsii-opit-kompanii-sibur.html,публикация СИБУРа от 23.05.2017,год пилота и оборот из открытого описания,исторический оборот склада
+ДАН,SOURCE,series_py312/artifacts/data_audit.md и series_py312/data/manifests/wepastacks.json,2_orders.json без отсева для подсчёта событий,число строк по типу и длины периодов,относительное время внешнего склада
+ПРОТ,ASSUMPTION,series_py312/protocol.yaml и series_py312/src/simulator.py,physical storage dispatch inference primary и preview_policy,значения зафиксированной конфигурации и правила,сценарные ресурсы и пороги
+СЕР,MEASURED_SIMULATION,series_py312/artifacts/run_manifest.csv,все строки VALID,число run_id и групп scenario/level/architecture,общий fingerprint
+ГИП,MEASURED_SIMULATION,series_py312/artifacts/hypotheses.json,H1 и H2 включая prep_late_ci975_pp,парные средние A-B или B-C и квантили bootstrap по seed,доверительные интервалы условны относительно входного профиля
+ШТАТ,MEASURED_SIMULATION,series_py312/artifacts/summary_54.csv,S1 по level и architecture,средние registration_bounded_s placement_bounded_s register_60_share*100 forklift_utilization*100 unplaced_stop,уровни нагрузки номинальные
+СРАВ,MEASURED_SIMULATION,series_py312/artifacts/paired_comparisons.csv,все S/L для B-A и C-B,среднее по парным разностям и low95/high95,исследовательские контрасты
+БУФ,MEASURED_SIMULATION,series_py312/artifacts/summary_54.csv,L2 для S1 и S4,100*full_buffer_share округлено по A/B/C,доля времени в основном периоде
+ПРОГ,MEASURED_SIMULATION,series_py312/artifacts/source_forecast_accuracy.csv,load=L2 и partition=test,naive_MAE и ml_MAE,отложенная сверенная история
+РЕШ,MEASURED_SIMULATION,series_py312/artifacts/runs/S1-L2-1000-{B и C}/decisions.parquet и preparation.parquet,86400<=time_s или created_s<2678400 с обеими границами для каждого ряда,по time_s сравнить pressure>=8 у B/C и по task посчитать abs(started_s_B-started_s_C)>1,один повтор с обратной связью между решением и очередью
+ОДУ,MEASURED_SOFTWARE,artifacts/replay/verification.json и artifacts/api_concurrency.json и artifacts/integration_results.json,counts и verified_cases и after и cases,число selected_pallets/receive/place и суммы остатка по пакету,фоновой занятости соответствует проекция журнала
+СЕРВЕР,MEASURED_SOFTWARE,artifacts/api_benchmark/status.json,levels.users=20,http_requests и completed_pallets и http_errors за elapsed_s,только локальный сервер
+ЭКОН,CALCULATED_SCENARIO,series_py312/artifacts/economics.csv и series_py312/protocol.yaml,S1/L1 contrast B-A и C-B,active hours times rates / completed placements и разница затрат / 30,comparable=False и пороги пусты
+КОНТРОЛЬ,INTERPRETATION,series_py312/src/simulator.py и series_py312/artifacts/diagnostics.json,metrics и driver и confirm и диагностические запуски,проверка реализации счётчиков и assert,константные нули не измеряют частоту нарушений

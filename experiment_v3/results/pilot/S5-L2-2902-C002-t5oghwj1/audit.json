@@ -1,0 +1,8 @@
+{
+  "events_checked": 191689,
+  "primary_cases": 2377,
+  "max_buffer": 40,
+  "findings": {},
+  "examples": [],
+  "scope": "quantity one per pallet, stock by address, receipt, dispatch, authority, closure, primary T72"
+}

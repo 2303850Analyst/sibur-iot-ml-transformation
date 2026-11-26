@@ -1,0 +1,18 @@
+{
+  "files": {
+    "artifacts/models/L1.joblib": "1f4df794de31323916bb85f97b7d98f1a3e8dbcb7ebea7e3317afd933151a4ec",
+    "artifacts/models/L2.joblib": "c41c20029971566abdc13d25c08e41762f93ed20113d9dd365bd7d6c05879da5",
+    "artifacts/models/L3.joblib": "3ac9c7c42678e738e89a59995e152ca057759a90b39f65e48a0a7d2ca9832fb7",
+    "configs/device_profiles.yaml": "bf1a27fafd9da4865ec7dd062685124ea8501dbe4d510db285e54d63bbf38295",
+    "data/manifests/wepastacks.json": "432b302feb619ffaad2506a3241fac884ba14a98fa6d3db88d1a64763ef7fabe",
+    "data/normalized/source.parquet": "fa4c376d6567f4b2342b8f7c514202fd36cb784da478a1fb41bf536240e4a592",
+    "protocol.yaml": "2601058cfc586ea0ee94313336af4844d06b6aa245e555050710119bd5fbc12f",
+    "src/data.py": "d58b59fe38be448e88de724bba1c08f30a8e8b97ea7fc9154cdb8e199baa0a26",
+    "src/forecast.py": "e1462b27633ea3a14ab2e896a8e2fc80dae98f94e6cd09150623ab5f724181c6",
+    "src/run_matrix.py": "9d031aad9d66601dd807282dbce4e775e1d82960aff526df3e6f68553391c762",
+    "src/simulator.py": "d020c83be935d8f32d4d728c7f4876868fe981c2fca7cad258f3e551dab34ff2"
+  },
+  "fingerprint": "091ee88c7c1d9707b8168c4842e261b2ffa9612912f77f6a1007ca1d2dbc024c",
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "python": "3.12.16 (main, Nov  5 2026, 07:58:20) [GCC 14.2.0]"
+}

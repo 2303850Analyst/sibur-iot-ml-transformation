@@ -1,0 +1,158 @@
+name: wms-inbound-v3
+networks:
+  access:
+    name: wms-inbound-v3_access
+  default:
+    internal: true
+    name: wms-inbound-v3_default
+services:
+  broker:
+    image: eclipse-mosquitto:2@sha256:fa12172a051310efe5bcb7a6a11b77bd5faacb82cbacd7742aa758bf024fd8e4
+    networks:
+      access: null
+      default: null
+    ports:
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "18893"
+        target: 1883
+    volumes:
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\mosquitto.conf
+        target: /mosquitto/config/mosquitto.conf
+        type: bind
+  db:
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?}
+      POSTGRES_USER: odoo
+    healthcheck:
+      interval: 2s
+      retries: 40
+      test:
+        - CMD-SHELL
+        - pg_isready -U odoo -d postgres
+      timeout: 3s
+    image: postgres:16-alpine@sha256:81e77a4833487b8132fe4b00bedd39dc3f74b8641e387f19312a48f7de218c2e
+    networks:
+      default: null
+    volumes:
+      - source: v3db
+        target: /var/lib/postgresql/data
+        type: volume
+        volume: {}
+  odoo:
+    command:
+      - odoo
+      - -d
+      - wms_v3
+      - --db-filter=^wms_v3$
+      - --no-database-list
+      - --workers=2
+      - --max-cron-threads=0
+      - --addons-path=/mnt/legacy,/mnt/extra-addons
+    depends_on:
+      db:
+        condition: service_healthy
+        required: true
+    environment:
+      HOST: db
+      PASSWORD: ${DB_PASSWORD:?}
+      TSD_PASSWORD: ${TSD_PASSWORD:?}
+      USER: odoo
+    image: odoo:19.0@sha256:49c9d2a9935f07f15e2404ce8649a84c4f0d4e70a880f7209ad27a19ab415f77
+    networks:
+      access: null
+      default: null
+    ports:
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "18079"
+        target: 8069
+    volumes:
+      - source: v3odoo
+        target: /var/lib/odoo
+        type: volume
+        volume: {}
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\odoo_addons
+        target: /mnt/legacy
+        type: bind
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\experiment_v3\odoo_addons
+        target: /mnt/extra-addons
+        type: bind
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\experiment_v3\live
+        target: /lab
+        type: bind
+  trial:
+    command:
+      - odoo
+      - -d
+      - wms_v3_trial
+      - --db-filter=^wms_v3_trial$
+      - --no-database-list
+      - --workers=2
+      - --max-cron-threads=0
+      - --addons-path=/mnt/legacy,/mnt/extra-addons
+    depends_on:
+      db:
+        condition: service_healthy
+        required: true
+    environment:
+      HOST: db
+      PASSWORD: ${DB_PASSWORD:?}
+      TSD_PASSWORD: ${TSD_PASSWORD:?}
+      USER: odoo
+    image: odoo:19.0@sha256:49c9d2a9935f07f15e2404ce8649a84c4f0d4e70a880f7209ad27a19ab415f77
+    networks:
+      access: null
+      default: null
+    ports:
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "18080"
+        target: 8069
+    profiles:
+      - trial
+    volumes:
+      - source: v3trial
+        target: /var/lib/odoo
+        type: volume
+        volume: {}
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\odoo_addons
+        target: /mnt/legacy
+        type: bind
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\experiment_v3\odoo_addons
+        target: /mnt/extra-addons
+        type: bind
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\experiment_v3\live
+        target: /lab
+        type: bind
+volumes:
+  v3db:
+    name: wms-inbound-v3_v3db
+  v3odoo:
+    name: wms-inbound-v3_v3odoo
+  v3trial:
+    name: wms-inbound-v3_v3trial

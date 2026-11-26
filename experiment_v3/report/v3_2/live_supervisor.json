@@ -1,0 +1,5 @@
+{
+  "phase": "STOPPED_BY_USER",
+  "command": "live/continue.ps1",
+  "process_id": 0
+}

@@ -1,0 +1,24 @@
+{
+  "operating_profile": "local isolated Docker; reference experiment",
+  "images": {
+    "odoo": "sha256:49c9d2a9935f07f15e2404ce8649a84c4f0d4e70a880f7209ad27a19ab415f77",
+    "db": "sha256:81e77a4833487b8132fe4b00bedd39dc3f74b8641e387f19312a48f7de218c2e",
+    "broker": "sha256:fa12172a051310efe5bcb7a6a11b77bd5faacb82cbacd7742aa758bf024fd8e4"
+  },
+  "odoo": "Odoo Server 19.0-20261112",
+  "postgres": "postgres (PostgreSQL) 16.16",
+  "mosquitto": "mosquitto version 2.1.4",
+  "v2_archive_files_verified": 1724,
+  "source_rows": 405928,
+  "partitions": {
+    "train": 56,
+    "validation": 13,
+    "test": 17
+  },
+  "unresolved_references": [
+    "WMS_V2_REVIEW_20261119/REVIEW_RU.md",
+    "WMS_ASIS_STRATEGIC/ASIS_REPORT_RU.md"
+  ],
+  "design_sha256": "09e301d8f4c11ed3d0d83ae43fcc71f0f81a4794d9ff759d833c0b1630149b60",
+  "runtime_design_freeze": false
+}

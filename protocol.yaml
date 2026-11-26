@@ -1,0 +1,31 @@
+evidence: SIMULATION
+architectures: [A, B, C]
+loads: {L1: 300, L2: 450, L3: 900}
+seeds: {first: 1000, last: 1019}
+simulation: {warmup_days: 1, study_days: 30, drain_days: 1, block_days: 7, day_seconds: 86400}
+scenarios:
+  S1: NORMAL
+  S2: IDENTIFICATION
+  S3: COMMUNICATION
+  S4: SMALL_BUFFER
+  S5: STORAGE_CONSTRAINTS
+  S6: UNANNOUNCED_BURST
+physical: {sku_count: 20, zones: 2, normal_per_zone: 2600, quarantine: 129, buffer: 40, initial_fill: 0.70, constrained_fill: 0.95, forklifts: 2, operators: 1, speed_mps: 1, handling_seconds: 180, handling_cv: 0.15, verification_seconds: 20}
+storage: {group_0_m: [40, 60], group_1_m: [80, 100], quarantine_m: [30, 40], hold: 0.05, hold_seconds: 7200, constrained_hold: 0.20, constrained_hold_seconds: 86400}
+identification: {baseline_bad_label: 0.005, stress_bad_label: 0.05, stress_wrong_record: 0.02, reoffer: 0.10, adjudication_seconds: 120}
+network: {daily_start_seconds: 43200, duration_seconds: 600, redelivery: 0.10, reorder_seconds: 30}
+dispatch: {decision_seconds: 300, prediction_seconds: 1800, pressure: 8, prep_release_seconds: 3600, prep_labor_seconds: 900, prep_deadline_seconds: 7200}
+forecast: {loss: poisson, max_iter: 100, max_leaf_nodes: 15, learning_rate: 0.05, l2_regularization: 1.0, early_stopping: false, random_state: 20261118}
+inference: {bootstrap_seed: 20261118, repetitions: 5000, unit: paired_seed, exploratory_ci: 0.95, primary_ci: 0.975}
+primary:
+  H1: {scenario: S1, load: L1, subtraction: A-B, metric: registration_bounded_s, cap_seconds: 600}
+  H2: {scenario: S1, load: L2, subtraction: B-C, metric: placement_bounded_s, cap_seconds: 86400, late_preparation_max_increase_pp: 1}
+economics:
+  evidence: FINANCIAL_SCENARIO
+  wages_rub_per_hour: {operator: 650, forklift_with_driver: 1200}
+  horizon_years: 5
+  discount: 0.20
+  ramp_year_1: 0.60
+  k: [0, 0.25, 0.50]
+  capex_rub: [0, 500000, 1500000, 4500000]
+  opex_rub_per_year: [0, 100000, 400000, 1000000]

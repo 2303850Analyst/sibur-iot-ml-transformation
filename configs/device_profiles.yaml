@@ -1,0 +1,7 @@
+manual_confirmation: {value: [8, 12, 20], unit: seconds, origin: ASSUMPTION, source: '01_EXPERIMENT_AGENT §7', uncertainty: triangular}
+automatic_scan: {value: [0.2, 0.5, 1], unit: seconds, origin: ASSUMPTION, source: '01_EXPERIMENT_AGENT §7', uncertainty: triangular}
+connection_latency: {value: [0.1, 0.3, 1], unit: seconds, origin: ASSUMPTION, source: '01_EXPERIMENT_AGENT §7', uncertainty: triangular}
+scan_miss: {value: 0.01, unit: probability, origin: ASSUMPTION, source: '01_EXPERIMENT_AGENT §7', uncertainty: not_calibrated}
+scan_retry: {value: 2, unit: seconds, origin: ASSUMPTION, source: '01_EXPERIMENT_AGENT §7', uncertainty: fixed}
+tsd_fallback: {value: 60, unit: seconds, origin: ASSUMPTION, source: '01_EXPERIMENT_AGENT §7', uncertainty: fixed}
+presence_interval: {value: 30, unit: seconds, origin: ASSUMPTION, source: '01_EXPERIMENT_AGENT §7', uncertainty: fixed}

@@ -1,0 +1,16 @@
+{
+  "status": "TECHNICAL_PILOT_ONLY",
+  "clock": "wall_seconds",
+  "scenario": "S1",
+  "load": "L1",
+  "mask": 0,
+  "seed": 2900,
+  "offered": 6,
+  "success_180s": 6,
+  "session_count": 20,
+  "users_ready_by_20s": 20,
+  "interval_seconds": 30,
+  "coverage_of_main_manifest": 0,
+  "requests": 651,
+  "duration": 440.3450998000044
+}

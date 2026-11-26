@@ -1,0 +1,222 @@
+ Image wms-inbound-research-gateway:py312-v1 Building 
+ Image wms-inbound-research-runner:py312-v1 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.35kB 0.0s done
+#1 DONE 0.0s
+
+#2 [runner internal] load build definition from Dockerfile
+#2 transferring dockerfile: 440B done
+#2 DONE 0.0s
+
+#3 [gateway internal] load metadata for docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+#3 DONE 0.1s
+
+#4 [runner internal] load .dockerignore
+#4 transferring context: 78B done
+#4 DONE 0.0s
+
+#5 [gateway base 1/3] FROM docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+#5 resolve docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b 0.0s done
+#5 DONE 0.0s
+
+#6 [gateway internal] load build context
+#6 transferring context: 1.08kB done
+#6 DONE 0.0s
+
+#7 [gateway base 2/3] WORKDIR /lab
+#7 CACHED
+
+#8 [gateway base 3/3] COPY requirements.lock.txt /tmp/requirements.lock.txt
+#8 DONE 0.0s
+
+#9 [gateway gateway 1/1] RUN pip install --no-cache-dir -c /tmp/requirements.lock.txt paho-mqtt==2.1.0 requests==2.32.4
+#9 1.600 Collecting paho-mqtt==2.1.0
+#9 2.079   Downloading paho_mqtt-2.1.0-py3-none-any.whl.metadata (23 kB)
+#9 2.227 Collecting requests==2.32.4
+#9 2.349   Downloading requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
+#9 2.654 Collecting charset_normalizer<4,>=2 (from requests==2.32.4)
+#9 2.792   Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+#9 3.012 Collecting idna<4,>=2.5 (from requests==2.32.4)
+#9 3.137   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#9 3.287 Collecting urllib3<3,>=1.21.1 (from requests==2.32.4)
+#9 3.404   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+#9 3.710 Collecting certifi>=2017.4.17 (from requests==2.32.4)
+#9 3.819   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+#9 3.962 Downloading paho_mqtt-2.1.0-py3-none-any.whl (67 kB)
+#9 4.324 Downloading requests-2.32.4-py3-none-any.whl (64 kB)
+#9 5.262 Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+#9 5.901 Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+#9 8.468 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#9 8.907 Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+#9 ...
+
+#10 [runner runner 1/1] RUN pip install --no-cache-dir -r /tmp/requirements.lock.txt
+#10 1.615 Collecting simpy==4.1.1 (from -r /tmp/requirements.lock.txt (line 1))
+#10 1.944   Downloading simpy-4.1.1-py3-none-any.whl.metadata (6.1 kB)
+#10 3.145 Collecting pandas==2.2.3 (from -r /tmp/requirements.lock.txt (line 2))
+#10 3.267   Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+#10 5.638 Collecting numpy==2.2.6 (from -r /tmp/requirements.lock.txt (line 3))
+#10 5.762   Downloading numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#10 7.654 Collecting scipy==1.15.3 (from -r /tmp/requirements.lock.txt (line 4))
+#10 7.781   Downloading scipy-1.15.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#10 9.112 Collecting scikit-learn==1.6.1 (from -r /tmp/requirements.lock.txt (line 5))
+#10 9.284   Downloading scikit_learn-1.6.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+#10 ...
+
+#9 [gateway gateway 1/1] RUN pip install --no-cache-dir -c /tmp/requirements.lock.txt paho-mqtt==2.1.0 requests==2.32.4
+#9 10.14 Installing collected packages: urllib3, paho-mqtt, idna, charset_normalizer, certifi, requests
+#9 10.35 Successfully installed certifi-2026.10.23 charset_normalizer-3.5.2 idna-3.20 paho-mqtt-2.1.0 requests-2.32.4 urllib3-2.8.0
+#9 10.35 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#9 10.69 
+#9 10.69 [notice] A new release of pip is available: 25.0.1 -> 26.3
+#9 10.69 [notice] To update, run: pip install --upgrade pip
+#9 DONE 10.8s
+
+#11 [gateway] exporting to image
+#11 exporting layers
+#11 exporting layers 0.5s done
+#11 exporting manifest sha256:7f086877acb705ed5e3dbdcd010995dc16b2faf737d69449dd902ff483a1499e 0.0s done
+#11 exporting config sha256:ddff432bd68337e4fce317570c3b4840f95069f324d4543f7ea858f46ce96f7a 0.0s done
+#11 exporting attestation manifest sha256:9ca5be86ee485d527887993465bd446cfe2a668449572102c864b80e30948613 0.1s done
+#11 exporting manifest list sha256:851caafe59cbc307c84c7bf2d0d0f140f34da92b3f54da760230cfacc78be2f1
+#11 exporting manifest list sha256:851caafe59cbc307c84c7bf2d0d0f140f34da92b3f54da760230cfacc78be2f1 0.0s done
+#11 naming to docker.io/library/wms-inbound-research-gateway:py312-v1 done
+#11 unpacking to docker.io/library/wms-inbound-research-gateway:py312-v1
+#11 unpacking to docker.io/library/wms-inbound-research-gateway:py312-v1 0.2s done
+#11 DONE 0.9s
+
+#10 [runner runner 1/1] RUN pip install --no-cache-dir -r /tmp/requirements.lock.txt
+#10 ...
+
+#12 [gateway] resolving provenance for metadata file
+#12 DONE 0.0s
+
+#10 [runner runner 1/1] RUN pip install --no-cache-dir -r /tmp/requirements.lock.txt
+#10 11.86 Collecting matplotlib==3.10.3 (from -r /tmp/requirements.lock.txt (line 6))
+#10 12.19   Downloading matplotlib-3.10.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+#10 12.56 Collecting pytest==8.3.5 (from -r /tmp/requirements.lock.txt (line 7))
+#10 12.66   Downloading pytest-8.3.5-py3-none-any.whl.metadata (7.6 kB)
+#10 14.96 Collecting pyarrow==19.0.1 (from -r /tmp/requirements.lock.txt (line 8))
+#10 16.06   Downloading pyarrow-19.0.1-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+#10 16.21 Collecting paho-mqtt==2.1.0 (from -r /tmp/requirements.lock.txt (line 9))
+#10 16.34   Downloading paho_mqtt-2.1.0-py3-none-any.whl.metadata (23 kB)
+#10 16.83 Collecting requests==2.32.4 (from -r /tmp/requirements.lock.txt (line 10))
+#10 17.31   Downloading requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
+#10 20.44 Collecting locust==2.37.6 (from -r /tmp/requirements.lock.txt (line 11))
+#10 20.55   Downloading locust-2.37.6-py3-none-any.whl.metadata (9.4 kB)
+#10 21.75 Collecting PyYAML==6.0.2 (from -r /tmp/requirements.lock.txt (line 12))
+#10 22.03   Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+#10 22.20 Collecting bidict==0.24.1 (from -r /tmp/requirements.lock.txt (line 13))
+#10 22.33   Downloading bidict-0.24.1-py3-none-any.whl.metadata (8.7 kB)
+#10 22.54 Collecting blinker==1.9.0 (from -r /tmp/requirements.lock.txt (line 14))
+#10 22.68   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#10 23.08 Collecting brotli==1.2.1 (from -r /tmp/requirements.lock.txt (line 15))
+#10 23.22   Downloading brotli-1.2.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.1 kB)
+#10 23.80 Collecting certifi==2026.10.23 (from -r /tmp/requirements.lock.txt (line 16))
+#10 23.93   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+#10 26.22 Collecting charset-normalizer==3.5.2 (from -r /tmp/requirements.lock.txt (line 17))
+#10 26.32   Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+#10 27.04 Collecting click==8.5.1 (from -r /tmp/requirements.lock.txt (line 18))
+#10 27.22   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+#10 27.45 Collecting cloudpickle==3.1.3 (from -r /tmp/requirements.lock.txt (line 19))
+#10 27.62   Downloading cloudpickle-3.1.3-py3-none-any.whl.metadata (7.1 kB)
+#10 28.20 Collecting ConfigArgParse==1.10.1 (from -r /tmp/requirements.lock.txt (line 20))
+#10 28.30   Downloading configargparse-1.10.1-py3-none-any.whl.metadata (25 kB)
+#10 30.00 Collecting contourpy==1.4.0 (from -r /tmp/requirements.lock.txt (line 21))
+#10 30.12   Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+#10 30.28 Collecting cycler==0.12.1 (from -r /tmp/requirements.lock.txt (line 22))
+#10 30.39   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#10 30.62 Collecting Flask==3.1.3 (from -r /tmp/requirements.lock.txt (line 23))
+#10 30.76   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+#10 31.43 Collecting flask-cors==6.0.5 (from -r /tmp/requirements.lock.txt (line 24))
+#10 31.56   Downloading flask_cors-6.0.5-py3-none-any.whl.metadata (5.4 kB)
+#10 31.82 Collecting Flask-Login==0.6.3 (from -r /tmp/requirements.lock.txt (line 25))
+#10 31.92   Downloading Flask_Login-0.6.3-py3-none-any.whl.metadata (5.8 kB)
+#10 36.50 Collecting fonttools==4.68.0 (from -r /tmp/requirements.lock.txt (line 26))
+#10 36.92   Downloading fonttools-4.68.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (139 kB)
+#10 39.66 Collecting gevent==24.11.1 (from -r /tmp/requirements.lock.txt (line 27))
+#10 40.73   Downloading gevent-24.11.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+#10 43.92 Collecting geventhttpclient==2.5.1 (from -r /tmp/requirements.lock.txt (line 28))
+#10 44.05   Downloading geventhttpclient-2.5.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (10 kB)
+#10 47.03 Collecting greenlet==3.5.6 (from -r /tmp/requirements.lock.txt (line 29))
+#10 47.15   Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+#10 47.46 Collecting h11==0.16.0 (from -r /tmp/requirements.lock.txt (line 30))
+#10 47.93   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#10 48.63 Collecting idna==3.20 (from -r /tmp/requirements.lock.txt (line 31))
+#10 48.74   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#10 48.96 Collecting iniconfig==2.3.1 (from -r /tmp/requirements.lock.txt (line 32))
+#10 49.08   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+#10 49.26 Collecting itsdangerous==2.2.0 (from -r /tmp/requirements.lock.txt (line 33))
+#10 49.38   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#10 49.58 Collecting Jinja2==3.1.6 (from -r /tmp/requirements.lock.txt (line 34))
+#10 49.77   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#10 50.01 Collecting joblib==1.6.0 (from -r /tmp/requirements.lock.txt (line 35))
+#10 51.37   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+#10 52.08 Collecting kiwisolver==1.5.1 (from -r /tmp/requirements.lock.txt (line 36))
+#10 52.44   Downloading kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+#10 52.99 Collecting locust-cloud==1.30.0 (from -r /tmp/requirements.lock.txt (line 37))
+#10 53.16   Downloading locust_cloud-1.30.0-py3-none-any.whl.metadata (829 bytes)
+#10 53.97 Collecting MarkupSafe==3.0.4 (from -r /tmp/requirements.lock.txt (line 38))
+#10 54.10   Downloading markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#10 55.19 Collecting msgpack==1.2.4 (from -r /tmp/requirements.lock.txt (line 39))
+#10 55.37   Downloading msgpack-1.2.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+#10 55.66 Collecting packaging==26.3 (from -r /tmp/requirements.lock.txt (line 40))
+#10 55.80   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#10 58.76 Collecting pillow==13.0.0 (from -r /tmp/requirements.lock.txt (line 41))
+#10 58.88   Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+#10 59.69 Collecting platformdirs==4.14.7 (from -r /tmp/requirements.lock.txt (line 42))
+#10 59.84   Downloading platformdirs-4.14.7-py3-none-any.whl.metadata (5.7 kB)
+#10 60.19 Collecting pluggy==1.7.0 (from -r /tmp/requirements.lock.txt (line 43))
+#10 60.29   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+#10 61.26 Collecting psutil==7.2.2 (from -r /tmp/requirements.lock.txt (line 44))
+#10 61.36   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#10 62.12 Collecting pyparsing==3.3.3 (from -r /tmp/requirements.lock.txt (line 45))
+#10 62.23   Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+#10 62.77 Collecting python-dateutil==4.0.0 (from -r /tmp/requirements.lock.txt (line 46))
+#10 62.88   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#10 63.42 Collecting python-engineio==4.15.1 (from -r /tmp/requirements.lock.txt (line 47))
+#10 63.92   Downloading python_engineio-4.15.1-py3-none-any.whl.metadata (2.6 kB)
+#10 64.36 Collecting python-socketio==5.18.1 (from -r /tmp/requirements.lock.txt (line 48))
+#10 64.47   Downloading python_socketio-5.18.1-py3-none-any.whl.metadata (3.6 kB)
+#10 65.01 Collecting pytz==2026.6 (from -r /tmp/requirements.lock.txt (line 49))
+#10 65.12   Downloading pytz-2026.6-py2.py3-none-any.whl.metadata (22 kB)
+#10 68.68 Collecting pyzmq==27.3.0 (from -r /tmp/requirements.lock.txt (line 50))
+#10 68.80   Downloading pyzmq-27.3.0-cp312-abi3-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+#10 70.56 Collecting setuptools==84.2.1 (from -r /tmp/requirements.lock.txt (line 51))
+#10 70.68   Downloading setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
+#10 71.22 Collecting simple-websocket==1.1.0 (from -r /tmp/requirements.lock.txt (line 52))
+#10 71.33   Downloading simple_websocket-1.1.0-py3-none-any.whl.metadata (1.5 kB)
+#10 71.50 Collecting threadpoolctl==3.8.0 (from -r /tmp/requirements.lock.txt (line 53))
+#10 72.04   Downloading threadpoolctl-3.8.0-py3-none-any.whl.metadata (29 kB)
+#10 72.39 Collecting tzdata==2026.6 (from -r /tmp/requirements.lock.txt (line 54))
+#10 72.52   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+#10 72.81 Collecting urllib3==2.8.0 (from -r /tmp/requirements.lock.txt (line 55))
+#10 72.92   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+#10 73.20 Collecting websocket-client==1.9.2 (from -r /tmp/requirements.lock.txt (line 56))
+#10 73.30   Downloading websocket_client-1.9.2-py3-none-any.whl.metadata (8.3 kB)
+#10 73.56 Collecting Werkzeug==3.1.9 (from -r /tmp/requirements.lock.txt (line 57))
+#10 73.90   Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+#10 74.06 Collecting wsproto==1.3.2 (from -r /tmp/requirements.lock.txt (line 58))
+#10 74.16   Downloading wsproto-1.3.2-py3-none-any.whl.metadata (5.2 kB)
+#10 74.51 Collecting zope.event==6.2 (from -r /tmp/requirements.lock.txt (line 59))
+#10 74.61   Downloading zope_event-6.2-py3-none-any.whl.metadata (5.4 kB)
+#10 77.54 Collecting zope.interface==8.7 (from -r /tmp/requirements.lock.txt (line 60))
+#10 77.64   Downloading zope_interface-8.7-cp312-cp312-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (48 kB)
+#10 78.02 Downloading simpy-4.1.1-py3-none-any.whl (27 kB)
+#10 78.19 Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+#10 91.91    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 932.6 kB/s eta 0:00:00
+#10 92.19 Downloading numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.5 MB)
+#10 142.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.5/16.5 MB 171.5 kB/s eta 0:00:00
+#10 142.4 Downloading scipy-1.15.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.3 MB)
+#10 254.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.3/37.3 MB 139.8 kB/s eta 0:00:00
+#10 255.0 Downloading scikit_learn-1.6.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+#10 284.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 439.4 kB/s eta 0:00:00
+#10 284.9 Downloading matplotlib-3.10.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.6 MB)
+#10 298.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 636.0 kB/s eta 0:00:00
+#10 298.3 Downloading pytest-8.3.5-py3-none-any.whl (343 kB)
+#10 298.7 Downloading pyarrow-19.0.1-cp312-cp312-manylinux_2_28_x86_64.whl (42.1 MB)
+NativeCommandExitException: C:\Users\i\.codex\.chatgpt-projects\g-p-6afb0f5618508191aec66e047ddbca2d\wms_inbound_experiment\run_all.ps1:19
+Line |
+  19 |  docker compose build runner gateway
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Program "docker.exe" ended with non-zero exit code: -1 (0xFFFFFFFF).

@@ -1,0 +1,669 @@
+{
+  "design": {
+    "input_sha256": "22a015e49ea5c42bb507bd4c629e4bbbd72b6a8ce97cf3f06d4d554473485245",
+    "seed": 20261121,
+    "scenario": "S1",
+    "load": "L2",
+    "nominal_pallets_per_day": 450,
+    "training_days": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+    ],
+    "test_source_days": [
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+    ],
+    "models": {
+      "A": {
+        "w": [
+          0.44751195632032975,
+          0.08217966006550415,
+          0.06738959572433506,
+          0.06218162224524495,
+          0.07096847705516451,
+          1.2599470638174575,
+          0.3981486069817847
+        ],
+        "b": 1.7676018747255808,
+        "mean": 6.620535714285714
+      },
+      "B": {
+        "w": [
+          0.37252747281159887,
+          -0.043403354952727166,
+          0.07210496245521751,
+          0.020945569795021844,
+          0.059034331353001804,
+          0.8276483723116216,
+          -0.06771468459627479
+        ],
+        "b": 1.422158093416248,
+        "mean": 2.765625
+      }
+    },
+    "sku_data": "WEPAStacks",
+    "early_notice_s": 60,
+    "slot_poll_s": 2,
+    "transport_s": 0.3,
+    "delayed_report_probability": 0.005,
+    "delay_duration_s": 10,
+    "slot_recheck_work_s": 8,
+    "slot_filter_samples": 2,
+    "reader_profile": {
+      "gate_setup_s": 2,
+      "success_decode_s": 0.8,
+      "no_read_timeout_s": 2,
+      "retry_wait_s": 2,
+      "delivery_s": 0.3,
+      "walk_to_fallback_s": 5,
+      "bypass_to_next_checkpoint_s": 30,
+      "chance_bypass": 0.002,
+      "chance_ambiguous_after_decode": 0.003,
+      "chance_other_valid_label_after_decode": 0.001,
+      "p_read_first_clean_bad": [
+        0.97,
+        0.25
+      ],
+      "p_read_retry_clean_bad": [
+        0.75,
+        0.2
+      ],
+      "tsd_normal_mode_s": 15,
+      "tsd_damaged_mode_s": 120,
+      "physical_check_mode_s": 20,
+      "triangular_low_high_scale": [
+        0.7,
+        1.3
+      ],
+      "lane_A_case_probability": 0.7,
+      "buffer_slots_per_lane": 20,
+      "id_cap_s": 600
+    },
+    "resource_assumptions": {
+      "shift_hours": 8,
+      "shifts_per_day": 3,
+      "workers_per_shift": {
+        "production_clerk": 1,
+        "receiver": 2,
+        "quality_inspector": 1,
+        "wms_operator": 2,
+        "forklift_driver": 2,
+        "supervisor_on_exception": 1
+      },
+      "forklifts_per_shift": 2,
+      "status": "SCENARIO_ASSUMPTION; if an existing frozen V3 resource roster is found, reconcile BEFORE protocol freeze; do not silently mix counts"
+    },
+    "cohort_days": 30,
+    "followup_hours": 72,
+    "stage_units": "elapsed seconds on the critical milestone path",
+    "source_sha256": {
+      "deployment_pilots/full_s1_l2/compare.py": "c4c782abed2814da110c8da99aa92677c0972f6ae5e881ca669c6fc6ec67b624",
+      "deployment_pilots/h5_gate_a_s1_l2/run.py": "456f765488abcaa313fa2dc2a674b63557f21bd41f54a1f36b0732ffe5c4be82",
+      "experiment_v3/src/process.py": "ad29de70a573c14dac8c1d86e44f16af571ad5c924c76c747e95abb4a1d0322c",
+      "experiment_v3/src/inputs.py": "e36dfe07348bd18914a7db33ae05ae42d5bff103adf68e13a50554b27da43833",
+      "experiment_v3/v3_2/engine.py": "4dcc2f41fe88afb039c19033675ed70df034178ba73ea3b5aa28bb29629b8a3d",
+      "experiment_v3/v3_2/crew.py": "bbdbf8b95905c70b70007a99ec6e8d0f0674ffd238315b25ac137e32483f0683",
+      "experiment_v3/v3_2/ledger.py": "fad9777c64751b45c30215ea54c91e9d2953f96c6e8560b9ce7e7c22ac3c0a3b",
+      "experiment_v3/v3_2/settings.json": "fa545222b35ce4d49508ac9a304e5f978f672c83a3eb3bf8f520094c85ce4205",
+      "experiment_v3/v3_2/design/protocol/ASIS_BASELINE_PARAMETER_FREEZE.json": "23db5cdbaf16f7ea908b3bd5f4ba2cefb62a772af76f7982e7a7df8548836161",
+      "experiment_v3/odoo_addons/wms_research_v3/policy.py": "22874d2cf545ca3511b3bf880b32ed1cea3c44897f72f931c3abb30f7665cdf8",
+      "series_py312/data/normalized/source.parquet": "fa4c376d6567f4b2342b8f7c514202fd36cb784da478a1fb41bf536240e4a592",
+      "series_py312/data/manifests/wepastacks.json": "432b302feb619ffaad2506a3241fac884ba14a98fa6d3db88d1a64763ef7fabe"
+    },
+    "sref_s": 269.375
+  },
+  "arms": {
+    "R0": {
+      "cases": 2315,
+      "pallets": 11351,
+      "closed72": 2041,
+      "q72_pct": 88.16414686825054,
+      "mean_y72_min": 723.7122743891525,
+      "mean_closed_min": 240.91813582111132,
+      "median_closed_min": 182.83392557617043,
+      "p90_closed_min": 505.28351287556967,
+      "quality_negative": 28,
+      "total_labor_h": 1467.5785841519846,
+      "receiver_h": 179.48016805662715,
+      "driver_h": 980.5197268140009,
+      "admitted_within_case_window": 10138,
+      "route_counts_through_sim_end": {
+        "tsd": 10138,
+        "waiting_buffer": 1213
+      },
+      "forecast_diagnostics": {},
+      "dispatch_decisions_in_cohort_period": 0,
+      "different_simple_vs_ridge_choices": 0,
+      "additional_checks": {
+        "dispatches": 10568,
+        "forecast_changed": 0,
+        "sensor_used": 0
+      },
+      "end_state": {
+        "quarantine_capacity": 129,
+        "quarantine_free": 0,
+        "last_continuous_zero_s": 2063621.3377953707,
+        "pallets_in_quarantine_by_status": {
+          "failed": 129
+        },
+        "waiting_dispatch": {
+          "P10_failed": 5,
+          "P10_released": 35
+        },
+        "ordinary_free": [
+          1863,
+          929
+        ],
+        "trucks_available": 2,
+        "buffer_occupied": {
+          "A": 20,
+          "B": 20
+        },
+        "queue_before_buffer": {
+          "A": 1909,
+          "B": 507
+        },
+        "last_standard_close_s": 2592019.535457992
+      },
+      "integrity": {
+        "checks": {
+          "capacity": 10465,
+          "unique_receipt": 10465,
+          "reservation": 10568,
+          "quality_address": 10568,
+          "source": 10568,
+          "single_vehicle": 10568,
+          "balance": 10568,
+          "complete_document": 2100,
+          "positive_balance": 11531
+        },
+        "violations": []
+      }
+    },
+    "R1": {
+      "cases": 2315,
+      "pallets": 11351,
+      "closed72": 2041,
+      "q72_pct": 88.16414686825054,
+      "mean_y72_min": 722.3701356561937,
+      "mean_closed_min": 239.39581775800514,
+      "median_closed_min": 182.7761894627125,
+      "p90_closed_min": 503.2442930552216,
+      "quality_negative": 28,
+      "total_labor_h": 1457.3825129706129,
+      "receiver_h": 179.40239027884945,
+      "driver_h": 980.4481000770731,
+      "admitted_within_case_window": 10138,
+      "route_counts_through_sim_end": {
+        "tsd": 10138,
+        "waiting_buffer": 1213
+      },
+      "forecast_diagnostics": {
+        "simple_mae": 3.2168402777777776,
+        "ridge_mae": 2.9460054279190993
+      },
+      "dispatch_decisions_in_cohort_period": 10241,
+      "different_simple_vs_ridge_choices": 76,
+      "additional_checks": {},
+      "end_state": {
+        "quarantine_capacity": 129,
+        "quarantine_free": 0,
+        "last_continuous_zero_s": 2063305.71875,
+        "pallets_in_quarantine_by_status": {
+          "failed": 129
+        },
+        "waiting_dispatch": {
+          "P10_failed": 5,
+          "P10_released": 35
+        },
+        "ordinary_free": [
+          1863,
+          929
+        ],
+        "trucks_available": 2,
+        "buffer_occupied": {
+          "A": 20,
+          "B": 20
+        },
+        "queue_before_buffer": {
+          "A": 1909,
+          "B": 507
+        },
+        "last_standard_close_s": 2591975.0945877526
+      },
+      "integrity": {
+        "checks": {
+          "capacity": 10465,
+          "unique_receipt": 10465,
+          "reservation": 10568,
+          "quality_address": 10568,
+          "source": 10568,
+          "single_vehicle": 10568,
+          "balance": 10568,
+          "complete_document": 2100,
+          "positive_balance": 11531
+        },
+        "violations": []
+      }
+    },
+    "R2": {
+      "cases": 2315,
+      "pallets": 11351,
+      "closed72": 2041,
+      "q72_pct": 88.16414686825054,
+      "mean_y72_min": 723.6066072735971,
+      "mean_closed_min": 240.79828311532435,
+      "median_closed_min": 183.23284058851812,
+      "p90_closed_min": 506.1292419412794,
+      "quality_negative": 28,
+      "total_labor_h": 1415.8157907733619,
+      "receiver_h": 137.65787569474156,
+      "driver_h": 980.5747813528192,
+      "admitted_within_case_window": 10138,
+      "route_counts_through_sim_end": {
+        "read_1": 9736,
+        "read_2": 242,
+        "no_read_tsd": 99,
+        "ambiguous_tsd": 30,
+        "foreign_tsd": 12,
+        "bypass_tsd": 19,
+        "waiting_buffer": 1213
+      },
+      "forecast_diagnostics": {
+        "simple_mae": 3.2164930555555555,
+        "ridge_mae": 2.9416234194376782
+      },
+      "dispatch_decisions_in_cohort_period": 10243,
+      "different_simple_vs_ridge_choices": 84,
+      "additional_checks": {
+        "delayed_slot_reports": 107,
+        "manual_slot_checks": 107
+      },
+      "end_state": {
+        "quarantine_capacity": 129,
+        "quarantine_free": 0,
+        "last_continuous_zero_s": 2063388.0625,
+        "pallets_in_quarantine_by_status": {
+          "failed": 129
+        },
+        "waiting_dispatch": {
+          "P10_failed": 5,
+          "P10_released": 35
+        },
+        "ordinary_free": [
+          1863,
+          929
+        ],
+        "trucks_available": 2,
+        "buffer_occupied": {
+          "A": 20,
+          "B": 20
+        },
+        "queue_before_buffer": {
+          "A": 1909,
+          "B": 507
+        },
+        "last_standard_close_s": 2591970.945294992
+      },
+      "integrity": {
+        "checks": {
+          "capacity": 10465,
+          "unique_receipt": 10465,
+          "reservation": 10570,
+          "quality_address": 10570,
+          "source": 10570,
+          "single_vehicle": 10570,
+          "balance": 10570,
+          "complete_document": 2100,
+          "positive_balance": 11531
+        },
+        "violations": []
+      }
+    },
+    "R3": {
+      "cases": 2315,
+      "pallets": 11351,
+      "closed72": 2041,
+      "q72_pct": 88.16414686825054,
+      "mean_y72_min": 723.3149255082061,
+      "mean_closed_min": 240.46744368030238,
+      "median_closed_min": 183.5163187374516,
+      "p90_closed_min": 503.66739562411965,
+      "quality_negative": 28,
+      "total_labor_h": 1416.1588303224262,
+      "receiver_h": 137.78454236140823,
+      "driver_h": 980.5911542352168,
+      "admitted_within_case_window": 10138,
+      "route_counts_through_sim_end": {
+        "read_1": 9736,
+        "read_2": 242,
+        "no_read_tsd": 99,
+        "ambiguous_tsd": 30,
+        "foreign_tsd": 12,
+        "bypass_tsd": 19,
+        "waiting_buffer": 1213
+      },
+      "forecast_diagnostics": {
+        "simple_mae": 3.2133680555555557,
+        "ridge_mae": 2.9415129639132203
+      },
+      "dispatch_decisions_in_cohort_period": 10243,
+      "different_simple_vs_ridge_choices": 77,
+      "additional_checks": {
+        "delayed_slot_reports": 107,
+        "manual_slot_checks": 107
+      },
+      "end_state": {
+        "quarantine_capacity": 129,
+        "quarantine_free": 0,
+        "last_continuous_zero_s": 2063621.3377953707,
+        "pallets_in_quarantine_by_status": {
+          "failed": 129
+        },
+        "waiting_dispatch": {
+          "P10_failed": 5,
+          "P10_released": 35
+        },
+        "ordinary_free": [
+          1863,
+          929
+        ],
+        "trucks_available": 2,
+        "buffer_occupied": {
+          "A": 20,
+          "B": 20
+        },
+        "queue_before_buffer": {
+          "A": 1909,
+          "B": 507
+        },
+        "last_standard_close_s": 2591970.945294992
+      },
+      "integrity": {
+        "checks": {
+          "capacity": 10465,
+          "unique_receipt": 10465,
+          "reservation": 10570,
+          "quality_address": 10570,
+          "source": 10570,
+          "single_vehicle": 10570,
+          "balance": 10570,
+          "complete_document": 2100,
+          "positive_balance": 11531
+        },
+        "violations": []
+      }
+    },
+    "R0_recheck": {
+      "cases": 2315,
+      "pallets": 11351,
+      "closed72": 2287,
+      "q72_pct": 98.79049676025917,
+      "mean_y72_min": 297.99042825314444,
+      "mean_closed_min": 248.74850957849995,
+      "median_closed_min": 192.85544796670825,
+      "p90_closed_min": 507.77095524120546,
+      "quality_negative": 28,
+      "total_labor_h": 1622.6013711289788,
+      "receiver_h": 193.32621048676646,
+      "driver_h": 1096.1122199263261,
+      "admitted_within_case_window": 11351,
+      "route_counts_through_sim_end": {
+        "tsd": 11351
+      },
+      "forecast_diagnostics": {},
+      "dispatch_decisions_in_cohort_period": 0,
+      "different_simple_vs_ridge_choices": 0,
+      "additional_checks": {
+        "dispatches": 12894,
+        "forecast_changed": 0,
+        "sensor_used": 0,
+        "quarantine_jobs_cancelled": 93
+      },
+      "end_state": {
+        "quarantine_capacity": 129,
+        "quarantine_free": 0,
+        "last_continuous_zero_s": 2063621.3377953707,
+        "pallets_in_quarantine_by_status": {
+          "failed": 129
+        },
+        "waiting_dispatch": {
+          "P10_failed": 10,
+          "P18_released": 8
+        },
+        "ordinary_free": [
+          1097,
+          522
+        ],
+        "trucks_available": 0,
+        "buffer_occupied": {
+          "A": 20,
+          "B": 0
+        },
+        "queue_before_buffer": {
+          "A": 65,
+          "B": 0
+        },
+        "last_standard_close_s": 2937386.674328244
+      },
+      "integrity": {
+        "checks": {
+          "capacity": 12816,
+          "unique_receipt": 12816,
+          "reservation": 12894,
+          "quality_address": 12894,
+          "source": 12892,
+          "single_vehicle": 12892,
+          "balance": 12892,
+          "complete_document": 2578,
+          "positive_balance": 12731
+        },
+        "violations": []
+      }
+    },
+    "R3_recheck": {
+      "cases": 2315,
+      "pallets": 11351,
+      "closed72": 2287,
+      "q72_pct": 98.79049676025917,
+      "mean_y72_min": 297.65871684169525,
+      "mean_closed_min": 248.4127369866745,
+      "median_closed_min": 193.15656426794206,
+      "p90_closed_min": 505.3980539589034,
+      "quality_negative": 28,
+      "total_labor_h": 1565.4593232355246,
+      "receiver_h": 146.6287065186499,
+      "driver_h": 1096.1854537787663,
+      "admitted_within_case_window": 11351,
+      "route_counts_through_sim_end": {
+        "read_1": 10890,
+        "read_2": 275,
+        "no_read_tsd": 120,
+        "ambiguous_tsd": 32,
+        "foreign_tsd": 12,
+        "bypass_tsd": 22
+      },
+      "forecast_diagnostics": {
+        "simple_mae": 3.145486111111111,
+        "ridge_mae": 2.896099231056607
+      },
+      "dispatch_decisions_in_cohort_period": 11444,
+      "different_simple_vs_ridge_choices": 85,
+      "additional_checks": {
+        "delayed_slot_reports": 127,
+        "manual_slot_checks": 127,
+        "quarantine_jobs_cancelled": 93
+      },
+      "end_state": {
+        "quarantine_capacity": 129,
+        "quarantine_free": 0,
+        "last_continuous_zero_s": 2063105.265625,
+        "pallets_in_quarantine_by_status": {
+          "failed": 129
+        },
+        "waiting_dispatch": {
+          "P10_failed": 10,
+          "P18_released": 8
+        },
+        "ordinary_free": [
+          1097,
+          522
+        ],
+        "trucks_available": 0,
+        "buffer_occupied": {
+          "A": 20,
+          "B": 0
+        },
+        "queue_before_buffer": {
+          "A": 63,
+          "B": 0
+        },
+        "last_standard_close_s": 2937563.5069543775
+      },
+      "integrity": {
+        "checks": {
+          "capacity": 12818,
+          "unique_receipt": 12818,
+          "reservation": 12898,
+          "quality_address": 12898,
+          "source": 12896,
+          "single_vehicle": 12896,
+          "balance": 12896,
+          "complete_document": 2580,
+          "positive_balance": 12733
+        },
+        "violations": []
+      }
+    }
+  },
+  "paired": {
+    "R0_vs_R3": {
+      "common_closed": 2041,
+      "gained": 0,
+      "lost": 0,
+      "mean_saved_min": 0.397348880946447,
+      "earlier_percent": 0.054904261680766474,
+      "stage_means_min": {
+        "R0": {
+          "stage1_s": 151.2373072692464,
+          "stage2_s": 1.4242997468723215,
+          "stage3_s": 86.37356071927353,
+          "stage4_s": 1.8829680857190803
+        },
+        "R3": {
+          "stage1_s": 150.79741659110584,
+          "stage2_s": 1.3419855698994685,
+          "stage3_s": 86.58624156419408,
+          "stage4_s": 1.7417999551029788
+        }
+      }
+    },
+    "R0_recheck_vs_R3_recheck": {
+      "common_closed": 2287,
+      "gained": 0,
+      "lost": 0,
+      "mean_saved_min": 0.3317114114491972,
+      "earlier_percent": 0.11131612964675718,
+      "stage_means_min": {
+        "R0_recheck": {
+          "stage1_s": 158.9779718594547,
+          "stage2_s": 1.4817712517572945,
+          "stage3_s": 86.39840654181953,
+          "stage4_s": 1.8903599254683903
+        },
+        "R3_recheck": {
+          "stage1_s": 158.72621086245817,
+          "stage2_s": 1.3756627859882051,
+          "stage3_s": 86.55917905280602,
+          "stage4_s": 1.7516842854220454
+        }
+      }
+    }
+  }
+}

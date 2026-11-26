@@ -1,0 +1,268 @@
+[
+  {
+    "time": 1.074505099997623,
+    "samples": [
+      "wms-inbound-v3-trial-1 49.76% 235.9MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 5.60% 210.4MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 13.16417139999976,
+    "samples": [
+      "wms-inbound-v3-trial-1 35.83% 243.3MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 4.63% 213.3MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 24.902539800008526,
+    "samples": [
+      "wms-inbound-v3-trial-1 13.50% 253.5MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 10.35% 218.6MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 36.926260499996715,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.73% 251.6MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 3.00% 216.7MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 48.98049970000284,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.02% 253.3MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.89% 218.8MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 60.03960790000565,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.28% 258.1MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 1.04% 219MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 71.09755320000113,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.03% 258.1MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.02% 219.7MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 83.19719990000885,
+    "samples": [
+      "wms-inbound-v3-trial-1 4.96% 259.1MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 9.86% 219MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 94.95782789999794,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.27% 259.2MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.12% 219.6MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 107.01374720000604,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.33% 258.5MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.12% 219.2MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 119.08875350000744,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.00% 260.5MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.28% 217.8MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 130.15344510000432,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.32% 259MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.10% 220.1MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 141.21024699999543,
+    "samples": [
+      "wms-inbound-v3-trial-1 4.06% 259MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 4.60% 218.4MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 153.32569599999988,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.00% 260.6MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.01% 219.5MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 165.0272207000089,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.30% 259.9MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.11% 219.5MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 177.07566590000351,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.00% 260.1MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.38% 218MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 189.14197579999745,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.52% 260.3MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.08% 220MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 201.20622809999622,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.90% 261.1MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 4.48% 220MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 213.29964800000016,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.31% 260.4MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.03% 217.8MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 225.02588580000156,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.00% 260.9MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.08% 219.8MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 237.0620779000019,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.34% 260.4MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.19% 219MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 248.13240129999758,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.03% 260.2MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.58% 220.8MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 260.19971230000374,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.75% 260.9MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.33% 220.2MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 272.2804599000083,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.34% 261.8MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.15% 220.8MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 284.05044140000246,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.02% 260.4MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.10% 219.2MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 296.09066509999684,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.02% 260MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.11% 218.7MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 308.15958020000835,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.37% 261MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.62% 222.5MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 320.2340525000036,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.00% 259.8MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 4.20% 221.4MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 332.3017245000083,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.00% 260.4MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.46% 220.1MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 344.1023286999989,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.03% 262.4MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 1.24% 221.9MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 356.11161999999604,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.56% 262.5MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.55% 220.6MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 368.1787050999992,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.03% 260.6MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 4.31% 219.4MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 379.24047590000555,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.00% 261.9MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.13% 221.6MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 391.3152933000092,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.35% 261MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.12% 219.8MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 403.4024967000005,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.00% 261.7MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 2.21% 221MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 415.167237200003,
+    "samples": [
+      "wms-inbound-v3-trial-1 11.92% 262.7MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 6.71% 221.1MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 427.1862967000052,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.30% 260.5MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.18% 219.7MiB / 15.51GiB"
+    ]
+  },
+  {
+    "time": 439.2564723999967,
+    "samples": [
+      "wms-inbound-v3-trial-1 0.40% 261.5MiB / 15.51GiB",
+      "wms-inbound-v3-db-1 0.11% 220.7MiB / 15.51GiB"
+    ]
+  }
+]

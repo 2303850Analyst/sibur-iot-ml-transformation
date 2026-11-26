@@ -1,0 +1,11 @@
+{
+  "writing/Финальная оценка Ex/Приёмка ПСВ - правила сравнения As-is и To-be.md": "5828fddcdf95ef709a6ee1974917efae1ad6fcc3edff5e437378dc9b76fc70a0",
+  "writing/Финальная оценка Ex/Приёмка ПСВ - 148 парков без зарядных пауз.xlsx": "19b1d349535d352bff5a3bb4deeb1b8f0a0c9dc3d57568374a70b551848f1d6d",
+  "writing/Финальная оценка Ex/As-is ПСВ - закрытие по суткам.csv": "1d860fc591164f33fdc1ccd6781f5ec36115ba961511e850fc4687db0f7b7900",
+  "writing/Финальная оценка Ex/As-is ПСВ - подбор ручных длительностей.csv": "c9a9957c225c17343b7eb6f0af6df018d4fa2cd553ca200fa774b26629e85d72",
+  "reproduction/psv/reference/flow320.json": "14713461f4f7681d893e1497a1dfa3108e63fe6c54cc135ca6d0a651d8a883ee",
+  "reproduction/psv/reference/flow640.json": "dbe8e18b762a5dd754d6b98b15baf7a82e059c28d871e61b94d2f037a182694f",
+  "reproduction/psv/reference/flow960.json": "c11b96fd1e23d12de6ce91607c1e3238253c911e19bb735990412fb29dc3b24f",
+  "reproduction/psv/reference/fleets.tsv": "b35448070ad6f207ffd0c31b64be45fe9ae5cf8834e07d5428ea29c80d2e1ada",
+  "writing/Финальная оценка Ex/Парк приёмки ПСВ - 148 вариантов.xlsx": "ad21e8eaf32599df341780c58d3a409065a8f077bffb28ba6479ddc903f85a98"
+}

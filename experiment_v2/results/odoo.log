@@ -1,0 +1,12 @@
+ Container wms-inbound-research-runner-run-0ddfd13b4bf7 Creating 
+ Container wms-inbound-research-runner-run-0ddfd13b4bf7 Created 
+ Container wms-inbound-research-odoo-run-992698ce5969 Creating 
+ Container wms-inbound-research-odoo-run-992698ce5969 Created 
+2026-11-19 11:13:09,269 1 WARNING wms_reference odoo.modules.module: Missing `author` key in manifest for 'wms_research', defaulting to '' 
+Committed V2 expected receipts: 6
+ Container wms-inbound-research-runner-run-f10cc746a38b Creating 
+ Container wms-inbound-research-runner-run-f10cc746a38b Created 
+ Container wms-inbound-research-runner-run-c4993ee04cf3 Creating 
+ Container wms-inbound-research-runner-run-c4993ee04cf3 Created 
+ Container wms-inbound-research-runner-run-64bed4a84249 Creating 
+ Container wms-inbound-research-runner-run-64bed4a84249 Created 

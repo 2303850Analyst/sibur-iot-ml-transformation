@@ -1,0 +1,2363 @@
+{
+  "evidence": "ODOO_INTEGRATION",
+  "status": "PASS_DEMO_AND_RESTART",
+  "cases": [
+    {
+      "case": "wrong_lot",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "assigned",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "assigned",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "result": {
+        "status": "rejected",
+        "reason": "identity_mismatch",
+        "picking_id": null,
+        "snapshot": {
+          "sku": "REF-01",
+          "lot": "LOT-TSD-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "TSD-01",
+          "receipt_id": 1,
+          "receipt_state": "assigned",
+          "transfer_id": null,
+          "reserved": null,
+          "cell": null,
+          "quants": [],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+        },
+        "audit_id": 1
+      },
+      "audit": [
+        [
+          1,
+          "TSD",
+          "receive",
+          "rejected",
+          "identity_mismatch",
+          null,
+          "3a34ffb600c6440bbad5da96d6021114",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "tsd_receive",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "assigned",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-TSD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": 1,
+        "snapshot": {
+          "sku": "REF-01",
+          "lot": "LOT-TSD-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "TSD-01",
+          "receipt_id": 1,
+          "receipt_state": "done",
+          "transfer_id": null,
+          "reserved": null,
+          "cell": null,
+          "quants": [
+            [
+              "WMS-R Buffer",
+              "LOT-TSD-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+        },
+        "audit_id": 2
+      },
+      "audit": [
+        [
+          1,
+          "TSD",
+          "receive",
+          "rejected",
+          "identity_mismatch",
+          null,
+          "3a34ffb600c6440bbad5da96d6021114",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ],
+        [
+          2,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          1,
+          "d418aacb93114f0aa5edd566e3c2da9e",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "new_event_same_business_key",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-TSD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-TSD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "result": {
+        "reason": null,
+        "status": "applied",
+        "audit_id": 2,
+        "snapshot": {
+          "lot": "LOT-TSD-01",
+          "sku": "REF-01",
+          "cell": null,
+          "pallet": "TSD-01",
+          "quants": [
+            [
+              "WMS-R Buffer",
+              "LOT-TSD-01",
+              1.0
+            ]
+          ],
+          "quality": "released",
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/1",
+          "quantity": 1.0,
+          "reserved": null,
+          "receipt_id": 1,
+          "transfer_id": null,
+          "receipt_state": "done"
+        },
+        "picking_id": 1
+      },
+      "audit": [
+        [
+          1,
+          "TSD",
+          "receive",
+          "rejected",
+          "identity_mismatch",
+          null,
+          "3a34ffb600c6440bbad5da96d6021114",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ],
+        [
+          2,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          1,
+          "d418aacb93114f0aa5edd566e3c2da9e",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "conflicting_quantity",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-TSD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-TSD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "result": {
+        "status": "conflict",
+        "reason": "business_key_payload_conflict",
+        "picking_id": null,
+        "snapshot": {
+          "sku": "REF-01",
+          "lot": "LOT-TSD-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "TSD-01",
+          "receipt_id": 1,
+          "receipt_state": "done",
+          "transfer_id": null,
+          "reserved": null,
+          "cell": null,
+          "quants": [
+            [
+              "WMS-R Buffer",
+              "LOT-TSD-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+        },
+        "audit_id": 3
+      },
+      "audit": [
+        [
+          1,
+          "TSD",
+          "receive",
+          "rejected",
+          "identity_mismatch",
+          null,
+          "3a34ffb600c6440bbad5da96d6021114",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ],
+        [
+          2,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          1,
+          "d418aacb93114f0aa5edd566e3c2da9e",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ],
+        [
+          3,
+          "TSD",
+          "receive",
+          "conflict",
+          "business_key_payload_conflict",
+          null,
+          "ff232f6007ce41de8ede8f940dc50801",
+          "2026-11-18 18:45:30",
+          "2026-11-18 18:45:30"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "tsd_reserve",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-TSD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": "A-01",
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-TSD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": null,
+        "snapshot": {
+          "sku": "REF-01",
+          "lot": "LOT-TSD-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "TSD-01",
+          "receipt_id": 1,
+          "receipt_state": "done",
+          "transfer_id": null,
+          "reserved": "A-01",
+          "cell": null,
+          "quants": [
+            [
+              "WMS-R Buffer",
+              "LOT-TSD-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+        },
+        "audit_id": 4
+      },
+      "audit": [
+        [
+          1,
+          "TSD",
+          "receive",
+          "rejected",
+          "identity_mismatch",
+          null,
+          "3a34ffb600c6440bbad5da96d6021114",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ],
+        [
+          2,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          1,
+          "d418aacb93114f0aa5edd566e3c2da9e",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ],
+        [
+          3,
+          "TSD",
+          "receive",
+          "conflict",
+          "business_key_payload_conflict",
+          null,
+          "ff232f6007ce41de8ede8f940dc50801",
+          "2026-11-18 18:45:30",
+          "2026-11-18 18:45:30"
+        ],
+        [
+          4,
+          "TSD",
+          "reserve",
+          "applied",
+          null,
+          null,
+          "765d931eb396408f89a8e3c2e9cfe7a6",
+          "2026-11-18 18:45:30",
+          "2026-11-18 18:45:30"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "wrong_address",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": "A-01",
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-TSD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": "A-01",
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-TSD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "result": {
+        "status": "rejected",
+        "reason": "wrong_address",
+        "picking_id": null,
+        "snapshot": {
+          "sku": "REF-01",
+          "lot": "LOT-TSD-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "TSD-01",
+          "receipt_id": 1,
+          "receipt_state": "done",
+          "transfer_id": null,
+          "reserved": "A-01",
+          "cell": null,
+          "quants": [
+            [
+              "WMS-R Buffer",
+              "LOT-TSD-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+        },
+        "audit_id": 5
+      },
+      "audit": [
+        [
+          1,
+          "TSD",
+          "receive",
+          "rejected",
+          "identity_mismatch",
+          null,
+          "3a34ffb600c6440bbad5da96d6021114",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ],
+        [
+          2,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          1,
+          "d418aacb93114f0aa5edd566e3c2da9e",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ],
+        [
+          3,
+          "TSD",
+          "receive",
+          "conflict",
+          "business_key_payload_conflict",
+          null,
+          "ff232f6007ce41de8ede8f940dc50801",
+          "2026-11-18 18:45:30",
+          "2026-11-18 18:45:30"
+        ],
+        [
+          4,
+          "TSD",
+          "reserve",
+          "applied",
+          null,
+          null,
+          "765d931eb396408f89a8e3c2e9cfe7a6",
+          "2026-11-18 18:45:30",
+          "2026-11-18 18:45:30"
+        ],
+        [
+          5,
+          "TSD",
+          "place",
+          "rejected",
+          "wrong_address",
+          null,
+          "35ae34dba9b74def84368c1dcb061c3d",
+          "2026-11-18 18:45:30",
+          "2026-11-18 18:45:30"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "tsd_place",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": "A-01",
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-TSD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-TSD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "TSD-01",
+        "receipt_id": 1,
+        "receipt_state": "done",
+        "transfer_id": 7,
+        "reserved": null,
+        "cell": "A-01",
+        "quants": [
+          [
+            "A-01",
+            "LOT-TSD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": 7,
+        "snapshot": {
+          "sku": "REF-01",
+          "lot": "LOT-TSD-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "TSD-01",
+          "receipt_id": 1,
+          "receipt_state": "done",
+          "transfer_id": 7,
+          "reserved": null,
+          "cell": "A-01",
+          "quants": [
+            [
+              "A-01",
+              "LOT-TSD-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/1"
+        },
+        "audit_id": 6
+      },
+      "audit": [
+        [
+          1,
+          "TSD",
+          "receive",
+          "rejected",
+          "identity_mismatch",
+          null,
+          "3a34ffb600c6440bbad5da96d6021114",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ],
+        [
+          2,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          1,
+          "d418aacb93114f0aa5edd566e3c2da9e",
+          "2026-11-18 18:45:29",
+          "2026-11-18 18:45:29"
+        ],
+        [
+          3,
+          "TSD",
+          "receive",
+          "conflict",
+          "business_key_payload_conflict",
+          null,
+          "ff232f6007ce41de8ede8f940dc50801",
+          "2026-11-18 18:45:30",
+          "2026-11-18 18:45:30"
+        ],
+        [
+          4,
+          "TSD",
+          "reserve",
+          "applied",
+          null,
+          null,
+          "765d931eb396408f89a8e3c2e9cfe7a6",
+          "2026-11-18 18:45:30",
+          "2026-11-18 18:45:30"
+        ],
+        [
+          5,
+          "TSD",
+          "place",
+          "rejected",
+          "wrong_address",
+          null,
+          "35ae34dba9b74def84368c1dcb061c3d",
+          "2026-11-18 18:45:30",
+          "2026-11-18 18:45:30"
+        ],
+        [
+          6,
+          "TSD",
+          "place",
+          "applied",
+          null,
+          7,
+          "bc77fc895db14c039ed2415a45095686",
+          "2026-11-18 18:45:30",
+          "2026-11-18 18:45:30"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "mqtt_duplicate_and_presence",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-IOT-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "IOT-01",
+        "receipt_id": 2,
+        "receipt_state": "assigned",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/2"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-IOT-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "IOT-01",
+        "receipt_id": 2,
+        "receipt_state": "assigned",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/2"
+      },
+      "audit": [
+        [
+          7,
+          "IOT",
+          "observe",
+          "applied",
+          null,
+          null,
+          "DEMO-SCAN-IOT-01",
+          "2026-11-18 18:45:31",
+          "2026-11-18 18:45:31"
+        ],
+        [
+          8,
+          "IOT",
+          "presence",
+          "applied",
+          null,
+          null,
+          "DEMO-PRESENCE-01",
+          "2026-11-18 18:45:32",
+          "2026-11-18 18:45:32"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "receive_after_observation",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-IOT-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "IOT-01",
+        "receipt_id": 2,
+        "receipt_state": "assigned",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/2"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-IOT-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "IOT-01",
+        "receipt_id": 2,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-IOT-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/2"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": 2,
+        "snapshot": {
+          "sku": "REF-01",
+          "lot": "LOT-IOT-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "IOT-01",
+          "receipt_id": 2,
+          "receipt_state": "done",
+          "transfer_id": null,
+          "reserved": null,
+          "cell": null,
+          "quants": [
+            [
+              "WMS-R Buffer",
+              "LOT-IOT-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/2"
+        },
+        "audit_id": 9
+      },
+      "audit": [
+        [
+          7,
+          "IOT",
+          "observe",
+          "applied",
+          null,
+          null,
+          "DEMO-SCAN-IOT-01",
+          "2026-11-18 18:45:31",
+          "2026-11-18 18:45:31"
+        ],
+        [
+          8,
+          "IOT",
+          "presence",
+          "applied",
+          null,
+          null,
+          "DEMO-PRESENCE-01",
+          "2026-11-18 18:45:32",
+          "2026-11-18 18:45:32"
+        ],
+        [
+          9,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          2,
+          "8cdf2696152048af8f1e1dcf51fbd32b",
+          "2026-11-18 18:45:32",
+          "2026-11-18 18:45:32"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "iot_reserve_via_tsd",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-IOT-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "IOT-01",
+        "receipt_id": 2,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-IOT-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/2"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-IOT-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "IOT-01",
+        "receipt_id": 2,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": "A-02",
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-IOT-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/2"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": null,
+        "snapshot": {
+          "sku": "REF-01",
+          "lot": "LOT-IOT-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "IOT-01",
+          "receipt_id": 2,
+          "receipt_state": "done",
+          "transfer_id": null,
+          "reserved": "A-02",
+          "cell": null,
+          "quants": [
+            [
+              "WMS-R Buffer",
+              "LOT-IOT-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/2"
+        },
+        "audit_id": 10
+      },
+      "audit": [
+        [
+          7,
+          "IOT",
+          "observe",
+          "applied",
+          null,
+          null,
+          "DEMO-SCAN-IOT-01",
+          "2026-11-18 18:45:31",
+          "2026-11-18 18:45:31"
+        ],
+        [
+          8,
+          "IOT",
+          "presence",
+          "applied",
+          null,
+          null,
+          "DEMO-PRESENCE-01",
+          "2026-11-18 18:45:32",
+          "2026-11-18 18:45:32"
+        ],
+        [
+          9,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          2,
+          "8cdf2696152048af8f1e1dcf51fbd32b",
+          "2026-11-18 18:45:32",
+          "2026-11-18 18:45:32"
+        ],
+        [
+          10,
+          "TSD",
+          "reserve",
+          "applied",
+          null,
+          null,
+          "673bf1f40b25447dbcd3e5224d604a3f",
+          "2026-11-18 18:45:32",
+          "2026-11-18 18:45:32"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "iot_confirm_via_tsd",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-IOT-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "IOT-01",
+        "receipt_id": 2,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": "A-02",
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-IOT-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/2"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-IOT-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "IOT-01",
+        "receipt_id": 2,
+        "receipt_state": "done",
+        "transfer_id": 8,
+        "reserved": null,
+        "cell": "A-02",
+        "quants": [
+          [
+            "A-02",
+            "LOT-IOT-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/2"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": 8,
+        "snapshot": {
+          "sku": "REF-01",
+          "lot": "LOT-IOT-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "IOT-01",
+          "receipt_id": 2,
+          "receipt_state": "done",
+          "transfer_id": 8,
+          "reserved": null,
+          "cell": "A-02",
+          "quants": [
+            [
+              "A-02",
+              "LOT-IOT-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/2"
+        },
+        "audit_id": 11
+      },
+      "audit": [
+        [
+          7,
+          "IOT",
+          "observe",
+          "applied",
+          null,
+          null,
+          "DEMO-SCAN-IOT-01",
+          "2026-11-18 18:45:31",
+          "2026-11-18 18:45:31"
+        ],
+        [
+          8,
+          "IOT",
+          "presence",
+          "applied",
+          null,
+          null,
+          "DEMO-PRESENCE-01",
+          "2026-11-18 18:45:32",
+          "2026-11-18 18:45:32"
+        ],
+        [
+          9,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          2,
+          "8cdf2696152048af8f1e1dcf51fbd32b",
+          "2026-11-18 18:45:32",
+          "2026-11-18 18:45:32"
+        ],
+        [
+          10,
+          "TSD",
+          "reserve",
+          "applied",
+          null,
+          null,
+          "673bf1f40b25447dbcd3e5224d604a3f",
+          "2026-11-18 18:45:32",
+          "2026-11-18 18:45:32"
+        ],
+        [
+          11,
+          "TSD",
+          "place",
+          "applied",
+          null,
+          8,
+          "6fa146ea20ce45c9b6c78a98e915505b",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "receive_hold",
+      "before": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "hold",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "assigned",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "after": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "hold",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": 3,
+        "snapshot": {
+          "sku": "REF-02",
+          "lot": "LOT-HOLD-01",
+          "quantity": 1.0,
+          "quality": "hold",
+          "pallet": "HOLD-01",
+          "receipt_id": 3,
+          "receipt_state": "done",
+          "transfer_id": null,
+          "reserved": null,
+          "cell": null,
+          "quants": [
+            [
+              "WMS-R Buffer",
+              "LOT-HOLD-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+        },
+        "audit_id": 12
+      },
+      "audit": [
+        [
+          12,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          3,
+          "bd1720ccd7de4868a3c001632a2b794d",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "reserve_hold",
+      "before": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "hold",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "after": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "hold",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": "Q-01",
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": null,
+        "snapshot": {
+          "sku": "REF-02",
+          "lot": "LOT-HOLD-01",
+          "quantity": 1.0,
+          "quality": "hold",
+          "pallet": "HOLD-01",
+          "receipt_id": 3,
+          "receipt_state": "done",
+          "transfer_id": null,
+          "reserved": "Q-01",
+          "cell": null,
+          "quants": [
+            [
+              "WMS-R Buffer",
+              "LOT-HOLD-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+        },
+        "audit_id": 13
+      },
+      "audit": [
+        [
+          12,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          3,
+          "bd1720ccd7de4868a3c001632a2b794d",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          13,
+          "TSD",
+          "reserve",
+          "applied",
+          null,
+          null,
+          "79595770068b43d3bbbcd5f9bb84a88c",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "hold_cannot_place_in_storage",
+      "before": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "hold",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": "Q-01",
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "after": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "hold",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": "Q-01",
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "result": {
+        "status": "rejected",
+        "reason": "wrong_address",
+        "picking_id": null,
+        "snapshot": {
+          "sku": "REF-02",
+          "lot": "LOT-HOLD-01",
+          "quantity": 1.0,
+          "quality": "hold",
+          "pallet": "HOLD-01",
+          "receipt_id": 3,
+          "receipt_state": "done",
+          "transfer_id": null,
+          "reserved": "Q-01",
+          "cell": null,
+          "quants": [
+            [
+              "WMS-R Buffer",
+              "LOT-HOLD-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+        },
+        "audit_id": 14
+      },
+      "audit": [
+        [
+          12,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          3,
+          "bd1720ccd7de4868a3c001632a2b794d",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          13,
+          "TSD",
+          "reserve",
+          "applied",
+          null,
+          null,
+          "79595770068b43d3bbbcd5f9bb84a88c",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          14,
+          "TSD",
+          "place",
+          "rejected",
+          "wrong_address",
+          null,
+          "796c4a3320734e68957bb51f9f414133",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "quarantine",
+      "before": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "hold",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": "Q-01",
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "after": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "hold",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": 9,
+        "reserved": null,
+        "cell": "Q-01",
+        "quants": [
+          [
+            "Q-01",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": 9,
+        "snapshot": {
+          "sku": "REF-02",
+          "lot": "LOT-HOLD-01",
+          "quantity": 1.0,
+          "quality": "hold",
+          "pallet": "HOLD-01",
+          "receipt_id": 3,
+          "receipt_state": "done",
+          "transfer_id": 9,
+          "reserved": null,
+          "cell": "Q-01",
+          "quants": [
+            [
+              "Q-01",
+              "LOT-HOLD-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+        },
+        "audit_id": 15
+      },
+      "audit": [
+        [
+          12,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          3,
+          "bd1720ccd7de4868a3c001632a2b794d",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          13,
+          "TSD",
+          "reserve",
+          "applied",
+          null,
+          null,
+          "79595770068b43d3bbbcd5f9bb84a88c",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          14,
+          "TSD",
+          "place",
+          "rejected",
+          "wrong_address",
+          null,
+          "796c4a3320734e68957bb51f9f414133",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          15,
+          "TSD",
+          "place",
+          "applied",
+          null,
+          9,
+          "fdeea1cb7d184c5db9310ff3efa99820",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "authorized_release",
+      "before": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "hold",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": 9,
+        "reserved": null,
+        "cell": "Q-01",
+        "quants": [
+          [
+            "Q-01",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "after": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": 9,
+        "reserved": null,
+        "cell": "Q-01",
+        "quants": [
+          [
+            "Q-01",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": null,
+        "snapshot": {
+          "sku": "REF-02",
+          "lot": "LOT-HOLD-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "HOLD-01",
+          "receipt_id": 3,
+          "receipt_state": "done",
+          "transfer_id": 9,
+          "reserved": null,
+          "cell": "Q-01",
+          "quants": [
+            [
+              "Q-01",
+              "LOT-HOLD-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+        },
+        "audit_id": 16
+      },
+      "audit": [
+        [
+          12,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          3,
+          "bd1720ccd7de4868a3c001632a2b794d",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          13,
+          "TSD",
+          "reserve",
+          "applied",
+          null,
+          null,
+          "79595770068b43d3bbbcd5f9bb84a88c",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          14,
+          "TSD",
+          "place",
+          "rejected",
+          "wrong_address",
+          null,
+          "796c4a3320734e68957bb51f9f414133",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          15,
+          "TSD",
+          "place",
+          "applied",
+          null,
+          9,
+          "fdeea1cb7d184c5db9310ff3efa99820",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          16,
+          "QUALITY",
+          "release",
+          "applied",
+          null,
+          null,
+          "79a1a85167e74bdbaa91c1b9b347fd66",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "reserve_after_release",
+      "before": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": 9,
+        "reserved": null,
+        "cell": "Q-01",
+        "quants": [
+          [
+            "Q-01",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "after": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": 9,
+        "reserved": "B-01",
+        "cell": "Q-01",
+        "quants": [
+          [
+            "Q-01",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": null,
+        "snapshot": {
+          "sku": "REF-02",
+          "lot": "LOT-HOLD-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "HOLD-01",
+          "receipt_id": 3,
+          "receipt_state": "done",
+          "transfer_id": 9,
+          "reserved": "B-01",
+          "cell": "Q-01",
+          "quants": [
+            [
+              "Q-01",
+              "LOT-HOLD-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+        },
+        "audit_id": 17
+      },
+      "audit": [
+        [
+          12,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          3,
+          "bd1720ccd7de4868a3c001632a2b794d",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          13,
+          "TSD",
+          "reserve",
+          "applied",
+          null,
+          null,
+          "79595770068b43d3bbbcd5f9bb84a88c",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          14,
+          "TSD",
+          "place",
+          "rejected",
+          "wrong_address",
+          null,
+          "796c4a3320734e68957bb51f9f414133",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          15,
+          "TSD",
+          "place",
+          "applied",
+          null,
+          9,
+          "fdeea1cb7d184c5db9310ff3efa99820",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          16,
+          "QUALITY",
+          "release",
+          "applied",
+          null,
+          null,
+          "79a1a85167e74bdbaa91c1b9b347fd66",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          17,
+          "TSD",
+          "final_reserve",
+          "applied",
+          null,
+          null,
+          "f1c9fb33921647d083fac2ce5204765f",
+          "2026-11-18 18:45:34",
+          "2026-11-18 18:45:34"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "store_after_release",
+      "before": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": 9,
+        "reserved": "B-01",
+        "cell": "Q-01",
+        "quants": [
+          [
+            "Q-01",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "after": {
+        "sku": "REF-02",
+        "lot": "LOT-HOLD-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "HOLD-01",
+        "receipt_id": 3,
+        "receipt_state": "done",
+        "transfer_id": 10,
+        "reserved": null,
+        "cell": "B-01",
+        "quants": [
+          [
+            "B-01",
+            "LOT-HOLD-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": 10,
+        "snapshot": {
+          "sku": "REF-02",
+          "lot": "LOT-HOLD-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "HOLD-01",
+          "receipt_id": 3,
+          "receipt_state": "done",
+          "transfer_id": 10,
+          "reserved": null,
+          "cell": "B-01",
+          "quants": [
+            [
+              "B-01",
+              "LOT-HOLD-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/3"
+        },
+        "audit_id": 18
+      },
+      "audit": [
+        [
+          12,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          3,
+          "bd1720ccd7de4868a3c001632a2b794d",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          13,
+          "TSD",
+          "reserve",
+          "applied",
+          null,
+          null,
+          "79595770068b43d3bbbcd5f9bb84a88c",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          14,
+          "TSD",
+          "place",
+          "rejected",
+          "wrong_address",
+          null,
+          "796c4a3320734e68957bb51f9f414133",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          15,
+          "TSD",
+          "place",
+          "applied",
+          null,
+          9,
+          "fdeea1cb7d184c5db9310ff3efa99820",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          16,
+          "QUALITY",
+          "release",
+          "applied",
+          null,
+          null,
+          "79a1a85167e74bdbaa91c1b9b347fd66",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          17,
+          "TSD",
+          "final_reserve",
+          "applied",
+          null,
+          null,
+          "f1c9fb33921647d083fac2ce5204765f",
+          "2026-11-18 18:45:34",
+          "2026-11-18 18:45:34"
+        ],
+        [
+          18,
+          "TSD",
+          "final_place",
+          "applied",
+          null,
+          10,
+          "60cdd89eb03d4b8c837fa6db7013f079",
+          "2026-11-18 18:45:34",
+          "2026-11-18 18:45:34"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "out_of_order",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-LATE-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "LATE-01",
+        "receipt_id": 4,
+        "receipt_state": "assigned",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/4"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-LATE-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "LATE-01",
+        "receipt_id": 4,
+        "receipt_state": "assigned",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/4"
+      },
+      "result": {
+        "status": "rejected",
+        "reason": "receive_first",
+        "picking_id": null,
+        "snapshot": {
+          "sku": "REF-01",
+          "lot": "LOT-LATE-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "LATE-01",
+          "receipt_id": 4,
+          "receipt_state": "assigned",
+          "transfer_id": null,
+          "reserved": null,
+          "cell": null,
+          "quants": [],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/4"
+        },
+        "audit_id": 19
+      },
+      "audit": [
+        [
+          19,
+          "TSD",
+          "place",
+          "rejected",
+          "receive_first",
+          null,
+          "63ab0c2c23eb436c8dcd8481f5d2fc84",
+          "2026-11-18 18:45:34",
+          "2026-11-18 18:45:34"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "missing_scan_tsd_fallback",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-LATE-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "LATE-01",
+        "receipt_id": 4,
+        "receipt_state": "assigned",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/4"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-LATE-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "LATE-01",
+        "receipt_id": 4,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-LATE-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/4"
+      },
+      "result": {
+        "status": "applied",
+        "reason": null,
+        "picking_id": 4,
+        "snapshot": {
+          "sku": "REF-01",
+          "lot": "LOT-LATE-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "LATE-01",
+          "receipt_id": 4,
+          "receipt_state": "done",
+          "transfer_id": null,
+          "reserved": null,
+          "cell": null,
+          "quants": [
+            [
+              "WMS-R Buffer",
+              "LOT-LATE-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/4"
+        },
+        "audit_id": 20
+      },
+      "audit": [
+        [
+          19,
+          "TSD",
+          "place",
+          "rejected",
+          "receive_first",
+          null,
+          "63ab0c2c23eb436c8dcd8481f5d2fc84",
+          "2026-11-18 18:45:34",
+          "2026-11-18 18:45:34"
+        ],
+        [
+          20,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          4,
+          "4250b4933b3a467fb3b65ca2c4045f79",
+          "2026-11-18 18:45:34",
+          "2026-11-18 18:45:34"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "delayed_scan_after_tsd",
+      "audit": [
+        [
+          19,
+          "TSD",
+          "place",
+          "rejected",
+          "receive_first",
+          null,
+          "63ab0c2c23eb436c8dcd8481f5d2fc84",
+          "2026-11-18 18:45:34",
+          "2026-11-18 18:45:34"
+        ],
+        [
+          20,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          4,
+          "4250b4933b3a467fb3b65ca2c4045f79",
+          "2026-11-18 18:45:34",
+          "2026-11-18 18:45:34"
+        ],
+        [
+          21,
+          "IOT",
+          "observe",
+          "applied",
+          null,
+          null,
+          "DEMO-DELAYED-01",
+          "2026-11-18 18:45:34",
+          "2026-11-18 18:45:34"
+        ]
+      ],
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-LATE-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "LATE-01",
+        "receipt_id": 4,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-LATE-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/4"
+      },
+      "pass": true
+    },
+    {
+      "case": "full_compatible_storage",
+      "before": {
+        "sku": "REF-01",
+        "lot": "LOT-LATE-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "LATE-01",
+        "receipt_id": 4,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-LATE-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/4"
+      },
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-LATE-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "LATE-01",
+        "receipt_id": 4,
+        "receipt_state": "done",
+        "transfer_id": null,
+        "reserved": null,
+        "cell": null,
+        "quants": [
+          [
+            "WMS-R Buffer",
+            "LOT-LATE-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/4"
+      },
+      "result": {
+        "status": "rejected",
+        "reason": "no_available_address",
+        "picking_id": null,
+        "snapshot": {
+          "sku": "REF-01",
+          "lot": "LOT-LATE-01",
+          "quantity": 1.0,
+          "quality": "released",
+          "pallet": "LATE-01",
+          "receipt_id": 4,
+          "receipt_state": "done",
+          "transfer_id": null,
+          "reserved": null,
+          "cell": null,
+          "quants": [
+            [
+              "WMS-R Buffer",
+              "LOT-LATE-01",
+              1.0
+            ]
+          ],
+          "odoo_url": "/odoo/action-stock.action_picking_tree_all/4"
+        },
+        "audit_id": 22
+      },
+      "audit": [
+        [
+          19,
+          "TSD",
+          "place",
+          "rejected",
+          "receive_first",
+          null,
+          "63ab0c2c23eb436c8dcd8481f5d2fc84",
+          "2026-11-18 18:45:34",
+          "2026-11-18 18:45:34"
+        ],
+        [
+          20,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          4,
+          "4250b4933b3a467fb3b65ca2c4045f79",
+          "2026-11-18 18:45:34",
+          "2026-11-18 18:45:34"
+        ],
+        [
+          21,
+          "IOT",
+          "observe",
+          "applied",
+          null,
+          null,
+          "DEMO-DELAYED-01",
+          "2026-11-18 18:45:34",
+          "2026-11-18 18:45:34"
+        ],
+        [
+          22,
+          "TSD",
+          "reserve",
+          "rejected",
+          "no_available_address",
+          null,
+          "6cd9861c81454f03a08ddc5c9c7ea0d4",
+          "2026-11-18 18:45:35",
+          "2026-11-18 18:45:35"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "case": "gateway_down_queue_then_broker_and_gateway_restart",
+      "audit": [
+        [
+          7,
+          "IOT",
+          "observe",
+          "applied",
+          null,
+          null,
+          "DEMO-SCAN-IOT-01",
+          "2026-11-18 18:45:31",
+          "2026-11-18 18:45:31"
+        ],
+        [
+          8,
+          "IOT",
+          "presence",
+          "applied",
+          null,
+          null,
+          "DEMO-PRESENCE-01",
+          "2026-11-18 18:45:32",
+          "2026-11-18 18:45:32"
+        ],
+        [
+          9,
+          "TSD",
+          "receive",
+          "applied",
+          null,
+          2,
+          "8cdf2696152048af8f1e1dcf51fbd32b",
+          "2026-11-18 18:45:32",
+          "2026-11-18 18:45:32"
+        ],
+        [
+          10,
+          "TSD",
+          "reserve",
+          "applied",
+          null,
+          null,
+          "673bf1f40b25447dbcd3e5224d604a3f",
+          "2026-11-18 18:45:32",
+          "2026-11-18 18:45:32"
+        ],
+        [
+          11,
+          "TSD",
+          "place",
+          "applied",
+          null,
+          8,
+          "6fa146ea20ce45c9b6c78a98e915505b",
+          "2026-11-18 18:45:33",
+          "2026-11-18 18:45:33"
+        ],
+        [
+          23,
+          "IOT",
+          "presence",
+          "applied",
+          null,
+          null,
+          "DEMO-RESTART-PROBE",
+          "2026-11-18 18:45:43",
+          "2026-11-18 18:45:43"
+        ]
+      ],
+      "after": {
+        "sku": "REF-01",
+        "lot": "LOT-IOT-01",
+        "quantity": 1.0,
+        "quality": "released",
+        "pallet": "IOT-01",
+        "receipt_id": 2,
+        "receipt_state": "done",
+        "transfer_id": 8,
+        "reserved": null,
+        "cell": "A-02",
+        "quants": [
+          [
+            "A-02",
+            "LOT-IOT-01",
+            1.0
+          ]
+        ],
+        "odoo_url": "/odoo/action-stock.action_picking_tree_all/2"
+      },
+      "pass": true
+    }
+  ]
+}
