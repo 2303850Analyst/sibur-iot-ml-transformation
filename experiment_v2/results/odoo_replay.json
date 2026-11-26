@@ -1,0 +1,1211 @@
+{
+  "status": "PASS",
+  "paths": [
+    {
+      "source_run": "S4-L2-2000-A2",
+      "run": "V2-b9258a60c36a",
+      "pallet": "P299",
+      "records": [
+        {
+          "operation": "place",
+          "status": "rejected",
+          "audit_id": 13856,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-b9258a60c36a-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16137,
+            "receipt_state": "assigned",
+            "transfer_id": null,
+            "reserved": null,
+            "cell": null,
+            "quants": [],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16137"
+          }
+        },
+        {
+          "operation": "receive",
+          "status": "applied",
+          "audit_id": 13857,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-b9258a60c36a-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16137,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": null,
+            "cell": null,
+            "quants": [
+              [
+                "V2-b9258a60c36a-BUFFER",
+                "V2-b9258a60c36a-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16137"
+          }
+        },
+        {
+          "operation": "receive",
+          "status": "applied",
+          "audit_id": 13857,
+          "snapshot": {
+            "lot": "V2-b9258a60c36a-LOT",
+            "sku": "V2-9",
+            "cell": null,
+            "pallet": "P299",
+            "quants": [
+              [
+                "V2-b9258a60c36a-BUFFER",
+                "V2-b9258a60c36a-LOT",
+                1.0
+              ]
+            ],
+            "quality": "released",
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16137",
+            "quantity": 1.0,
+            "reserved": null,
+            "receipt_id": 16137,
+            "transfer_id": null,
+            "receipt_state": "done"
+          }
+        },
+        {
+          "operation": "reserve",
+          "status": "applied",
+          "audit_id": 13858,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-b9258a60c36a-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16137,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": "V2-1038",
+            "cell": null,
+            "quants": [
+              [
+                "V2-b9258a60c36a-BUFFER",
+                "V2-b9258a60c36a-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16137"
+          }
+        },
+        {
+          "operation": "place",
+          "status": "rejected",
+          "audit_id": 13859,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-b9258a60c36a-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16137,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": "V2-1038",
+            "cell": null,
+            "quants": [
+              [
+                "V2-b9258a60c36a-BUFFER",
+                "V2-b9258a60c36a-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16137"
+          }
+        },
+        {
+          "operation": "place",
+          "status": "applied",
+          "audit_id": 13860,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-b9258a60c36a-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16137,
+            "receipt_state": "done",
+            "transfer_id": 16143,
+            "reserved": null,
+            "cell": "V2-1038",
+            "quants": [
+              [
+                "V2-1038",
+                "V2-b9258a60c36a-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16137"
+          }
+        }
+      ]
+    },
+    {
+      "source_run": "S4-L2-2000-A2",
+      "run": "V2-a14a658c5f21",
+      "pallet": "P308",
+      "records": [
+        {
+          "operation": "place",
+          "status": "rejected",
+          "audit_id": 13861,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-a14a658c5f21-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16138,
+            "receipt_state": "assigned",
+            "transfer_id": null,
+            "reserved": null,
+            "cell": null,
+            "quants": [],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16138"
+          }
+        },
+        {
+          "operation": "receive",
+          "status": "applied",
+          "audit_id": 13862,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-a14a658c5f21-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16138,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": null,
+            "cell": null,
+            "quants": [
+              [
+                "V2-a14a658c5f21-BUFFER",
+                "V2-a14a658c5f21-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16138"
+          }
+        },
+        {
+          "operation": "receive",
+          "status": "applied",
+          "audit_id": 13862,
+          "snapshot": {
+            "lot": "V2-a14a658c5f21-LOT",
+            "sku": "V2-9",
+            "cell": null,
+            "pallet": "P308",
+            "quants": [
+              [
+                "V2-a14a658c5f21-BUFFER",
+                "V2-a14a658c5f21-LOT",
+                1.0
+              ]
+            ],
+            "quality": "hold",
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16138",
+            "quantity": 1.0,
+            "reserved": null,
+            "receipt_id": 16138,
+            "transfer_id": null,
+            "receipt_state": "done"
+          }
+        },
+        {
+          "operation": "reserve",
+          "status": "applied",
+          "audit_id": 13863,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-a14a658c5f21-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16138,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": "V2-5200",
+            "cell": null,
+            "quants": [
+              [
+                "V2-a14a658c5f21-BUFFER",
+                "V2-a14a658c5f21-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16138"
+          }
+        },
+        {
+          "operation": "place",
+          "status": "rejected",
+          "audit_id": 13864,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-a14a658c5f21-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16138,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": "V2-5200",
+            "cell": null,
+            "quants": [
+              [
+                "V2-a14a658c5f21-BUFFER",
+                "V2-a14a658c5f21-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16138"
+          }
+        },
+        {
+          "operation": "place",
+          "status": "applied",
+          "audit_id": 13865,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-a14a658c5f21-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16138,
+            "receipt_state": "done",
+            "transfer_id": 16144,
+            "reserved": null,
+            "cell": "V2-5200",
+            "quants": [
+              [
+                "V2-5200",
+                "V2-a14a658c5f21-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16138"
+          }
+        },
+        {
+          "operation": "release",
+          "status": "applied",
+          "audit_id": 13866,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-a14a658c5f21-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P308",
+            "receipt_id": 16138,
+            "receipt_state": "done",
+            "transfer_id": 16144,
+            "reserved": null,
+            "cell": "V2-5200",
+            "quants": [
+              [
+                "V2-5200",
+                "V2-a14a658c5f21-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16138"
+          }
+        },
+        {
+          "operation": "final_reserve",
+          "status": "applied",
+          "audit_id": 13867,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-a14a658c5f21-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P308",
+            "receipt_id": 16138,
+            "receipt_state": "done",
+            "transfer_id": 16144,
+            "reserved": "V2-1141",
+            "cell": "V2-5200",
+            "quants": [
+              [
+                "V2-5200",
+                "V2-a14a658c5f21-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16138"
+          }
+        },
+        {
+          "operation": "final_place",
+          "status": "rejected",
+          "audit_id": 13868,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-a14a658c5f21-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P308",
+            "receipt_id": 16138,
+            "receipt_state": "done",
+            "transfer_id": 16144,
+            "reserved": "V2-1141",
+            "cell": "V2-5200",
+            "quants": [
+              [
+                "V2-5200",
+                "V2-a14a658c5f21-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16138"
+          }
+        },
+        {
+          "operation": "final_place",
+          "status": "applied",
+          "audit_id": 13869,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-a14a658c5f21-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P308",
+            "receipt_id": 16138,
+            "receipt_state": "done",
+            "transfer_id": 16145,
+            "reserved": null,
+            "cell": "V2-1141",
+            "quants": [
+              [
+                "V2-1141",
+                "V2-a14a658c5f21-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16138"
+          }
+        }
+      ]
+    },
+    {
+      "source_run": "S4-L2-2000-B2",
+      "run": "V2-1604bc1cb48e",
+      "pallet": "P299",
+      "records": [
+        {
+          "operation": "place",
+          "status": "rejected",
+          "audit_id": 13870,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-1604bc1cb48e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16139,
+            "receipt_state": "assigned",
+            "transfer_id": null,
+            "reserved": null,
+            "cell": null,
+            "quants": [],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16139"
+          }
+        },
+        {
+          "operation": "receive",
+          "status": "applied",
+          "audit_id": 13871,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-1604bc1cb48e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16139,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": null,
+            "cell": null,
+            "quants": [
+              [
+                "V2-1604bc1cb48e-BUFFER",
+                "V2-1604bc1cb48e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16139"
+          }
+        },
+        {
+          "operation": "receive",
+          "status": "applied",
+          "audit_id": 13871,
+          "snapshot": {
+            "lot": "V2-1604bc1cb48e-LOT",
+            "sku": "V2-9",
+            "cell": null,
+            "pallet": "P299",
+            "quants": [
+              [
+                "V2-1604bc1cb48e-BUFFER",
+                "V2-1604bc1cb48e-LOT",
+                1.0
+              ]
+            ],
+            "quality": "released",
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16139",
+            "quantity": 1.0,
+            "reserved": null,
+            "receipt_id": 16139,
+            "transfer_id": null,
+            "receipt_state": "done"
+          }
+        },
+        {
+          "operation": "reserve",
+          "status": "applied",
+          "audit_id": 13872,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-1604bc1cb48e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16139,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": "V2-1038",
+            "cell": null,
+            "quants": [
+              [
+                "V2-1604bc1cb48e-BUFFER",
+                "V2-1604bc1cb48e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16139"
+          }
+        },
+        {
+          "operation": "place",
+          "status": "rejected",
+          "audit_id": 13873,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-1604bc1cb48e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16139,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": "V2-1038",
+            "cell": null,
+            "quants": [
+              [
+                "V2-1604bc1cb48e-BUFFER",
+                "V2-1604bc1cb48e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16139"
+          }
+        },
+        {
+          "operation": "place",
+          "status": "applied",
+          "audit_id": 13874,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-1604bc1cb48e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16139,
+            "receipt_state": "done",
+            "transfer_id": 16146,
+            "reserved": null,
+            "cell": "V2-1038",
+            "quants": [
+              [
+                "V2-1038",
+                "V2-1604bc1cb48e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16139"
+          }
+        }
+      ]
+    },
+    {
+      "source_run": "S4-L2-2000-B2",
+      "run": "V2-f85898ae8c1e",
+      "pallet": "P308",
+      "records": [
+        {
+          "operation": "place",
+          "status": "rejected",
+          "audit_id": 13875,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-f85898ae8c1e-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16140,
+            "receipt_state": "assigned",
+            "transfer_id": null,
+            "reserved": null,
+            "cell": null,
+            "quants": [],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16140"
+          }
+        },
+        {
+          "operation": "receive",
+          "status": "applied",
+          "audit_id": 13876,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-f85898ae8c1e-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16140,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": null,
+            "cell": null,
+            "quants": [
+              [
+                "V2-f85898ae8c1e-BUFFER",
+                "V2-f85898ae8c1e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16140"
+          }
+        },
+        {
+          "operation": "receive",
+          "status": "applied",
+          "audit_id": 13876,
+          "snapshot": {
+            "lot": "V2-f85898ae8c1e-LOT",
+            "sku": "V2-9",
+            "cell": null,
+            "pallet": "P308",
+            "quants": [
+              [
+                "V2-f85898ae8c1e-BUFFER",
+                "V2-f85898ae8c1e-LOT",
+                1.0
+              ]
+            ],
+            "quality": "hold",
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16140",
+            "quantity": 1.0,
+            "reserved": null,
+            "receipt_id": 16140,
+            "transfer_id": null,
+            "receipt_state": "done"
+          }
+        },
+        {
+          "operation": "reserve",
+          "status": "applied",
+          "audit_id": 13877,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-f85898ae8c1e-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16140,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": "V2-5200",
+            "cell": null,
+            "quants": [
+              [
+                "V2-f85898ae8c1e-BUFFER",
+                "V2-f85898ae8c1e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16140"
+          }
+        },
+        {
+          "operation": "place",
+          "status": "rejected",
+          "audit_id": 13878,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-f85898ae8c1e-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16140,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": "V2-5200",
+            "cell": null,
+            "quants": [
+              [
+                "V2-f85898ae8c1e-BUFFER",
+                "V2-f85898ae8c1e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16140"
+          }
+        },
+        {
+          "operation": "place",
+          "status": "applied",
+          "audit_id": 13879,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-f85898ae8c1e-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16140,
+            "receipt_state": "done",
+            "transfer_id": 16147,
+            "reserved": null,
+            "cell": "V2-5200",
+            "quants": [
+              [
+                "V2-5200",
+                "V2-f85898ae8c1e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16140"
+          }
+        },
+        {
+          "operation": "release",
+          "status": "applied",
+          "audit_id": 13880,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-f85898ae8c1e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P308",
+            "receipt_id": 16140,
+            "receipt_state": "done",
+            "transfer_id": 16147,
+            "reserved": null,
+            "cell": "V2-5200",
+            "quants": [
+              [
+                "V2-5200",
+                "V2-f85898ae8c1e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16140"
+          }
+        },
+        {
+          "operation": "final_reserve",
+          "status": "applied",
+          "audit_id": 13881,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-f85898ae8c1e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P308",
+            "receipt_id": 16140,
+            "receipt_state": "done",
+            "transfer_id": 16147,
+            "reserved": "V2-1141",
+            "cell": "V2-5200",
+            "quants": [
+              [
+                "V2-5200",
+                "V2-f85898ae8c1e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16140"
+          }
+        },
+        {
+          "operation": "final_place",
+          "status": "rejected",
+          "audit_id": 13882,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-f85898ae8c1e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P308",
+            "receipt_id": 16140,
+            "receipt_state": "done",
+            "transfer_id": 16147,
+            "reserved": "V2-1141",
+            "cell": "V2-5200",
+            "quants": [
+              [
+                "V2-5200",
+                "V2-f85898ae8c1e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16140"
+          }
+        },
+        {
+          "operation": "final_place",
+          "status": "applied",
+          "audit_id": 13883,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-f85898ae8c1e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P308",
+            "receipt_id": 16140,
+            "receipt_state": "done",
+            "transfer_id": 16148,
+            "reserved": null,
+            "cell": "V2-1141",
+            "quants": [
+              [
+                "V2-1141",
+                "V2-f85898ae8c1e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16140"
+          }
+        }
+      ]
+    },
+    {
+      "source_run": "S4-L2-2000-C2",
+      "run": "V2-27dd06406da9",
+      "pallet": "P299",
+      "records": [
+        {
+          "operation": "place",
+          "status": "rejected",
+          "audit_id": 13884,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-27dd06406da9-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16141,
+            "receipt_state": "assigned",
+            "transfer_id": null,
+            "reserved": null,
+            "cell": null,
+            "quants": [],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16141"
+          }
+        },
+        {
+          "operation": "receive",
+          "status": "applied",
+          "audit_id": 13885,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-27dd06406da9-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16141,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": null,
+            "cell": null,
+            "quants": [
+              [
+                "V2-27dd06406da9-BUFFER",
+                "V2-27dd06406da9-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16141"
+          }
+        },
+        {
+          "operation": "receive",
+          "status": "applied",
+          "audit_id": 13885,
+          "snapshot": {
+            "lot": "V2-27dd06406da9-LOT",
+            "sku": "V2-9",
+            "cell": null,
+            "pallet": "P299",
+            "quants": [
+              [
+                "V2-27dd06406da9-BUFFER",
+                "V2-27dd06406da9-LOT",
+                1.0
+              ]
+            ],
+            "quality": "released",
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16141",
+            "quantity": 1.0,
+            "reserved": null,
+            "receipt_id": 16141,
+            "transfer_id": null,
+            "receipt_state": "done"
+          }
+        },
+        {
+          "operation": "reserve",
+          "status": "applied",
+          "audit_id": 13886,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-27dd06406da9-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16141,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": "V2-1038",
+            "cell": null,
+            "quants": [
+              [
+                "V2-27dd06406da9-BUFFER",
+                "V2-27dd06406da9-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16141"
+          }
+        },
+        {
+          "operation": "place",
+          "status": "rejected",
+          "audit_id": 13887,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-27dd06406da9-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16141,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": "V2-1038",
+            "cell": null,
+            "quants": [
+              [
+                "V2-27dd06406da9-BUFFER",
+                "V2-27dd06406da9-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16141"
+          }
+        },
+        {
+          "operation": "place",
+          "status": "applied",
+          "audit_id": 13888,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-27dd06406da9-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P299",
+            "receipt_id": 16141,
+            "receipt_state": "done",
+            "transfer_id": 16149,
+            "reserved": null,
+            "cell": "V2-1038",
+            "quants": [
+              [
+                "V2-1038",
+                "V2-27dd06406da9-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16141"
+          }
+        }
+      ]
+    },
+    {
+      "source_run": "S4-L2-2000-C2",
+      "run": "V2-af65daa85b6e",
+      "pallet": "P308",
+      "records": [
+        {
+          "operation": "place",
+          "status": "rejected",
+          "audit_id": 13889,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-af65daa85b6e-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16142,
+            "receipt_state": "assigned",
+            "transfer_id": null,
+            "reserved": null,
+            "cell": null,
+            "quants": [],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16142"
+          }
+        },
+        {
+          "operation": "receive",
+          "status": "applied",
+          "audit_id": 13890,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-af65daa85b6e-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16142,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": null,
+            "cell": null,
+            "quants": [
+              [
+                "V2-af65daa85b6e-BUFFER",
+                "V2-af65daa85b6e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16142"
+          }
+        },
+        {
+          "operation": "receive",
+          "status": "applied",
+          "audit_id": 13890,
+          "snapshot": {
+            "lot": "V2-af65daa85b6e-LOT",
+            "sku": "V2-9",
+            "cell": null,
+            "pallet": "P308",
+            "quants": [
+              [
+                "V2-af65daa85b6e-BUFFER",
+                "V2-af65daa85b6e-LOT",
+                1.0
+              ]
+            ],
+            "quality": "hold",
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16142",
+            "quantity": 1.0,
+            "reserved": null,
+            "receipt_id": 16142,
+            "transfer_id": null,
+            "receipt_state": "done"
+          }
+        },
+        {
+          "operation": "reserve",
+          "status": "applied",
+          "audit_id": 13891,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-af65daa85b6e-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16142,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": "V2-5200",
+            "cell": null,
+            "quants": [
+              [
+                "V2-af65daa85b6e-BUFFER",
+                "V2-af65daa85b6e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16142"
+          }
+        },
+        {
+          "operation": "place",
+          "status": "rejected",
+          "audit_id": 13892,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-af65daa85b6e-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16142,
+            "receipt_state": "done",
+            "transfer_id": null,
+            "reserved": "V2-5200",
+            "cell": null,
+            "quants": [
+              [
+                "V2-af65daa85b6e-BUFFER",
+                "V2-af65daa85b6e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16142"
+          }
+        },
+        {
+          "operation": "place",
+          "status": "applied",
+          "audit_id": 13893,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-af65daa85b6e-LOT",
+            "quantity": 1.0,
+            "quality": "hold",
+            "pallet": "P308",
+            "receipt_id": 16142,
+            "receipt_state": "done",
+            "transfer_id": 16150,
+            "reserved": null,
+            "cell": "V2-5200",
+            "quants": [
+              [
+                "V2-5200",
+                "V2-af65daa85b6e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16142"
+          }
+        },
+        {
+          "operation": "release",
+          "status": "applied",
+          "audit_id": 13894,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-af65daa85b6e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P308",
+            "receipt_id": 16142,
+            "receipt_state": "done",
+            "transfer_id": 16150,
+            "reserved": null,
+            "cell": "V2-5200",
+            "quants": [
+              [
+                "V2-5200",
+                "V2-af65daa85b6e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16142"
+          }
+        },
+        {
+          "operation": "final_reserve",
+          "status": "applied",
+          "audit_id": 13895,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-af65daa85b6e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P308",
+            "receipt_id": 16142,
+            "receipt_state": "done",
+            "transfer_id": 16150,
+            "reserved": "V2-1141",
+            "cell": "V2-5200",
+            "quants": [
+              [
+                "V2-5200",
+                "V2-af65daa85b6e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16142"
+          }
+        },
+        {
+          "operation": "final_place",
+          "status": "rejected",
+          "audit_id": 13896,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-af65daa85b6e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P308",
+            "receipt_id": 16142,
+            "receipt_state": "done",
+            "transfer_id": 16150,
+            "reserved": "V2-1141",
+            "cell": "V2-5200",
+            "quants": [
+              [
+                "V2-5200",
+                "V2-af65daa85b6e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16142"
+          }
+        },
+        {
+          "operation": "final_place",
+          "status": "applied",
+          "audit_id": 13897,
+          "snapshot": {
+            "sku": "V2-9",
+            "lot": "V2-af65daa85b6e-LOT",
+            "quantity": 1.0,
+            "quality": "released",
+            "pallet": "P308",
+            "receipt_id": 16142,
+            "receipt_state": "done",
+            "transfer_id": 16151,
+            "reserved": null,
+            "cell": "V2-1141",
+            "quants": [
+              [
+                "V2-1141",
+                "V2-af65daa85b6e-LOT",
+                1.0
+              ]
+            ],
+            "odoo_url": "/odoo/action-stock.action_picking_tree_all/16142"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "V2 SimPy all primary and ablation streams",
+  "main": 1080,
+  "ablation": 400,
+  "event_rows": 154619253,
+  "passed": 1480,
+  "violations": {
+    "duplicate_receipts": 0,
+    "illegal_moves": 0,
+    "illegal_release": 0,
+    "negative_stock": 0
+  },
+  "method": "Event subscriber validates source, reserve, transit, confirm, quality schedule and opening stock, then closes balance.",
+  "fingerprint": "5a6ee46b08c3830cd53612f4c8a74cfe9b298a2af31471150f17483cba1b49d5"
+}

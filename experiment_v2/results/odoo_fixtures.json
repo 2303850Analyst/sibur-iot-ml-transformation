@@ -1,0 +1,275 @@
+[
+  {
+    "run": "V2-b9258a60c36a",
+    "variant": "A2",
+    "pallet": "P299",
+    "sku": 9,
+    "cells": [
+      1038
+    ],
+    "events": [
+      {
+        "time": 86648.763943,
+        "event": "register",
+        "pallet": 299,
+        "quality": "released",
+        "lot": "LOT-299",
+        "quantity": 1
+      },
+      {
+        "time": 86648.763943,
+        "event": "reserve_and_start",
+        "pallet": 299,
+        "cell": 1038,
+        "quality": "released"
+      },
+      {
+        "time": 86943.516557,
+        "event": "confirm_place",
+        "pallet": 299,
+        "cell": 1038,
+        "quality": "released",
+        "primary": true
+      }
+    ],
+    "source_run": "S4-L2-2000-A2"
+  },
+  {
+    "run": "V2-a14a658c5f21",
+    "variant": "A2",
+    "pallet": "P308",
+    "sku": 9,
+    "cells": [
+      5200,
+      1141
+    ],
+    "events": [
+      {
+        "time": 87755.997662,
+        "event": "register",
+        "pallet": 308,
+        "quality": "hold",
+        "lot": "LOT-308",
+        "quantity": 1
+      },
+      {
+        "time": 88177.048061,
+        "event": "reserve_and_start",
+        "pallet": 308,
+        "cell": 5200,
+        "quality": "hold"
+      },
+      {
+        "time": 88497.241493,
+        "event": "confirm_place",
+        "pallet": 308,
+        "cell": 5200,
+        "quality": "hold",
+        "primary": true
+      },
+      {
+        "time": 94908.0,
+        "event": "external_release",
+        "pallet": 308
+      },
+      {
+        "time": 94964.869075,
+        "event": "reserve_and_start",
+        "pallet": 308,
+        "cell": 1141,
+        "quality": "released"
+      },
+      {
+        "time": 95199.164085,
+        "event": "confirm_place",
+        "pallet": 308,
+        "cell": 1141,
+        "quality": "released",
+        "primary": false
+      }
+    ],
+    "source_run": "S4-L2-2000-A2"
+  },
+  {
+    "run": "V2-1604bc1cb48e",
+    "variant": "B2",
+    "pallet": "P299",
+    "sku": 9,
+    "cells": [
+      1038
+    ],
+    "events": [
+      {
+        "time": 86639.018744,
+        "event": "register",
+        "pallet": 299,
+        "quality": "released",
+        "lot": "LOT-299",
+        "quantity": 1
+      },
+      {
+        "time": 86639.018744,
+        "event": "reserve_and_start",
+        "pallet": 299,
+        "cell": 1038,
+        "quality": "released"
+      },
+      {
+        "time": 86933.771357,
+        "event": "confirm_place",
+        "pallet": 299,
+        "cell": 1038,
+        "quality": "released",
+        "primary": true
+      }
+    ],
+    "source_run": "S4-L2-2000-B2"
+  },
+  {
+    "run": "V2-f85898ae8c1e",
+    "variant": "B2",
+    "pallet": "P308",
+    "sku": 9,
+    "cells": [
+      5200,
+      1141
+    ],
+    "events": [
+      {
+        "time": 87729.387515,
+        "event": "register",
+        "pallet": 308,
+        "quality": "hold",
+        "lot": "LOT-308",
+        "quantity": 1
+      },
+      {
+        "time": 88162.325537,
+        "event": "reserve_and_start",
+        "pallet": 308,
+        "cell": 5200,
+        "quality": "hold"
+      },
+      {
+        "time": 88482.518969,
+        "event": "confirm_place",
+        "pallet": 308,
+        "cell": 5200,
+        "quality": "hold",
+        "primary": true
+      },
+      {
+        "time": 94908.0,
+        "event": "external_release",
+        "pallet": 308
+      },
+      {
+        "time": 95158.943691,
+        "event": "reserve_and_start",
+        "pallet": 308,
+        "cell": 1141,
+        "quality": "released"
+      },
+      {
+        "time": 95400.603071,
+        "event": "confirm_place",
+        "pallet": 308,
+        "cell": 1141,
+        "quality": "released",
+        "primary": false
+      }
+    ],
+    "source_run": "S4-L2-2000-B2"
+  },
+  {
+    "run": "V2-27dd06406da9",
+    "variant": "C2",
+    "pallet": "P299",
+    "sku": 9,
+    "cells": [
+      1038
+    ],
+    "events": [
+      {
+        "time": 86639.018744,
+        "event": "register",
+        "pallet": 299,
+        "quality": "released",
+        "lot": "LOT-299",
+        "quantity": 1
+      },
+      {
+        "time": 86639.018744,
+        "event": "reserve_and_start",
+        "pallet": 299,
+        "cell": 1038,
+        "quality": "released"
+      },
+      {
+        "time": 86933.771357,
+        "event": "confirm_place",
+        "pallet": 299,
+        "cell": 1038,
+        "quality": "released",
+        "primary": true
+      }
+    ],
+    "source_run": "S4-L2-2000-C2"
+  },
+  {
+    "run": "V2-af65daa85b6e",
+    "variant": "C2",
+    "pallet": "P308",
+    "sku": 9,
+    "cells": [
+      5200,
+      1141
+    ],
+    "events": [
+      {
+        "time": 87729.387515,
+        "event": "register",
+        "pallet": 308,
+        "quality": "hold",
+        "lot": "LOT-308",
+        "quantity": 1
+      },
+      {
+        "time": 88798.911954,
+        "event": "reserve_and_start",
+        "pallet": 308,
+        "cell": 5200,
+        "quality": "hold"
+      },
+      {
+        "time": 89074.34971,
+        "event": "confirm_place",
+        "pallet": 308,
+        "cell": 5200,
+        "quality": "hold",
+        "primary": true
+      },
+      {
+        "time": 94908.0,
+        "event": "external_release",
+        "pallet": 308
+      },
+      {
+        "time": 94986.53509,
+        "event": "reserve_and_start",
+        "pallet": 308,
+        "cell": 1141,
+        "quality": "released"
+      },
+      {
+        "time": 95220.8301,
+        "event": "confirm_place",
+        "pallet": 308,
+        "cell": 1141,
+        "quality": "released",
+        "primary": false
+      }
+    ],
+    "source_run": "S4-L2-2000-C2"
+  }
+]
