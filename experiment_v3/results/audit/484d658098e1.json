@@ -1,0 +1,16 @@
+{
+  "file": "484d658098e1.json",
+  "scope": "HTTP functional observations only; no DB inventory reconstruction",
+  "rows": 74,
+  "detected": {},
+  "mutations": {
+    "double_receipt": true,
+    "foreign_cell": true,
+    "unauthorized_quality": true,
+    "repeated_stock_issue": true,
+    "early_close": true,
+    "missing_ack": true,
+    "stale_version": true,
+    "duplicate_reservation": true
+  }
+}

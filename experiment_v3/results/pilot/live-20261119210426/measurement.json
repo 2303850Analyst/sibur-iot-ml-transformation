@@ -1,0 +1,11 @@
+{
+  "evidence": "LIVE_SOFTWARE_TEST",
+  "scope": "technical pilot",
+  "unit": "wall_seconds_per_offered_receipt",
+  "denominator": 6,
+  "mean_restricted_T180_s": 5.0845650166690275,
+  "accepted": 6,
+  "offered": 6,
+  "standard_180": 6,
+  "failed_http": 0
+}

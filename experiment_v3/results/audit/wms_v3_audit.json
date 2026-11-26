@@ -1,0 +1,10 @@
+{
+  "database": "wms_v3",
+  "case_count": 6,
+  "closed": 6,
+  "events": 198,
+  "pallets": 12,
+  "receipts_done": 12,
+  "findings": [],
+  "scope": "current stock location and lot, receipt uniqueness, full closed routes and exchange ordering"
+}

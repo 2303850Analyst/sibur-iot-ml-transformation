@@ -1,0 +1,8 @@
+{
+  "archive_checksums": 11,
+  "config_json_csv_equal": true,
+  "unique_cartesian_products": {
+    "PROCESS_SIMULATION": 46080,
+    "LIVE_ODOO": 6912
+  }
+}

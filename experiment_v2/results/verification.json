@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "fingerprint": "5a6ee46b08c3830cd53612f4c8a74cfe9b298a2af31471150f17483cba1b49d5",
+  "repeated_runs": [
+    {
+      "run": "S4-L2-2000-B2",
+      "metrics": 54,
+      "identical_events": 97365
+    },
+    {
+      "run": "S6-L2-2001-C2",
+      "metrics": 54,
+      "identical_events": null
+    },
+    {
+      "run": "S5-L3-2002-A2",
+      "metrics": 54,
+      "identical_events": null
+    }
+  ],
+  "v1_manifests_verified": 1080,
+  "v1_manifest_file_hashes_verified": 5508
+}
