@@ -1,0 +1,50 @@
+{
+  "evidence": "SIMULATION",
+  "forecast": "fixed_before_test",
+  "hypotheses": {
+    "H1": {
+      "contrast": "A-B",
+      "scenario": "S1",
+      "level": "L1",
+      "metric": "registration_bounded_s",
+      "mean_s": 14.708573079185356,
+      "ci95_s": [
+        14.514783563847272,
+        14.879863969968431
+      ],
+      "ci975_s": [
+        14.48610631962672,
+        14.902728095677936
+      ],
+      "guard_pass": true,
+      "prep_late_delta_pp": 5.578870698741412e-16,
+      "prep_late_ci975_pp": [
+        -0.06954102920723072,
+        0.06258692628650993
+      ],
+      "supported": true
+    },
+    "H2": {
+      "contrast": "B-C",
+      "scenario": "S1",
+      "level": "L2",
+      "metric": "placement_bounded_s",
+      "mean_s": 7.896856440126067,
+      "ci95_s": [
+        5.483979423764394,
+        10.570548648977713
+      ],
+      "ci975_s": [
+        5.198501532269066,
+        11.036817551772192
+      ],
+      "guard_pass": true,
+      "prep_late_delta_pp": 0.5910987482614742,
+      "prep_late_ci975_pp": [
+        0.3894297635605018,
+        0.7927677329624486
+      ],
+      "supported": true
+    }
+  }
+}

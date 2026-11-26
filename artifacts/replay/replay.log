@@ -1,0 +1,58 @@
+ Container wms-inbound-research-odoo-run-a497aa593caf Creating 
+ Container wms-inbound-research-odoo-run-a497aa593caf Created 
+2026-11-18 18:47:05,723 1 WARNING wms_reference odoo.modules.module: Missing `author` key in manifest for 'wms_research', defaulting to '' 
+Replay 1/54: S1-L1-1000-A
+Replay 2/54: S1-L1-1000-B
+Replay 3/54: S1-L1-1000-C
+Replay 4/54: S1-L2-1000-A
+Replay 5/54: S1-L2-1000-B
+Replay 6/54: S1-L2-1000-C
+Traceback (most recent call last):
+  File "/usr/bin/odoo", line 6, in <module>
+    odoo.cli.main()
+  File "/usr/lib/python3/dist-packages/odoo/cli/command.py", line 133, in main
+    command().run(args)
+  File "/usr/lib/python3/dist-packages/odoo/cli/shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "/usr/lib/python3/dist-packages/odoo/cli/shell.py", line 148, in shell
+    self.console(local_vars)
+  File "/usr/lib/python3/dist-packages/odoo/cli/shell.py", line 82, in console
+    exec(sys.stdin.read(), local_vars)
+  File "<string>", line 1, in <module>
+  File "/lab/scripts/replay_odoo.py", line 94, in <module>
+    audit = run_case(fixture, address_records)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lab/scripts/replay_odoo.py", line 73, in run_case
+    result = pallets.with_context(**box)._apply(message, 'QUALITY' if operation == 'release' else 'TSD')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/extra-addons/wms_research/models.py", line 201, in _apply
+    picking = pallet._transition(operation, payload)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/extra-addons/wms_research/models.py", line 129, in _transition
+    self._finish(self.receipt_id, False)
+  File "/mnt/extra-addons/wms_research/models.py", line 102, in _finish
+    move.move_line_ids.unlink()
+  File "/usr/lib/python3/dist-packages/odoo/addons/stock/models/stock_move_line.py", line 580, in unlink
+    if not float_is_zero(ml.quantity_product_uom, precision_digits=precision) and ml.move_id and not ml.move_id._should_bypass_reservation(ml.location_id):
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/orm/fields.py", line 1701, in __get__
+    recs._fetch_field(self)
+  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 3778, in _fetch_field
+    self.fetch(fnames)
+  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 3818, in fetch
+    fetched = self._fetch_query(query, fields_to_fetch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 3923, in _fetch_query
+    rows = self.env.execute_query(query.select(*sql_terms))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/orm/environments.py", line 534, in execute_query
+    self.cr.execute(query)
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 440, in execute
+    self._obj.execute(query, params)
+  File "/usr/lib/python3.12/encodings/utf_8.py", line 15, in decode
+    def decode(input, errors='strict'):
+    
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 484, in signal_handler
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+

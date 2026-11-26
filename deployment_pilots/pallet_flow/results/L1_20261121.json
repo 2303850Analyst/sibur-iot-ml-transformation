@@ -1,0 +1,316 @@
+{
+  "manifest": "f5ca0869a2f99501fe5b25e96dda76973de4600f1f9b8de29b5dc412b4f28215",
+  "seed": 20261121,
+  "runs": [
+    {
+      "load": "L1",
+      "arm": "ASIS",
+      "finite": false,
+      "fleet_size": 2,
+      "coverage": 0.9,
+      "handling": 75.0,
+      "stationary": false,
+      "cases": 1926,
+      "n": 7787,
+      "closed": 1901,
+      "placed": 7697,
+      "first_pickups": 7787,
+      "failed_cases": 25,
+      "y72": 5770.714844500255,
+      "doc": 2437.873114417407,
+      "doc_p90": 3744.6615840066224,
+      "physical": 558.52535418165,
+      "p20": 595.2108621122655,
+      "p20_p50": 423.21107013942674,
+      "p20_p90": 819.4845189758577,
+      "buffer": 197.54124264253633,
+      "first_pick_p90": 514.7796912512742,
+      "direct": 7488,
+      "no_stop": 0,
+      "quarantine_trips": 299,
+      "direct_within5_pct": 0.0,
+      "choices": 0,
+      "many_ready": 0,
+      "spare": 2660,
+      "extra_addresses": {},
+      "max_dispatch_wait": 0.0,
+      "return_m": 0,
+      "job_empty_m": 0,
+      "simple_mae": null,
+      "ridge_mae": null,
+      "reads": {
+        "legacy": 7787
+      },
+      "ledger_checks": 73866,
+      "examples": [],
+      "by_size": {
+        "6": {
+          "n": 208,
+          "mean_s": 3310.216598617964
+        },
+        "5": {
+          "n": 297,
+          "mean_s": 3010.814652030407
+        },
+        "3": {
+          "n": 254,
+          "mean_s": 2074.9058221016935
+        },
+        "8": {
+          "n": 167,
+          "mean_s": 3251.059253104745
+        },
+        "7": {
+          "n": 116,
+          "mean_s": 3342.974224562008
+        },
+        "1": {
+          "n": 294,
+          "mean_s": 1115.8665662525325
+        },
+        "2": {
+          "n": 250,
+          "mean_s": 1509.874706157865
+        },
+        "4": {
+          "n": 315,
+          "mean_s": 2820.2804926752283
+        }
+      }
+    },
+    {
+      "load": "L1",
+      "arm": "RIDGE",
+      "finite": false,
+      "fleet_size": 2,
+      "coverage": 0.9,
+      "handling": 75.0,
+      "stationary": false,
+      "cases": 1926,
+      "n": 7787,
+      "closed": 1901,
+      "placed": 7697,
+      "first_pickups": 7787,
+      "failed_cases": 25,
+      "y72": 5382.152913807637,
+      "doc": 2044.201216198585,
+      "doc_p90": 3423.385280598188,
+      "physical": 309.67991597789785,
+      "p20": 309.83954227159575,
+      "p20_p50": 188.90422337898053,
+      "p20_p90": 250.51536760767925,
+      "buffer": 46.88434128570876,
+      "first_pick_p90": 81.86470166584478,
+      "direct": 7023,
+      "no_stop": 1115,
+      "quarantine_trips": 764,
+      "direct_within5_pct": 14.486163440301416,
+      "choices": 0,
+      "many_ready": 118,
+      "spare": 1548,
+      "extra_addresses": {},
+      "max_dispatch_wait": 0.0,
+      "return_m": 0,
+      "job_empty_m": 406118.828125,
+      "simple_mae": 1.8147569444444445,
+      "ridge_mae": 1.7630861573878038,
+      "reads": {
+        "read1": 7473,
+        "fallback": 117,
+        "read2": 180,
+        "bypass": 17
+      },
+      "ledger_checks": 76431,
+      "examples": [],
+      "by_size": {
+        "6": {
+          "n": 208,
+          "mean_s": 2951.4390660025383
+        },
+        "5": {
+          "n": 297,
+          "mean_s": 2668.5567913329696
+        },
+        "3": {
+          "n": 254,
+          "mean_s": 1717.4178417330133
+        },
+        "8": {
+          "n": 167,
+          "mean_s": 2890.07773475589
+        },
+        "7": {
+          "n": 116,
+          "mean_s": 2993.669513706103
+        },
+        "1": {
+          "n": 294,
+          "mean_s": 533.7234079826574
+        },
+        "2": {
+          "n": 250,
+          "mean_s": 1107.5152497429935
+        },
+        "4": {
+          "n": 315,
+          "mean_s": 2475.0461833717877
+        }
+      }
+    },
+    {
+      "load": "L1",
+      "arm": "ASIS",
+      "finite": true,
+      "fleet_size": 2,
+      "coverage": 0.9,
+      "handling": 75.0,
+      "stationary": false,
+      "cases": 1926,
+      "n": 7787,
+      "closed": 1901,
+      "placed": 7697,
+      "first_pickups": 7787,
+      "failed_cases": 25,
+      "y72": 6562.290979555745,
+      "doc": 3239.859245988619,
+      "doc_p90": 5271.214230931713,
+      "physical": 1339.8736011093602,
+      "p20": 1376.559109039976,
+      "p20_p50": 838.7737190243788,
+      "p20_p90": 3141.871786296788,
+      "buffer": 948.3549972276542,
+      "first_pick_p90": 2468.841518090574,
+      "direct": 7488,
+      "no_stop": 0,
+      "quarantine_trips": 299,
+      "direct_within5_pct": 0.0,
+      "choices": 0,
+      "many_ready": 4470,
+      "spare": 0,
+      "extra_addresses": {},
+      "max_dispatch_wait": 7533.349393255543,
+      "return_m": 0,
+      "job_empty_m": 0,
+      "simple_mae": null,
+      "ridge_mae": null,
+      "reads": {
+        "legacy": 7787
+      },
+      "ledger_checks": 73865,
+      "examples": [],
+      "by_size": {
+        "6": {
+          "n": 208,
+          "mean_s": 4334.370821141415
+        },
+        "5": {
+          "n": 297,
+          "mean_s": 3806.5543986381203
+        },
+        "3": {
+          "n": 254,
+          "mean_s": 2910.1887249097213
+        },
+        "8": {
+          "n": 167,
+          "mean_s": 4212.783044029453
+        },
+        "7": {
+          "n": 116,
+          "mean_s": 4370.774035883378
+        },
+        "1": {
+          "n": 294,
+          "mean_s": 1837.4285492814877
+        },
+        "2": {
+          "n": 250,
+          "mean_s": 2243.7798630619923
+        },
+        "4": {
+          "n": 315,
+          "mean_s": 3415.8577382054395
+        }
+      }
+    },
+    {
+      "load": "L1",
+      "arm": "RIDGE",
+      "finite": true,
+      "fleet_size": 2,
+      "coverage": 0.9,
+      "handling": 75.0,
+      "stationary": false,
+      "cases": 1926,
+      "n": 7787,
+      "closed": 1901,
+      "placed": 7697,
+      "first_pickups": 7787,
+      "failed_cases": 25,
+      "y72": 5454.166099208727,
+      "doc": 2117.161445068916,
+      "doc_p90": 3458.5312142485054,
+      "physical": 377.8290002465655,
+      "p20": 377.98862654026317,
+      "p20_p50": 209.48585947370157,
+      "p20_p90": 416.4794476024807,
+      "buffer": 102.28464610713772,
+      "first_pick_p90": 215.58729631777388,
+      "direct": 7023,
+      "no_stop": 0,
+      "quarantine_trips": 764,
+      "direct_within5_pct": 0.0,
+      "choices": 0,
+      "many_ready": 1409,
+      "spare": 0,
+      "extra_addresses": {},
+      "max_dispatch_wait": 1464.861230099923,
+      "return_m": 0,
+      "job_empty_m": 485319.453125,
+      "simple_mae": 1.8147569444444445,
+      "ridge_mae": 1.763044730528458,
+      "reads": {
+        "read1": 7473,
+        "fallback": 117,
+        "read2": 180,
+        "bypass": 17
+      },
+      "ledger_checks": 76431,
+      "examples": [],
+      "by_size": {
+        "6": {
+          "n": 208,
+          "mean_s": 3048.3168315024104
+        },
+        "5": {
+          "n": 297,
+          "mean_s": 2723.110689395144
+        },
+        "3": {
+          "n": 254,
+          "mean_s": 1793.0223537279933
+        },
+        "8": {
+          "n": 167,
+          "mean_s": 2987.4089005529163
+        },
+        "7": {
+          "n": 116,
+          "mean_s": 3078.311894122627
+        },
+        "1": {
+          "n": 294,
+          "mean_s": 618.4344341024988
+        },
+        "2": {
+          "n": 250,
+          "mean_s": 1178.314787223413
+        },
+        "4": {
+          "n": 315,
+          "mean_s": 2520.9605301069505
+        }
+      }
+    }
+  ]
+}

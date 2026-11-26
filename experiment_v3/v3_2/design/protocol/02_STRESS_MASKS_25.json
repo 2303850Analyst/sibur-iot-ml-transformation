@@ -1,0 +1,542 @@
+{
+  "version": "V3.1",
+  "oa_column_vectors_4_bit": [
+    "1000",
+    "1100",
+    "1010",
+    "1001",
+    "1110",
+    "1101",
+    "1011"
+  ],
+  "oa_strength": 3,
+  "oa_16_masks": [
+    "C000",
+    "C014",
+    "C023",
+    "C025",
+    "C037",
+    "C043",
+    "C050",
+    "C060",
+    "C067",
+    "C077",
+    "C084",
+    "C090",
+    "C102",
+    "C104",
+    "C113",
+    "C127"
+  ],
+  "hypothesis_anchor_masks": [
+    "C000",
+    "C001",
+    "C002",
+    "C004",
+    "C008",
+    "C016",
+    "C032",
+    "C040",
+    "C063",
+    "C064",
+    "C127"
+  ],
+  "final_count": 25,
+  "masks": [
+    {
+      "mask_id": "C000",
+      "mask_integer": 0,
+      "bits_M1_to_M7": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "modules": [],
+      "oa_strength3": true,
+      "pre_registered_anchor": true
+    },
+    {
+      "mask_id": "C001",
+      "mask_integer": 1,
+      "bits_M1_to_M7": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "modules": [
+        "Производство→WMS"
+      ],
+      "oa_strength3": false,
+      "pre_registered_anchor": true
+    },
+    {
+      "mask_id": "C002",
+      "mask_integer": 2,
+      "bits_M1_to_M7": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "modules": [
+        "Качество→WMS"
+      ],
+      "oa_strength3": false,
+      "pre_registered_anchor": true
+    },
+    {
+      "mask_id": "C004",
+      "mask_integer": 4,
+      "bits_M1_to_M7": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "modules": [
+        "Сквозной workflow"
+      ],
+      "oa_strength3": false,
+      "pre_registered_anchor": true
+    },
+    {
+      "mask_id": "C008",
+      "mask_integer": 8,
+      "bits_M1_to_M7": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "modules": [
+        "Адресация+задания"
+      ],
+      "oa_strength3": false,
+      "pre_registered_anchor": true
+    },
+    {
+      "mask_id": "C016",
+      "mask_integer": 16,
+      "bits_M1_to_M7": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "modules": [
+        "IoT прибытия"
+      ],
+      "oa_strength3": false,
+      "pre_registered_anchor": true
+    },
+    {
+      "mask_id": "C032",
+      "mask_integer": 32,
+      "bits_M1_to_M7": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "modules": [
+        "IoT зоны"
+      ],
+      "oa_strength3": false,
+      "pre_registered_anchor": true
+    },
+    {
+      "mask_id": "C040",
+      "mask_integer": 40,
+      "bits_M1_to_M7": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "modules": [
+        "Адресация+задания",
+        "IoT зоны"
+      ],
+      "oa_strength3": false,
+      "pre_registered_anchor": true
+    },
+    {
+      "mask_id": "C014",
+      "mask_integer": 14,
+      "bits_M1_to_M7": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "modules": [
+        "Качество→WMS",
+        "Сквозной workflow",
+        "Адресация+задания"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C025",
+      "mask_integer": 25,
+      "bits_M1_to_M7": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "modules": [
+        "Производство→WMS",
+        "Адресация+задания",
+        "IoT прибытия"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C037",
+      "mask_integer": 37,
+      "bits_M1_to_M7": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "modules": [
+        "Производство→WMS",
+        "Сквозной workflow",
+        "IoT зоны"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C050",
+      "mask_integer": 50,
+      "bits_M1_to_M7": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "modules": [
+        "Качество→WMS",
+        "IoT прибытия",
+        "IoT зоны"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C023",
+      "mask_integer": 23,
+      "bits_M1_to_M7": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "modules": [
+        "Производство→WMS",
+        "Качество→WMS",
+        "Сквозной workflow",
+        "IoT прибытия"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C043",
+      "mask_integer": 43,
+      "bits_M1_to_M7": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "modules": [
+        "Производство→WMS",
+        "Качество→WMS",
+        "Адресация+задания",
+        "IoT зоны"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C060",
+      "mask_integer": 60,
+      "bits_M1_to_M7": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "modules": [
+        "Сквозной workflow",
+        "Адресация+задания",
+        "IoT прибытия",
+        "IoT зоны"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C063",
+      "mask_integer": 63,
+      "bits_M1_to_M7": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "modules": [
+        "Производство→WMS",
+        "Качество→WMS",
+        "Сквозной workflow",
+        "Адресация+задания",
+        "IoT прибытия",
+        "IoT зоны"
+      ],
+      "oa_strength3": false,
+      "pre_registered_anchor": true
+    },
+    {
+      "mask_id": "C064",
+      "mask_integer": 64,
+      "bits_M1_to_M7": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "modules": [
+        "Локальный ML"
+      ],
+      "oa_strength3": false,
+      "pre_registered_anchor": true
+    },
+    {
+      "mask_id": "C067",
+      "mask_integer": 67,
+      "bits_M1_to_M7": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "modules": [
+        "Производство→WMS",
+        "Качество→WMS",
+        "Локальный ML"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C084",
+      "mask_integer": 84,
+      "bits_M1_to_M7": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "modules": [
+        "Сквозной workflow",
+        "IoT прибытия",
+        "Локальный ML"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C104",
+      "mask_integer": 104,
+      "bits_M1_to_M7": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "modules": [
+        "Адресация+задания",
+        "IoT зоны",
+        "Локальный ML"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C077",
+      "mask_integer": 77,
+      "bits_M1_to_M7": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "modules": [
+        "Производство→WMS",
+        "Сквозной workflow",
+        "Адресация+задания",
+        "Локальный ML"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C090",
+      "mask_integer": 90,
+      "bits_M1_to_M7": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "modules": [
+        "Качество→WMS",
+        "Адресация+задания",
+        "IoT прибытия",
+        "Локальный ML"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C102",
+      "mask_integer": 102,
+      "bits_M1_to_M7": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "modules": [
+        "Качество→WMS",
+        "Сквозной workflow",
+        "IoT зоны",
+        "Локальный ML"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C113",
+      "mask_integer": 113,
+      "bits_M1_to_M7": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "modules": [
+        "Производство→WMS",
+        "IoT прибытия",
+        "IoT зоны",
+        "Локальный ML"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": false
+    },
+    {
+      "mask_id": "C127",
+      "mask_integer": 127,
+      "bits_M1_to_M7": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modules": [
+        "Производство→WMS",
+        "Качество→WMS",
+        "Сквозной workflow",
+        "Адресация+задания",
+        "IoT прибытия",
+        "IoT зоны",
+        "Локальный ML"
+      ],
+      "oa_strength3": true,
+      "pre_registered_anchor": true
+    }
+  ]
+}

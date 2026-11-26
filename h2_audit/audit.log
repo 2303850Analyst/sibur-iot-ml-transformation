@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED_FOR_H2_SIMULATION_SCOPE",
+  "scope": "SimPy S1/L2 B,C seeds 1000..1019",
+  "fingerprint": "091ee88c7c1d9707b8168c4842e261b2ffa9612912f77f6a1007ca1d2dbc024c",
+  "verified_runs": 40,
+  "total_runs": 40,
+  "newly_reconstructed": 38,
+  "seed1000_controls": 2,
+  "lines_read": 3957630,
+  "violations": {
+    "duplicate_receipts": 0,
+    "illegal_moves": 0,
+    "illegal_release": 0,
+    "negative_stock": 0
+  },
+  "effect_seconds": 7.896856440125885,
+  "interval975_seconds": [
+    5.198501532268847,
+    11.036817551772371
+  ],
+  "late_delta_pp": 0.5910987482614742,
+  "late_ci975_pp": [
+    0.3894297635605018,
+    0.7927677329624486
+  ],
+  "late_upper_limit_pp": 1,
+  "quality_authority": "Model external release schedule only; no Odoo user/role data in SimPy logs."
+}

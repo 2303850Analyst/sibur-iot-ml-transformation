@@ -1,0 +1,278 @@
+{
+  "limitations": "Background occupancy projected from canonical logs; native stock transfers tested on selected pallets. Replay tracks physical dispatch through an internal transit location; live demo API counts registered pallets until confirmation.",
+  "cases": [
+    {
+      "case": "S1-L1-1000-A",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S1-L3-1000-C",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S2-L3-1000-B",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S3-L3-1000-A",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S4-L2-1000-C",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S5-L2-1000-B",
+      "pallets": 50,
+      "transitions": 279
+    },
+    {
+      "case": "S6-L2-1000-A",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S1-L1-1000-B",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S2-L1-1000-A",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S2-L3-1000-C",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S3-L3-1000-B",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S4-L3-1000-A",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S5-L2-1000-C",
+      "pallets": 50,
+      "transitions": 279
+    },
+    {
+      "case": "S6-L2-1000-B",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S1-L1-1000-C",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S2-L1-1000-B",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S3-L1-1000-A",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S3-L3-1000-C",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S4-L3-1000-B",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S5-L3-1000-A",
+      "pallets": 50,
+      "transitions": 261
+    },
+    {
+      "case": "S6-L2-1000-C",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S1-L2-1000-A",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S2-L1-1000-C",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S3-L1-1000-B",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S4-L1-1000-A",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S4-L3-1000-C",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S5-L3-1000-B",
+      "pallets": 50,
+      "transitions": 261
+    },
+    {
+      "case": "S6-L3-1000-A",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S1-L2-1000-B",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S2-L2-1000-A",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S3-L1-1000-C",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S4-L1-1000-B",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S5-L1-1000-A",
+      "pallets": 50,
+      "transitions": 274
+    },
+    {
+      "case": "S5-L3-1000-C",
+      "pallets": 50,
+      "transitions": 261
+    },
+    {
+      "case": "S6-L3-1000-B",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S1-L2-1000-C",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S2-L2-1000-B",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S3-L2-1000-A",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S4-L1-1000-C",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S5-L1-1000-B",
+      "pallets": 50,
+      "transitions": 274
+    },
+    {
+      "case": "S6-L1-1000-A",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S6-L3-1000-C",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S1-L3-1000-A",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S2-L2-1000-C",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S3-L2-1000-B",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S4-L2-1000-A",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S5-L1-1000-C",
+      "pallets": 50,
+      "transitions": 274
+    },
+    {
+      "case": "S6-L1-1000-B",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S1-L3-1000-B",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S2-L3-1000-A",
+      "pallets": 50,
+      "transitions": 253
+    },
+    {
+      "case": "S3-L2-1000-C",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S4-L2-1000-B",
+      "pallets": 50,
+      "transitions": 262
+    },
+    {
+      "case": "S5-L2-1000-A",
+      "pallets": 50,
+      "transitions": 279
+    },
+    {
+      "case": "S6-L1-1000-C",
+      "pallets": 50,
+      "transitions": 253
+    }
+  ],
+  "status": "PASS_PROJECTED_REPLAY",
+  "evidence": "ODOO_INTEGRATION",
+  "namespace": "R202611181854431981"
+}

@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-19T22:22:39.3805801Z",
+  "windows": {
+    "FreePhysicalMemory": 6331536,
+    "TotalVisibleMemorySize": 33328148
+  },
+  "dockerStats": "wms-v32-night 597.13% 3.518GiB / 15.51GiB",
+  "runner_version": "3.12.16 (main, Nov  5 2026, 07:58:20) [GCC 14.2.0] 4.1.1 19.0.1",
+  "cgroup": [
+    "low 0",
+    "high 0",
+    "max 0",
+    "oom 0",
+    "oom_kill 0",
+    "oom_group_kill 0"
+  ],
+  "free_c": 1058515075072,
+  "swap": "Swap:     4294967296      454656  4294512640",
+  "git_status": "fatal: not a git repository (or any of the parent directories): .git",
+  "thermal": "UNKNOWN"
+}

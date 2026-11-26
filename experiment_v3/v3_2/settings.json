@@ -1,0 +1,73 @@
+{
+  "scope": "NEW_SCENARIO_ASSUMPTION where no explicit residual was supplied; applied before any V3.2 contrast",
+  "retained_manual_modes_s": {
+    "P01": [
+      1,
+      30
+    ],
+    "P03": [
+      3,
+      45
+    ],
+    "P04": [
+      3,
+      20
+    ],
+    "P05": [
+      1,
+      10
+    ],
+    "P06": [
+      2,
+      20
+    ],
+    "P09": [
+      2,
+      10
+    ],
+    "P12": [
+      3,
+      30
+    ],
+    "P13": [
+      3,
+      15
+    ],
+    "P14": [
+      3,
+      25
+    ],
+    "P16": [
+      3,
+      10
+    ],
+    "P17": [
+      4,
+      15
+    ],
+    "P20": [
+      3,
+      8
+    ],
+    "P22": [
+      3,
+      25
+    ],
+    "P23": [
+      3,
+      20
+    ],
+    "P24": [
+      1,
+      15
+    ],
+    "P25": [
+      3,
+      10
+    ]
+  },
+  "calendar": "Fixed staggered break offsets at 2h, 4h, 6h plus 10 min per worker slot. Roles staggered by 3 minutes per role. Three distinct crews repeat every 24 hours; nonpreemptive operations fit one uninterrupted work interval. FIFO by resource request. Each forklift is paired with one driver slot; P19 retains both after P18.",
+  "handling_factor": 1,
+  "diagnostic_seed": 2900,
+  "retention": "per case audit fingerprint for all; full visits for deterministic samples, violations, extreme and open exceptions"
+}

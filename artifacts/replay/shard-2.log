@@ -1,0 +1,11 @@
+time="2026-11-18T21:54:45+03:00" level=warning msg="Found orphan containers ([wms-inbound-research-runner-run-8548656ae735]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container wms-inbound-research-odoo-run-bb1be3fad8bc Creating 
+ Container wms-inbound-research-odoo-run-bb1be3fad8bc Created 
+2026-11-18 18:54:48,032 1 WARNING wms_reference odoo.modules.module: Missing `author` key in manifest for 'wms_research', defaulting to '' 
+Replay 1/54: S1-L1-1000-C
+Replay 2/54: S2-L1-1000-B
+Replay 3/54: S3-L1-1000-A
+Replay 4/54: S3-L3-1000-C
+Replay 5/54: S4-L3-1000-B
+Replay 6/54: S5-L3-1000-A
+Replay 7/54: S6-L2-1000-C

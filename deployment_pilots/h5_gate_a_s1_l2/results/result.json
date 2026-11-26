@@ -1,0 +1,415 @@
+{
+  "design": {
+    "seed": 20261121,
+    "scenario": "S1",
+    "load": "L2",
+    "nominal_pallets_day": 450,
+    "profile": {
+      "gate_setup_s": 2,
+      "success_decode_s": 0.8,
+      "no_read_timeout_s": 2,
+      "retry_wait_s": 2,
+      "delivery_s": 0.3,
+      "walk_to_fallback_s": 5,
+      "bypass_to_next_checkpoint_s": 30,
+      "chance_bypass": 0.002,
+      "chance_ambiguous_after_decode": 0.003,
+      "chance_other_valid_label_after_decode": 0.001,
+      "p_read_first_clean_bad": [
+        0.97,
+        0.25
+      ],
+      "p_read_retry_clean_bad": [
+        0.75,
+        0.2
+      ],
+      "tsd_normal_mode_s": 15,
+      "tsd_damaged_mode_s": 120,
+      "physical_check_mode_s": 20,
+      "triangular_low_high_scale": [
+        0.7,
+        1.3
+      ],
+      "lane_A_case_probability": 0.7,
+      "buffer_slots_per_lane": 20,
+      "id_cap_s": 600
+    },
+    "input_sha256": "22a015e49ea5c42bb507bd4c629e4bbbd72b6a8ce97cf3f06d4d554473485245",
+    "observed_days": [
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+    ],
+    "python": "3.12.16",
+    "simpy": "4.1.1",
+    "roster": {
+      "shift_hours": 8,
+      "shifts_per_day": 3,
+      "workers_per_shift": {
+        "production_clerk": 1,
+        "receiver": 2,
+        "quality_inspector": 1,
+        "wms_operator": 2,
+        "forklift_driver": 2,
+        "supervisor_on_exception": 1
+      },
+      "forklifts_per_shift": 2,
+      "status": "SCENARIO_ASSUMPTION; if an existing frozen V3 resource roster is found, reconcile BEFORE protocol freeze; do not silently mix counts"
+    },
+    "manual_modes_s": {
+      "1": 30,
+      "2": 35,
+      "3": 45,
+      "4": 20,
+      "5": 10,
+      "6": 20,
+      "7": 180,
+      "8": 45,
+      "9": 10,
+      "11": 120,
+      "12": 30,
+      "13": 15,
+      "14": 25,
+      "15": 120,
+      "16": 10,
+      "17": 15,
+      "19": 25,
+      "20": 8,
+      "21": 120,
+      "22": 25,
+      "23": 20,
+      "24": 15,
+      "25": 10
+    },
+    "code_hashes": {
+      "deployment_pilots/h5_gate_a_s1_l2/run.py": "456f765488abcaa313fa2dc2a674b63557f21bd41f54a1f36b0732ffe5c4be82",
+      "experiment_v3/v3_2/engine.py": "4dcc2f41fe88afb039c19033675ed70df034178ba73ea3b5aa28bb29629b8a3d",
+      "experiment_v3/v3_2/crew.py": "bbdbf8b95905c70b70007a99ec6e8d0f0674ffd238315b25ac137e32483f0683",
+      "experiment_v3/v3_2/ledger.py": "fad9777c64751b45c30215ea54c91e9d2953f96c6e8560b9ce7e7c22ac3c0a3b",
+      "experiment_v3/src/inputs.py": "e36dfe07348bd18914a7db33ae05ae42d5bff103adf68e13a50554b27da43833",
+      "experiment_v3/src/process.py": "ad29de70a573c14dac8c1d86e44f16af571ad5c924c76c747e95abb4a1d0322c",
+      "experiment_v3/odoo_addons/wms_research_v3/policy.py": "22874d2cf545ca3511b3bf880b32ed1cea3c44897f72f931c3abb30f7665cdf8",
+      "experiment_v3/v3_2/settings.json": "fa545222b35ce4d49508ac9a304e5f978f672c83a3eb3bf8f520094c85ce4205",
+      "experiment_v3/v3_2/design/protocol/ASIS_BASELINE_PARAMETER_FREEZE.json": "23db5cdbaf16f7ea908b3bd5f4ba2cefb62a772af76f7982e7a7df8548836161",
+      "series_py312/data/normalized/source.parquet": "fa4c376d6567f4b2342b8f7c514202fd36cb784da478a1fb41bf536240e4a592",
+      "series_py312/data/manifests/wepastacks.json": "432b302feb619ffaad2506a3241fac884ba14a98fa6d3db88d1a64763ef7fabe"
+    }
+  },
+  "audits": {
+    "000-D0-G0-B0": {
+      "checks": {
+        "capacity": 10465,
+        "unique_receipt": 10465,
+        "reservation": 10568,
+        "quality_address": 10568,
+        "source": 10568,
+        "single_vehicle": 10568,
+        "balance": 10568,
+        "complete_document": 2100,
+        "positive_balance": 11531
+      },
+      "violations": [],
+      "max_buffer_per_lane": {
+        "B": 20,
+        "A": 20
+      },
+      "verified_cohort_pallets": 11351,
+      "verified_cohort_cases": 2315,
+      "observed_at_end": {
+        "quarantine_capacity": 129,
+        "quarantine_free": 0,
+        "last_continuous_zero_s": 2063621.3377953707,
+        "pallets_in_quarantine_by_status": {
+          "failed": 129
+        },
+        "waiting_dispatch": {
+          "P10_failed": 5,
+          "P10_released": 35
+        },
+        "ordinary_free": [
+          1863,
+          929
+        ],
+        "trucks_available": 2,
+        "buffer_occupied": {
+          "A": 20,
+          "B": 20
+        },
+        "queue_before_buffer": {
+          "A": 1909,
+          "B": 507
+        },
+        "last_standard_close_s": 2592019.535457992
+      }
+    },
+    "000-D0-GA-B0": {
+      "checks": {
+        "capacity": 10465,
+        "unique_receipt": 10465,
+        "reservation": 10566,
+        "quality_address": 10566,
+        "source": 10566,
+        "single_vehicle": 10566,
+        "balance": 10566,
+        "complete_document": 2100,
+        "positive_balance": 11531
+      },
+      "violations": [],
+      "max_buffer_per_lane": {
+        "B": 20,
+        "A": 20
+      },
+      "verified_cohort_pallets": 11351,
+      "verified_cohort_cases": 2315,
+      "observed_at_end": {
+        "quarantine_capacity": 129,
+        "quarantine_free": 0,
+        "last_continuous_zero_s": 2063627.2948810374,
+        "pallets_in_quarantine_by_status": {
+          "failed": 129
+        },
+        "waiting_dispatch": {
+          "P10_failed": 5,
+          "P10_released": 35
+        },
+        "ordinary_free": [
+          1863,
+          929
+        ],
+        "trucks_available": 2,
+        "buffer_occupied": {
+          "A": 20,
+          "B": 20
+        },
+        "queue_before_buffer": {
+          "A": 1909,
+          "B": 507
+        },
+        "last_standard_close_s": 2592019.535457992
+      }
+    }
+  },
+  "summary": {
+    "R0": {
+      "all": {
+        "cases": 2315,
+        "pallets": 11351,
+        "success72": 2041,
+        "quality_nonconformity": 28,
+        "sum_y_s": 100523634.9126533,
+        "mean_y_min": 723.7122743891526,
+        "sum_receiver_h": 179.48016805662715,
+        "sum_worker_h": 1467.5785841519846,
+        "median_closed_min": 182.83392557617043,
+        "p90_closed_min": 505.28351287556967,
+        "mean_id600_s": 388.6011045973059,
+        "id_within600": 4347,
+        "mean_id_uncapped_s": 7171.0002726514585,
+        "station_eligible": 10138,
+        "mean_station_id600_s": 33.6745213542493,
+        "identified": 10138,
+        "p02_labor_h": 115.84507340681448,
+        "p02_check_h": 56.3283239794321,
+        "p02_scan_h": 43.90786053849349,
+        "p02_switch_h": 15.608888888888888,
+        "mean_p02_s": 7190.7024393831525,
+        "bad_labels": 65,
+        "routes": {
+          "tsd": 10138,
+          "waiting_buffer": 1213
+        }
+      },
+      "A": {
+        "cases": 1658,
+        "pallets": 8215,
+        "success72": 1427,
+        "quality_nonconformity": 20,
+        "sum_y_s": 84332971.9615668,
+        "mean_y_min": 847.7379569920266,
+        "sum_receiver_h": 127.0858482785924,
+        "sum_worker_h": 1038.3409683002935,
+        "median_closed_min": 242.8941646062963,
+        "p90_closed_min": 536.3542183917032,
+        "mean_id600_s": 471.2276642612649,
+        "id_within600": 1952,
+        "mean_id_uncapped_s": 9875.424582463544,
+        "station_eligible": 7141,
+        "mean_station_id600_s": 29.241511360425534,
+        "identified": 7141,
+        "p02_labor_h": 81.54495422150374,
+        "p02_check_h": 39.65875022340285,
+        "p02_scan_h": 30.986203998100898,
+        "p02_switch_h": 10.9,
+        "mean_p02_s": 9895.117790810302,
+        "bad_labels": 49,
+        "routes": {
+          "tsd": 7141,
+          "waiting_buffer": 1074
+        }
+      },
+      "B": {
+        "cases": 657,
+        "pallets": 3136,
+        "success72": 614,
+        "quality_nonconformity": 8,
+        "sum_y_s": 16190662.951086488,
+        "mean_y_min": 410.7220434065573,
+        "sum_receiver_h": 52.39431977803479,
+        "sum_worker_h": 429.2376158516913,
+        "median_closed_min": 131.99957894371474,
+        "p90_closed_min": 239.04616289289956,
+        "mean_id600_s": 172.15429731432653,
+        "id_within600": 2395,
+        "mean_id_uncapped_s": 727.1250653214274,
+        "station_eligible": 2997,
+        "mean_station_id600_s": 44.23712541360717,
+        "identified": 2997,
+        "p02_labor_h": 34.30011918531074,
+        "p02_check_h": 16.669573756029255,
+        "p02_scan_h": 12.921656540392593,
+        "p02_switch_h": 4.708888888888889,
+        "mean_p02_s": 746.8485773406885,
+        "bad_labels": 16,
+        "routes": {
+          "tsd": 2997,
+          "waiting_buffer": 139
+        }
+      }
+    },
+    "H5_A": {
+      "all": {
+        "cases": 2315,
+        "pallets": 11351,
+        "success72": 2041,
+        "quality_nonconformity": 28,
+        "sum_y_s": 100509000.75528634,
+        "mean_y_min": 723.6069168847109,
+        "sum_receiver_h": 149.82404298144832,
+        "sum_worker_h": 1438.0440462912654,
+        "median_closed_min": 183.69028306523882,
+        "p90_closed_min": 505.5169849318569,
+        "mean_id600_s": 381.8991527781153,
+        "id_within600": 4400,
+        "mean_id_uncapped_s": 7148.867225703942,
+        "station_eligible": 10138,
+        "mean_station_id600_s": 15.681719662926044,
+        "identified": 10138,
+        "p02_labor_h": 86.18894833163561,
+        "p02_check_h": 56.32832397942952,
+        "p02_scan_h": 14.109513241094994,
+        "p02_switch_h": 15.751111111111111,
+        "mean_p02_s": 7179.660465508081,
+        "bad_labels": 65,
+        "routes": {
+          "read_1": 6867,
+          "tsd": 2997,
+          "waiting_buffer": 1213,
+          "read_2": 160,
+          "no_read_tsd": 66,
+          "ambiguous_tsd": 23,
+          "bypass_tsd": 15,
+          "foreign_tsd": 10
+        }
+      },
+      "A": {
+        "cases": 1658,
+        "pallets": 8215,
+        "success72": 1427,
+        "quality_nonconformity": 20,
+        "sum_y_s": 84302072.95693196,
+        "mean_y_min": 847.4273517986727,
+        "sum_receiver_h": 97.4163898700802,
+        "sum_worker_h": 1008.4046688002438,
+        "median_closed_min": 244.5871069222456,
+        "p90_closed_min": 535.8997995238907,
+        "mean_id600_s": 462.39676083730205,
+        "id_within600": 1999,
+        "mean_id_uncapped_s": 9839.80963072084,
+        "station_eligible": 7141,
+        "mean_station_id600_s": 4.100491562297583,
+        "identified": 7141,
+        "p02_labor_h": 51.87549581299156,
+        "p02_check_h": 39.65875022340027,
+        "p02_scan_h": 1.1878567007024,
+        "p02_switch_h": 11.028888888888888,
+        "mean_p02_s": 9875.24871482848,
+        "bad_labels": 49,
+        "routes": {
+          "read_1": 6867,
+          "waiting_buffer": 1074,
+          "read_2": 160,
+          "no_read_tsd": 66,
+          "ambiguous_tsd": 23,
+          "bypass_tsd": 15,
+          "foreign_tsd": 10
+        }
+      },
+      "B": {
+        "cases": 657,
+        "pallets": 3136,
+        "success72": 614,
+        "quality_nonconformity": 8,
+        "sum_y_s": 16206927.79835437,
+        "mean_y_min": 411.13464734536706,
+        "sum_receiver_h": 52.40765311136813,
+        "sum_worker_h": 429.6393774910216,
+        "median_closed_min": 132.42120605019153,
+        "p90_closed_min": 238.6401377048002,
+        "mean_id600_s": 171.02930258480544,
+        "id_within600": 2401,
+        "mean_id_uncapped_s": 737.1155693056481,
+        "station_eligible": 2997,
+        "mean_station_id600_s": 43.27649772985559,
+        "identified": 2997,
+        "p02_labor_h": 34.31345251864407,
+        "p02_check_h": 16.669573756029255,
+        "p02_scan_h": 12.921656540392593,
+        "p02_switch_h": 4.722222222222222,
+        "mean_p02_s": 756.8390813249091,
+        "bad_labels": 16,
+        "routes": {
+          "tsd": 2997,
+          "waiting_buffer": 139
+        }
+      }
+    },
+    "paired_counts": {
+      "faster": 1021,
+      "slower": 818,
+      "same_1ms": 476
+    },
+    "example_case": "R-1-38-1-1-0",
+    "first_fallback_pallet": "1-365111"
+  }
+}

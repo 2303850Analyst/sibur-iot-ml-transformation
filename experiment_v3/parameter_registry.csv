@@ -1,0 +1,24 @@
+﻿operation,action,resource,unit,value,uncertainty,origin,scope
+P01,Сформировать и передать основание на приёмку,production,s/visit,22,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,поступление
+P02,Получить продукцию и сопроводительные документы,operator,s/visit,12,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,паллета + поступление
+P03,Проверить комплектность и соответствие документов,operator,s/visit,24,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,поступление
+P04,Оформить акт приёмки продукции,operator,s/visit,18,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,поступление
+P05,Зафиксировать результаты приёмки и передать сведения дальше,operator,s/visit,10,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,поступление
+P06,Получить и идентифицировать объект контроля качества,quality,s/visit,12,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,партия качества
+P07,Выполнить предусмотренную проверку качества,quality,s/visit,15,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,партия качества
+P08,Зафиксировать результаты и принять решение о соответствии,quality,s/visit,12,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,партия качества
+P09,Зарегистрировать подтверждение качества и довести его до склада,quality,s/visit,18,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,партия качества
+P11,Оформить несоответствие и передать его на рассмотрение,quality,s/visit,35,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,исключение
+P12,Подготовить данные для приёмочной записи,operator,s/visit,18,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,поступление
+P13,Создать или дополнить электронную запись приёмки,operator,s/visit,22,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,поступление + паллеты
+P14,Проверить корректность записей,operator,s/visit,15,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,поступление
+P15,Исправить выявленные ошибки и подтвердить данные,operator,s/visit,30,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,запись / исключение
+P16,Оформить приходные записи и учётное состояние,operator,s/visit,12,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,паллета + поступление
+P17,Определить допустимое место хранения,dispatch,s/visit,14,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,паллета / задание
+P19,Установить продукцию и подтвердить размещение,driver,s/visit,12,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,паллета
+P20,Проверить соответствие размещения заданию,operator,s/visit,12,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,паллета / задание
+P21,Передать расхождение по размещению на разрешение,operator,s/visit,35,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,исключение
+P22,Сконсолидировать результаты по всему поступлению,closing,s/visit,20,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,поступление
+P23,Сформировать необходимые итоговые документы,closing,s/visit,18,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,поступление
+P24,Передать обязательные результаты и проверить завершение обмена,closing,s/visit,14,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,поступление
+P25,Зафиксировать исход обработки поступления,closing,s/visit,10,uncalibrated; sensitivity 0.5x to 2x,NEW_SCENARIO_ASSUMPTION,поступление

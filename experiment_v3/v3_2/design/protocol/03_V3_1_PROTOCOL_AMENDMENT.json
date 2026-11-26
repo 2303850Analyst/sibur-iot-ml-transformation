@@ -1,0 +1,87 @@
+{
+  "version": "V3.1",
+  "type": "PRE_MAIN_PROTOCOL_AMENDMENT",
+  "scope": "Live testing and completion statuses; 25 operations, modules, 6 scenarios and 3 load tiers unchanged",
+  "reason": "6912 independent 440-second windows = 35d 4h 48m before overhead; separate full live contract from sustained software load",
+  "process_simulation": {
+    "masks": 128,
+    "scenarios": 6,
+    "loads": 3,
+    "replications": 20,
+    "seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007,
+      3008,
+      3009,
+      3010,
+      3011,
+      3012,
+      3013,
+      3014,
+      3015,
+      3016,
+      3017,
+      3018,
+      3019
+    ],
+    "total": 46080,
+    "clock": "simulation_time",
+    "duration": "1d warmup + 30d cohort + per-case 72h"
+  },
+  "live_odoo_contract": {
+    "masks": 128,
+    "scenarios": 6,
+    "loads": 3,
+    "replications": 3,
+    "seeds": [
+      4000,
+      4001,
+      4002
+    ],
+    "total": 6912,
+    "clock": "event_driven_logical_replay_with_actual_API_latency",
+    "fixed_440_sec_wait": false,
+    "user_role_sessions": 20
+  },
+  "live_odoo_stress": {
+    "masks": 25,
+    "scenarios": 6,
+    "loads": 3,
+    "replications": 3,
+    "seeds": [
+      5000,
+      5001,
+      5002
+    ],
+    "total": 1350,
+    "active_seconds": 60,
+    "tail_seconds": 15,
+    "user_sessions": 20,
+    "sample_file": "02_STRESS_MASKS_25.json",
+    "sampling": "strength3_OA_16_plus_9_registered_hypothesis_anchors"
+  },
+  "statuses": [
+    "PROCESS_SIMULATION_COMPLETE",
+    "LIVE_CONTRACT_COMPLETE",
+    "LIVE_STRESS_SELECTED_COMPLETE",
+    "LIVE_STRESS_FULL_FACTORIAL_NOT_RUN",
+    "COMPLETE_REFERENCE_V3_1",
+    "PARTIAL"
+  ],
+  "scientific_limits": [
+    "Only full factorial process simulation supports all 128 modules interaction comparisons",
+    "All 128 masks get real Odoo functional checks, not full sustained stress",
+    "25 stress masks have 3-way coverage, not 4+-way full factorial",
+    "Do not merge wall-clock, logical replay and simulation time",
+    "20 sessions do not imply 20 continuously busy users"
+  ],
+  "input_data": "Same input case manifest and method per mask within each S/L/seed; all scenarios and load levels in each of three contours",
+  "old_protocol_frozen": true,
+  "pilot_runs_included": false
+}

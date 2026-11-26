@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+data/candidate/
+series_py312/.venv/
+
+.env.*
+!.env.example
+~$*
+*.pyc
+node_modules/
+reproduced/

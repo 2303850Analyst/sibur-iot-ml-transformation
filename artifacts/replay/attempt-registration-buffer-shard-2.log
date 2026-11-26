@@ -1,0 +1,26 @@
+ Container wms-inbound-research-odoo-run-653b7e0b53e1 Creating 
+ Container wms-inbound-research-odoo-run-653b7e0b53e1 Created 
+2026-11-18 18:50:02,320 1 WARNING wms_reference odoo.modules.module: Missing `author` key in manifest for 'wms_research', defaulting to '' 
+Replay 1/54: S1-L1-1000-C
+Replay 2/54: S2-L1-1000-B
+Replay 3/54: S3-L1-1000-A
+Traceback (most recent call last):
+  File "/usr/bin/odoo", line 6, in <module>
+    odoo.cli.main()
+  File "/usr/lib/python3/dist-packages/odoo/cli/command.py", line 133, in main
+    command().run(args)
+  File "/usr/lib/python3/dist-packages/odoo/cli/shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "/usr/lib/python3/dist-packages/odoo/cli/shell.py", line 148, in shell
+    self.console(local_vars)
+  File "/usr/lib/python3/dist-packages/odoo/cli/shell.py", line 82, in console
+    exec(sys.stdin.read(), local_vars)
+  File "<string>", line 1, in <module>
+  File "/lab/scripts/replay_odoo.py", line 97, in <module>
+    audit = run_case(fixture, address_records)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lab/scripts/replay_odoo.py", line 78, in run_case
+    assert result['status'] == 'applied', (step, result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ({'operation': 'receive', 'pallet': 620, 'quality': 'released', 'virtual_s': 97557.421987}, {'status': 'rejected', 'reason': 'buffer_full', 'picking_id': None, 'snapshot': {'sku': 'SKU-18', 'lot': 'LOT-620', 'quantity': 1.0, 'quality': 'released', 'pallet': 'P620', 'receipt_id': 3502, 'receipt_state': 'assigned', 'transfer_id': None, 'reserved': None, 'cell': None, 'quants': [], 'odoo_url': '/odoo/action-stock.action_picking_tree_all/3502'}, 'audit_id': 3654})
+

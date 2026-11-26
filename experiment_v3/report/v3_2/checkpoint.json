@@ -1,0 +1,31 @@
+{
+  "block": [
+    "S5",
+    "L1",
+    3013
+  ],
+  "coverage": {
+    "A": {
+      "COMPLETE": 30548,
+      "PENDING": 15532
+    },
+    "B": {
+      "PENDING": 6912
+    },
+    "C": {
+      "PENDING": 1350
+    }
+  },
+  "elapsed_s": 16123.730390479002,
+  "phase": "STOPPED_BY_USER",
+  "utc": "2026-11-21T21:54:59.190451+00:00",
+  "version": "5c308beae210a2e1883448a345c29419bb976fd81f8894a843a0cfb2ace15e56",
+  "workers": 2,
+  "complete_groups": 238,
+  "recovered_commits": [
+    "A-S5-L1-3013-C079",
+    "A-S5-L1-3013-C080",
+    "A-S5-L1-3013-C083",
+    "A-S5-L1-3013-C084"
+  ]
+}

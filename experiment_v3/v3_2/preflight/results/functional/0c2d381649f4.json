@@ -1,0 +1,1132 @@
+{
+  "scope": "FUNCTIONAL_ONLY",
+  "sessions": 24,
+  "rows": [
+    {
+      "mask": 0,
+      "operation": 25,
+      "role": "closing",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 422,
+      "event_id": "9c34c02507394795ba37162f16fc218d",
+      "data": {},
+      "result": {
+        "error": "missing_predecessor"
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 8,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 403,
+      "event_id": "523dcf5a89cd4acc8107f59120a8c42c",
+      "data": {},
+      "result": {
+        "error": "role"
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 1,
+      "role": "production",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "06d4bf5281524595b073aed389dc8b1c",
+      "data": {
+        "members": [
+          "TECH-0c2d381649f4-0-0",
+          "TECH-0c2d381649f4-0-1"
+        ]
+      },
+      "result": {
+        "status": "applied",
+        "operation": 1
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 2,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "bededafaa4b94f39b8e77dbbab7c568f",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-0",
+        "barcode": "TECH-0c2d381649f4-0-0"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 2,
+        "group": 0
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 2,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "ca1291b665014dd39abed0307870c074",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-1",
+        "barcode": "TECH-0c2d381649f4-0-1"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 2,
+        "group": 0
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 3,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "0cdb3d6392684b93ba1e5c694a358602",
+      "data": {
+        "document": "TECH-0c2d381649f4-0"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 3
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 4,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "b709019d469147cd809994072db64aeb",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 4
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 5,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "016f6ac443b540cdbb905c4dcdacc925",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 5
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 6,
+      "role": "quality",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "03c2819c766847c7a6fc6b0acfc9a79a",
+      "data": {
+        "quality_case": "Q-TECH-0c2d381649f4-0"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 6
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 7,
+      "role": "quality",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "f381bcfa36dd49da99d1ef8238751319",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 7
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 12,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "a7090a5ca7844323ac0b958da8853047",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 12
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 13,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "8f627b2a9ce042e083533560234e26e7",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 13
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 14,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "ba5cc846849b4dd59bd319d8a772200a",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 14
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 15,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "e36a52b032fb4d34b6a9944e22079053",
+      "data": {},
+      "result": {
+        "status": "NOT_APPLICABLE:validated",
+        "operation": 15
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 16,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "0929c2cf972841a886fbd9f7f2c75bdb",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-0"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 16,
+        "picking": 678
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 16,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "993545f5c9dc4969aed02e74019cda84",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-1"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 16,
+        "picking": 679
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 10,
+      "role": "driver",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "2d238ba48f2d4becb6d1f26a3ffa49b8",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-0"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 10,
+        "picking": 682
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 8,
+      "role": "quality",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "9118e066bb4547cc8c12c658dfb377d0",
+      "data": {
+        "decision": "released"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 8,
+        "quality_version": 1
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 9,
+      "role": "quality",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "7cc911327afd464a9164bb7f29e3394f",
+      "data": {
+        "quality_case": "Q-TECH-0c2d381649f4-0",
+        "quality_version": 1
+      },
+      "result": {
+        "status": "applied",
+        "operation": 9
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 10,
+      "role": "driver",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "b03dce9d1f5b4a70827e585295e8cdd5",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-1"
+      },
+      "result": {
+        "status": "NOT_APPLICABLE:released",
+        "operation": 10
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 11,
+      "role": "quality",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "d9a5c020b4434ca7b563e5463e6daa56",
+      "data": {},
+      "result": {
+        "status": "NOT_APPLICABLE:no_nonconformity",
+        "operation": 11
+      }
+    },
+    {
+      "mask": 0,
+      "operation": "next",
+      "role": "dispatch",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "f1522df35b3742ad8da2a5e8b3a4cd30",
+      "data": {},
+      "result": {
+        "case": "TECH-0c2d381649f4-0",
+        "pallet": "TECH-0c2d381649f4-0-0",
+        "observed": 1,
+        "source": "delivered_movements",
+        "forecast": [
+          0.0,
+          0.0
+        ],
+        "candidates": 2
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 17,
+      "role": "dispatch",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "ab71f73457024b6d9576962eac36b8a6",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-0"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 17,
+        "address": "V3-0008"
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 18,
+      "role": "driver",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "4e2ff95f57df4a61b7b31251e1955ec8",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-0",
+        "address": "V3-0008"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 18
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 19,
+      "role": "driver",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "17b092101de84b51b30923d2f309ce3d",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-0",
+        "address": "V3-0008"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 19,
+        "picking": 683
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 20,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "d3fb874ec7114c51830aca6c86d3d538",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-0"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 20,
+        "address": "V3-0008"
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 21,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "37e3ff8b4a944ddaa10b4d219d28e3e3",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-0"
+      },
+      "result": {
+        "status": "NOT_APPLICABLE:placement_verified",
+        "operation": 21
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 22,
+      "role": "closing",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 422,
+      "event_id": "976308021fba4befa32f15e524565eeb",
+      "data": {},
+      "result": {
+        "error": "incomplete_manifest"
+      }
+    },
+    {
+      "mask": 0,
+      "operation": "next",
+      "role": "dispatch",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "bdab75416b5b4063a96c6ca231b984a5",
+      "data": {},
+      "result": {
+        "case": "TECH-0c2d381649f4-0",
+        "pallet": "TECH-0c2d381649f4-0-1",
+        "observed": 1,
+        "source": "delivered_movements",
+        "forecast": [
+          0.0,
+          0.0
+        ],
+        "candidates": 1
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 17,
+      "role": "dispatch",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "643cdbe138854125bd62783f7cb8af08",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-1"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 17,
+        "address": "V3-0009"
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 18,
+      "role": "driver",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "0ccdbc4755ea430a94b45856e64606f9",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-1",
+        "address": "V3-0009"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 18
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 19,
+      "role": "driver",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "f26e5c79e420475ea0b885139d51bf3f",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-1",
+        "address": "V3-0009"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 19,
+        "picking": 684
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 20,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "75dfab372dda4bc186842a2191865cd4",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-1"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 20,
+        "address": "V3-0009"
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 21,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "3a1be83634784f40b44cf698d8c1e28a",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-0-1"
+      },
+      "result": {
+        "status": "NOT_APPLICABLE:placement_verified",
+        "operation": 21
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 22,
+      "role": "closing",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "08793ebbb41a4b9d86f26eb057cbf6d1",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 22
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 23,
+      "role": "closing",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "74e5ee0d72574dda88a76e718a22b8a7",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 23
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 24,
+      "role": "exchange",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 422,
+      "event_id": "43e2ea5756e14321858d17acccdafbba",
+      "data": {
+        "ack": "wrong"
+      },
+      "result": {
+        "error": "unconfirmed_exchange"
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 24,
+      "role": "exchange",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "697330150ef84ca895b5796516c1574b",
+      "data": {
+        "ack": "TECH-0c2d381649f4-0/1"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 24
+      }
+    },
+    {
+      "mask": 0,
+      "operation": 25,
+      "role": "closing",
+      "case": "TECH-0c2d381649f4-0",
+      "status": 200,
+      "event_id": "36542906212340839ff165658f75ade7",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 25
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 25,
+      "role": "closing",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 422,
+      "event_id": "ba6317dd33484196b6cb1af60d0309de",
+      "data": {},
+      "result": {
+        "error": "missing_predecessor"
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 8,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 403,
+      "event_id": "2dc9968e5c90467ead2f25cad504f24f",
+      "data": {},
+      "result": {
+        "error": "role"
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 1,
+      "role": "production_adapter",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "a560dfa065ab44c3be2368aecaf755b9",
+      "data": {
+        "members": [
+          "TECH-0c2d381649f4-127-0",
+          "TECH-0c2d381649f4-127-1"
+        ]
+      },
+      "result": {
+        "status": "applied",
+        "operation": 1
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 2,
+      "role": "sensor",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "24246e4a7d884366b0dc46055c6d7a28",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-0",
+        "barcode": "TECH-0c2d381649f4-127-0"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 2,
+        "group": 0
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 2,
+      "role": "sensor",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "179acedf3789429f88831e0bff1690f4",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-1",
+        "barcode": "TECH-0c2d381649f4-127-1"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 2,
+        "group": 0
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 3,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "2e43b81d85364af7a12d3bb17c3fd820",
+      "data": {
+        "document": "TECH-0c2d381649f4-127"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 3
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 4,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "f4d53f93556a4f428079c544229ad243",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 4
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 5,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "cb2dc63956ff486ab4b51fe8c5311604",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 5
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 6,
+      "role": "quality",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "fcaba9947b7e47c3948c883399cfd168",
+      "data": {
+        "quality_case": "Q-TECH-0c2d381649f4-127"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 6
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 7,
+      "role": "quality",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "67f1d95212cf4227ab6e1cf67f15f42e",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 7
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 16,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "a7f4ce60ddb34502aaeba4743af9cba3",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-0"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 16,
+        "picking": 680
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 16,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "c310c066d6654214917d13da1a29c790",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-1"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 16,
+        "picking": 681
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 10,
+      "role": "driver",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "fffc76ab14e04275a0d6fe531c15f7df",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-0"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 10,
+        "picking": 685
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 8,
+      "role": "quality",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "153547ddf7194ef6aebc3682f8dbe675",
+      "data": {
+        "decision": "released"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 8,
+        "quality_version": 1
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 9,
+      "role": "quality_adapter",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "5dcd79abd75b4c5aa6892b7f86031964",
+      "data": {
+        "quality_case": "Q-TECH-0c2d381649f4-127",
+        "quality_version": 1
+      },
+      "result": {
+        "status": "applied",
+        "operation": 9
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 10,
+      "role": "driver",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "f1673b316fd948669c66e9bb4c676aab",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-1"
+      },
+      "result": {
+        "status": "NOT_APPLICABLE:released",
+        "operation": 10
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 11,
+      "role": "quality",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "cd2cf4c5b24c43b385a6466bf3fc3bff",
+      "data": {},
+      "result": {
+        "status": "NOT_APPLICABLE:no_nonconformity",
+        "operation": 11
+      }
+    },
+    {
+      "mask": 127,
+      "operation": "reading",
+      "role": "sensor",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "2ee67cc8fdc14c0d900f9f73f7b81b70",
+      "data": {
+        "stamp": "2026-11-19 22:08:29",
+        "count": 2,
+        "serial": 1
+      },
+      "result": {
+        "status": "stored",
+        "serial": 1
+      }
+    },
+    {
+      "mask": 127,
+      "operation": "next",
+      "role": "dispatch",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "d46781f70a664cdb8e52a58b39c4d1f6",
+      "data": {},
+      "result": {
+        "case": "TECH-0c2d381649f4-127",
+        "pallet": "TECH-0c2d381649f4-127-0",
+        "observed": 2,
+        "source": "sensor",
+        "forecast": [
+          0.6311289179545874,
+          0.4145424362118144
+        ],
+        "candidates": 2
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 17,
+      "role": "dispatch",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "0662eb9fcc324c5c89a6aaa01d021b57",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-0"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 17,
+        "address": "V3-0902"
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 18,
+      "role": "driver",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "91999a37e9114084b51f3ed20c6cbda5",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-0",
+        "address": "V3-0902"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 18
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 19,
+      "role": "driver",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "b9ab45e210e1461d97080b4ff201e192",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-0",
+        "address": "V3-0902"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 19,
+        "picking": 686
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 20,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "e46474ca1c484aa190d7a7cdbaf6ca92",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-0"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 20,
+        "address": "V3-0902"
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 21,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "3b51f8a698b142ee81bc94787577cad7",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-0"
+      },
+      "result": {
+        "status": "NOT_APPLICABLE:placement_verified",
+        "operation": 21
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 22,
+      "role": "closing",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 422,
+      "event_id": "8cd5a2791343461e88a80d5b719c30c8",
+      "data": {},
+      "result": {
+        "error": "incomplete_manifest"
+      }
+    },
+    {
+      "mask": 127,
+      "operation": "reading",
+      "role": "sensor",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "f9540fc7ecca49d0833c1012e3318d2e",
+      "data": {
+        "stamp": "2026-11-19 22:08:29",
+        "count": 2,
+        "serial": 2
+      },
+      "result": {
+        "status": "stored",
+        "serial": 2
+      }
+    },
+    {
+      "mask": 127,
+      "operation": "next",
+      "role": "dispatch",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "8911b161ea8b4b64a40ab51f08090bad",
+      "data": {},
+      "result": {
+        "case": "TECH-0c2d381649f4-127",
+        "pallet": "TECH-0c2d381649f4-127-1",
+        "observed": 2,
+        "source": "sensor",
+        "forecast": [
+          0.6311289179545874,
+          0.4145424362118144
+        ],
+        "candidates": 1
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 17,
+      "role": "dispatch",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "8de526ce46ff4c488e47688c0ddd4724",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-1"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 17,
+        "address": "V3-1031"
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 18,
+      "role": "driver",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "d7653c795b224ec99e717ede5e28c6b8",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-1",
+        "address": "V3-1031"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 18
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 19,
+      "role": "driver",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "3c8ffa86961c49f0b3baeb749147cc2d",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-1",
+        "address": "V3-1031"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 19,
+        "picking": 687
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 20,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "dbf8c9515a3448eea0413da12be40a67",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-1"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 20,
+        "address": "V3-1031"
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 21,
+      "role": "operator",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "5cbf50fd309d447e8d4d1f745912c09d",
+      "data": {
+        "pallet": "TECH-0c2d381649f4-127-1"
+      },
+      "result": {
+        "status": "NOT_APPLICABLE:placement_verified",
+        "operation": 21
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 22,
+      "role": "closing",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "d9f8b5c852d144ca87770bc81f97b2d5",
+      "data": {},
+      "result": {
+        "status": "applied",
+        "operation": 22
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 24,
+      "role": "exchange",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 422,
+      "event_id": "66de9dc684e7457ca8b1f0dc2fcb467c",
+      "data": {
+        "ack": "wrong"
+      },
+      "result": {
+        "error": "unconfirmed_exchange"
+      }
+    },
+    {
+      "mask": 127,
+      "operation": 24,
+      "role": "exchange",
+      "case": "TECH-0c2d381649f4-127",
+      "status": 200,
+      "event_id": "564d797e7353403bbc3ba6d9921876c4",
+      "data": {
+        "ack": "TECH-0c2d381649f4-127/1"
+      },
+      "result": {
+        "status": "applied",
+        "operation": 24
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+ Container wms-inbound-research-odoo-run-56d282e4b908 Creating 
+ Container wms-inbound-research-odoo-run-56d282e4b908 Created 
+2026-11-18 18:54:48,596 1 WARNING wms_reference odoo.modules.module: Missing `author` key in manifest for 'wms_research', defaulting to '' 
+Replay 1/54: S1-L2-1000-B
+Replay 2/54: S2-L2-1000-A
+Replay 3/54: S3-L1-1000-C
+Replay 4/54: S4-L1-1000-B
+Replay 5/54: S5-L1-1000-A
+Replay 6/54: S5-L3-1000-C
+Replay 7/54: S6-L3-1000-B

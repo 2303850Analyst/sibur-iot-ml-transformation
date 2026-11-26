@@ -1,0 +1,30 @@
+{
+  "stacks": 1,
+  "stack_choice": "One isolated stack, 20 sessions; no independent sustained windows overlap.",
+  "base_interval_s": 30,
+  "source": "V3 software pilot 20 users; 1 receipt per 30 seconds",
+  "offered": {
+    "L1": 2,
+    "L2": 3,
+    "L3": 6
+  },
+  "duration_s": 60,
+  "tail_s": 15,
+  "session_roles": {
+    "production": 2,
+    "operator": 6,
+    "driver": 4,
+    "quality": 2,
+    "dispatch": 2,
+    "closing": 2,
+    "supervisor": 2
+  },
+  "pallets_per_case": [
+    2,
+    3,
+    4
+  ],
+  "defects": "S2 first pallet unreadable and first document version stale; S3 event duplicated and actual broker suspended for one dispatch interval; S4 bounded staging capacity; S5 first receipt held pending external authorized decision (last receipt nonconforming); S6 arrivals compressed into first half of the offer window. All schedules independent of mask.",
+  "evidence": "SEPARATE_LIVE_CONTRACT_AND_STRESS",
+  "snapshot": "Isolated PostgreSQL clone, immutable template taken before fixture creation, fresh broker and explicit credentialed clients. Template completeness is checked before live admission."
+}

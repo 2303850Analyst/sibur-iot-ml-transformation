@@ -1,0 +1,4 @@
+﻿test,workers,jobs,success,elapsed_s,failures,max_worker_rss_mb
+scale4,4,8,8,28.2873027070018,0,647.2421875
+scale6,6,8,8,24.220108526998956,0,620.99609375
+scale8,8,8,8,23.75493362799898,0,621.03515625

@@ -1,0 +1,8 @@
+{
+  "equal_forecast_equal_actions": true,
+  "evidence": "SIMULATION",
+  "fingerprint": "091ee88c7c1d9707b8168c4842e261b2ffa9612912f77f6a1007ca1d2dbc024c",
+  "missing_model_fallback": true,
+  "no_prep_same_physical_transitions": true,
+  "scope": "DIAGNOSTIC_ONLY"
+}
