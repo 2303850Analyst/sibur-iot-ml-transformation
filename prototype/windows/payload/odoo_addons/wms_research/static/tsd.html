@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ТСД · Входящий склад</title>
+<style>
+body{margin:auto;max-width:40rem;padding:1rem;font:1rem system-ui;color:#102638;background:#f3f7fa}
+form,section{background:white;border:1px solid #ccd8e2;padding:1rem;margin:1rem 0;border-radius:.75rem}
+input,button{font:inherit;padding:.65rem;box-sizing:border-box;border-radius:.4rem;border:1px solid #91a8b8}
+label{display:block;margin:.65rem 0}input{display:block;width:100%}button{margin:.2rem;cursor:pointer}
+output{display:block;white-space:pre-wrap}a{display:block;margin-top:.75rem}
+</style>
+<h1>Входящий склад · ТСД</h1>
+<p>Проверьте паллету перед приёмкой. После назначения сверьте адрес с маркировкой места.</p>
+<form id="scan"><label>Серия<input id="run" value="DEMO" required></label>
+<label>Код паллеты<input id="pallet" autofocus required></label>
+<button>Проверить документ</button><button id="demo" type="button">Сканировать TSD-01</button>
+<button id="iot" type="button">Сигнал IoT от IOT-01</button><output id="sensor-status" aria-live="polite"></output></form>
+<section><label>SKU<input id="sku"></label><label>Партия<input id="lot"></label>
+<label>Фактическое количество<input id="qty" type="number" min="1" step="1" value="1"></label>
+<button id="receive">Подтвердить приёмку</button><button id="reserve">Назначить место</button>
+<form id="placement"><label>Отсканированный адрес<input id="address" required></label>
+<button>Подтвердить размещение</button></form></section>
+<section><output id="result" aria-live="polite"></output><a id="transfer" hidden>Открыть приёмку в Odoo</a></section>
+<script>
+const node = id => document.getElementById(id);
+const value = id => node(id).value.trim();
+let snapshot;
+const show = text => node('result').textContent = text;
+const display = data => {
+  if (!data.snapshot) return;
+  snapshot = data.snapshot;
+  show(`Документ №${snapshot.receipt_id} · ${snapshot.receipt_state}\nКачество: ${snapshot.quality}\nРезерв: ${snapshot.reserved ?? 'нет'}\nРазмещена: ${snapshot.cell ?? 'нет'}`);
+  node('transfer').href = snapshot.odoo_url;
+  node('transfer').hidden = false;
+};
+const read = async () => {
+  snapshot = undefined;
+  node('transfer').hidden = true;
+  try {
+    const params = new URLSearchParams({run_id:value('run'), pallet_id:value('pallet')});
+    const response = await fetch('/wms/status?' + params);
+    if (!response.ok) throw Error(response.status === 404 ? 'Ожидаемая паллета не найдена' : 'Нет доступа к документу');
+    display(await response.json());
+    node('sku').value = snapshot.sku; node('lot').value = snapshot.lot; node('qty').value = snapshot.quantity;
+  } catch (error) { show(error.message); }
+};
+const send = async (operation, payload) => {
+  try {
+    if (!snapshot || snapshot.pallet !== value('pallet')) throw Error('Сначала проверьте документ');
+    const {csrf} = await (await fetch('/wms/session')).json();
+    const message = {schema_version:1, event_id:crypto.randomUUID(), device_id:'web-tsd',
+      run_id:value('run'), pallet_id:value('pallet'), operation,payload,
+      occurred_at:new Date().toISOString().slice(0,19).replace('T',' ')};
+    const data = await (await fetch('/wms/event',{method:'POST',body:new URLSearchParams({csrf_token:csrf,message:JSON.stringify(message)})})).json();
+    if (data.status !== 'applied') throw Error(data.reason ?? data.status);
+    await read();
+  } catch (error) { show('Операция не подтверждена: ' + error.message); }
+};
+node('scan').onsubmit = event => {event.preventDefault(); read();};
+node('demo').onclick = () => {node('pallet').value='TSD-01'; read();};
+node('iot').onclick = async () => {
+  const button=node('iot'), status=node('sensor-status');
+  button.disabled=true;
+  try {
+    const session=await (await fetch('/wms/session')).json();
+    const response=await fetch('/wms/demo/scan',{method:'POST',body:new URLSearchParams({csrf_token:session.csrf})});
+    if(!response.ok) throw Error('Считыватель недоступен');
+    const event=await response.json();
+    status.textContent='Событие отправлено в MQTT. Ждём запись в Odoo…';
+    for(let i=0;i<25;i++){
+      const data=await (await fetch('/wms/status?run_id=DEMO&pallet_id=IOT-01')).json();
+      if(data.audit.some(a=>a[6]===event.event_id && a[3]==='applied')){
+        node('run').value='DEMO';node('pallet').value='IOT-01';await read();
+        status.textContent='Odoo зарегистрировал сигнал считывателя для IOT-01. Можно подтвердить приёмку.';
+        return;
+      }
+      await new Promise(resolve=>setTimeout(resolve,600));
+    }
+    status.textContent='Сигнал отправлен. За 15 секунд подтверждение Odoo не получено.';
+  } catch(error){status.textContent=error.message;}
+  finally {button.disabled=false;}
+};
+node('receive').onclick = () => send('receive',{sku:value('sku'),lot:value('lot'),quantity:Number(value('qty'))});
+node('reserve').onclick = () => send(snapshot?.cell ? 'final_reserve' : 'reserve',{});
+node('placement').onsubmit = event => {event.preventDefault(); send(snapshot?.cell ? 'final_place' : 'place',{address:value('address')});};
+</script></html>
