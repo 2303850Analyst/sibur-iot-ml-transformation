@@ -1,5 +1,10 @@
 # Приёмка ПСВ от фасовки до складской ячейки
 
+**Developed by Sychikov Vladimir.**
+This project is publicly available as a contribution to the open-source and Codex community. Community contributions, feedback, and improvements are welcome.
+
+[MIT License](LICENSE) · [Contributing](CONTRIBUTING.md)
+
 **Автор проекта и методики: Sychikov Vladimir.** Исследование входящей логистики склада ПСВ. Репозиторий объединяет карту операций P01-P25, дискретно-событийную модель, интеграционный стенд и сохранённые результаты. Срез от 26 ноября 2026 года.
 
 **Вопрос исследования.** Сколько времени проходит от выпуска первой паллеты поставки до подтверждения размещения всей поставки в SAP? Как меняется этот срок при цифровой приёмке, какой состав техники выдерживает поток и окупается ли он за пять лет?
