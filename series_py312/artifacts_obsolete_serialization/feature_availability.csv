@@ -1,0 +1,10 @@
+feature,availability
+lag_1,closed_interval_delivered_by_issue
+lag_2,closed_interval_delivered_by_issue
+lag_3,closed_interval_delivered_by_issue
+lag_4,closed_interval_delivered_by_issue
+lag_48,closed_interval_delivered_by_issue
+mean_4,closed_interval_delivered_by_issue
+mean_48,closed_interval_delivered_by_issue
+sin_time,clock_at_issue
+cos_time,clock_at_issue
